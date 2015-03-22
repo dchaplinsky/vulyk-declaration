@@ -22,23 +22,23 @@ requirements = [str(ir.req) for ir in install_reqs]
 test_requirements = requirements
 
 setup(
-    name='vulyk_decalaration',
+    name='vulyk_declaration',
     version='0.1.0',
-    description="Vulyk Decalarations plugin",
+    description="Vulyk declarations plugin",
     long_description=readme + '\n\n' + history,
     author="Volodymyr Hotsyk",
     author_email='gotsyk@gmail.com',
-    url='https://github.com/hotsyk/vulyk_decalaration',
+    url='https://github.com/hotsyk/vulyk_declaration',
     packages=[
-        'vulyk_decalaration',
+        'vulyk_declaration',
     ],
-    package_dir={'vulyk_decalaration':
-                 'vulyk_decalaration'},
+    package_dir={'vulyk_declaration':
+                 'vulyk_declaration'},
     include_package_data=True,
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='vulyk_decalaration',
+    keywords='vulyk_declaration',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

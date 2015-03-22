@@ -2,6 +2,6 @@
 Usage
 ========
 
-To use Vulyk Decalarations plugin in a project::
+To use Vulyk declarations plugin in a project::
 
-    import vulyk_decalaration
+    import vulyk_declaration

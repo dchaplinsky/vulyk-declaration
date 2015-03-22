@@ -35,7 +35,7 @@ clean-test:
 	rm -fr htmlcov/
 
 lint:
-	flake8 vulyk_decalaration tests
+	flake8 vulyk_declaration tests
 
 test:
 	python setup.py test
@@ -44,15 +44,15 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source vulyk_decalaration setup.py test
+	coverage run --source vulyk_declaration setup.py test
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
 
 docs:
-	rm -f docs/vulyk_decalaration.rst
+	rm -f docs/vulyk_declaration.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ vulyk_decalaration
+	sphinx-apidoc -o docs/ vulyk_declaration
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html

@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 
 """
-test_vulyk_decalaration
+test_vulyk_declaration
 ----------------------------------
 
-Tests for `vulyk_decalaration` module.
+Tests for `vulyk_declaration` module.
 """
 
 import unittest
 
-from vulyk_decalaration import vulyk_decalaration
+from vulyk_declaration import vulyk_declaration
 
 
-class TestVulyk_decalaration(unittest.TestCase):
+class TestVulyk_declaration(unittest.TestCase):
 
     def setUp(self):
         pass
