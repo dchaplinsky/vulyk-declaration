@@ -31,6 +31,9 @@ setup(
     url='https://github.com/hotsyk/vulyk_declaration',
     packages=[
         'vulyk_declaration',
+        'vulyk_declaration.fixtures',
+        'vulyk_declaration.models',
+        'vulyk_declaration.static'
     ],
     package_dir={'vulyk_declaration':
                  'vulyk_declaration'},
