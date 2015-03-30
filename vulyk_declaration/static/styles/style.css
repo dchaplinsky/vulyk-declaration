@@ -395,22 +395,6 @@ dd {
 }
 
 /* @end */
-.declaration-action {
-  font-family: Arial, FreeSans, sans-serif;
-  margin: 0 0 20px;
-  padding: 20px 20px 10px;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-}
-.declaration-action p {
-  margin: 0 0 10px;
-}
-
-.declaration-action_head {
-  font-size: 1.4em;
-  font-weight: bold;
-}
 
 /* ============================================================================
 	Generic button
