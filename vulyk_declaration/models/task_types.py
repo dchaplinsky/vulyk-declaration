@@ -23,6 +23,7 @@ class DeclarationTaskType(AbstractTaskType):
                  "static/scripts/jquery.dateSelectBoxes.js",
                  "static/scripts/jquery.placeholder.min.js",
                  "static/scripts/jquery.serializejson.js",
+                 "static/scripts/data.js",
                  "static/scripts/main.js"]
 
     CSS_ASSETS = ["static/styles/core-style.css",
