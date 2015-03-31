@@ -85,7 +85,7 @@ scripts.Common = {
 			});
 		});
 
-        this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
+		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
 			var self = $(this);
 
 			self.parent().toggleClass('js-ico-checked');
@@ -264,20 +264,35 @@ scripts.Common = {
 		scrpt.detecting();
 
 		$(function () { // DOM Ready
-			scrpt.jqueryValidateInit();
-			scrpt.toggleFormSection();
-			scrpt.inputActions();
-			scrpt.cloneyaInit();
-			scrpt.dateSelectBoxesInit();
-			scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-			scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
-			scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
-			scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
-			scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
-			scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
-			scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
-			scrpt.vulikEventsHandling();
-			//scripts.testJSON();
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
+
+			scrpt.$cache.body.on("vulyk.next", function(e, data) {
+				scrpt.$cache.html.scrollTop(0);
+				output.html(template(data.result.task.data));
+				scrpt.jqueryValidateInit();
+				scrpt.toggleFormSection();
+				scrpt.inputActions();
+				scrpt.cloneyaInit();
+				scrpt.dateSelectBoxesInit();
+				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
+				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
+				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
+				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
+				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
+				scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
+				scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
+				scrpt.vulikEventsHandling();
+			}).on("vulyk.save", function(e, callback) {
+
+				// if (words_wrapper.filter(".done").length == words_wrapper.length) {
+				// 	callback(serialize());
+				// } else {
+				// 	select(words_wrapper.filter(":not(.done)").eq(0), true);
+				// }
+			}).on("vulyk.skip", function(e, callback) {
+				callback();
+			});
 		});
 
 		return scrpt;

@@ -23,6 +23,7 @@ class DeclarationTaskType(AbstractTaskType):
     redundancy = 3
 
     JS_ASSETS = ['static/scripts/jquery-ui.min.js',
+                 'static/scripts/handlebars.js',
                  'static/scripts/jquery.validate.min.js',
                  'static/scripts/messages_uk.min.js',
                  'static/scripts/jquery-cloneya.min.js',
