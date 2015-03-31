@@ -1,7 +1,6 @@
 <form class="weiss-form weiss-form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
 
 	<div id="section-0" class="js-tab-content">
-
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
 			про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
@@ -19,7 +18,7 @@
 					</label>
 				</div>
 				<div class="l-weiss-form__item">
-					<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus=""/>
+					<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus="" />
 				</div>
 			</div>
 
@@ -64,6 +63,7 @@
 		</fieldset>
 
 
+
 		<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
 			<legend class="weiss-form__set-legend weiss-form__set-legend_main">
 				<span>Розділ I. Загальні відомості</span>
@@ -75,19 +75,19 @@
 				</legend>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__last-name" class="i-wai">Прізвище</label>
-					<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear"/>
+					<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__name" class="i-wai">Ім’я</label>
-					<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear"/>
+					<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__patronymic" class="i-wai">По батькові</label>
-					<input class="js-is-LettersOnly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear"/>
+					<input class="js-is-LettersOnly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__inn" class="i-wai">ІНН</label>
-					<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear"/>
+					<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 				</div>
 			</fieldset>
 
@@ -102,7 +102,7 @@
 							<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Область</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -114,6 +114,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -132,11 +133,11 @@
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_lined">
 							<label for="general__place_district" class="i-wai">Район</label>
-							<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_lined">
 							<label for="general__place_city" class="i-wai">Населений пункт</label>
-							<input type="text" id="general__place_city" name="general[addresses][][place_city]" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="general__place_city" name="general[addresses][][place_city]" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_lined">
 							<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
@@ -150,16 +151,7 @@
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_lined">
 							<label for="general__place_address" class="i-wai">Решта адреси</label>
-							<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear"/>
-						</div>
-						<div class="l-weiss-form__item l-weiss-form__item_lined">
-							<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-							<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
-								<option value="" selected="" disabled="">Тип адреси</option>
-								<option value="nodata">Немає данних</option>
-								<option value="registration">Адреса реестрації</option>
-								<option value="actual">Фактична адреса</option>
-							</select>
+							<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__item">
 							<span class="weiss-btn weiss-btn_small weiss-btn_w-30 weiss-btn_grey js-clone" title="Додати строку" role="button">+</span>
@@ -168,21 +160,23 @@
 					</div>
 				</div>
 			</fieldset>
-			<fieldset class="l-weiss-form__row">
-				<legend class="l-weiss-form__item weiss-form__label">
-					<span>3. Посада:</span>
-				</legend>
-				<p class="l-weiss-form__item declaration-small-note">
-					У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
-				</p>
-
-				<div class="l-weiss-form__item">
-					<div class="l-weiss-form__item l-weiss-form__item_lined">
+			<fieldset>
+				<div class="l-weiss-form__row">
+					<legend class="l-weiss-form__item weiss-form__label">
+						<span>3. Посада:</span>
+					</legend>
+					<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
+						<label for="general__post_post" class="i-wai">Посада</label>
+						<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+					</div>
+				</div>
+				<div class="l-weiss-form__row">
+					<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
 						<label for="general__post_region" class="i-wai">Область</label>
 						<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Область</option>
 							<option value="nodata">Немає данних</option>
-							<option value="kiev">Київ</option>
+							<option value="kiev">м. Київ</option>
 							<option value="1">Івано-Франківська область</option>
 							<option value="2">Вінницька область</option>
 							<option value="3">Волинська область</option>
@@ -194,6 +188,7 @@
 							<option value="9">Кіровоградська область</option>
 							<option value="10">Київська область</option>
 							<option value="11">Кримська Автономна Республіка</option>
+							<option value="Sevostopol">м. Севостополь</option>
 							<option value="12">Луганська область</option>
 							<option value="13">Львівська область</option>
 							<option value="14">Миколаївська область</option>
@@ -210,15 +205,14 @@
 							<option value="25">Чернігівська область</option>
 						</select>
 					</div>
-					<div class="l-weiss-form__item l-weiss-form__item_lined">
+					<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
 						<label for="general__post_office" class="i-wai">Відомство</label>
-						<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear"/>
-					</div>
-					<div class="l-weiss-form__item l-weiss-form__item_lined">
-						<label for="general__post_post" class="i-wai">Посада</label>
-						<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear"/>
+						<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 					</div>
 				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					Запишіть посаду так, як її вказав декларант (повністю). Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте «Структуру органів державної влади (лінк)», або погугліть. Якщо нічого не допомогло - вводіть що бачите в посаді. У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними.
+				</p>
 			</fieldset>
 
 			<fieldset class="weiss-form__set">
@@ -227,10 +221,10 @@
 				</legend>
 				<table class="weiss-table weiss-table_decl">
 					<colgroup>
-						<col width="200"/>
-						<col/>
-						<col width="200"/>
-						<col width="30"/>
+						<col width="200" />
+						<col />
+						<col width="200" />
+						<col width="30" />
 					</colgroup>
 					<thead>
 					<tr>
@@ -238,7 +232,7 @@
 							Ступінь зв’язку
 						</th>
 						<th>
-							Прізвище ініціали, дата народження
+							ПІБ, дата народження
 						</th>
 						<th>
 							Реєстраційний номер облікової картки платника податків/ серія та номер паспорта громадянина України (якщо вказано)
@@ -255,14 +249,14 @@
 								<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
 									<option value="unspecified" selected="" disabled="">Ступінь зв’язку</option>
 									<option value="nodata">Немає данних</option>
-									<option value="spouse">Супруг</option>
+									<option value="spouse">Подружжя</option>
 									<option value="parents">Батькі</option>
 									<option value="children">Дитина</option>
 									<option value="other">Інше</option>
 								</select>
 							</div>
 							<div class="l-weiss-form__row js-related-section">
-								<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2"/>
+								<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2" />
 							</div>
 							<p class="declaration-small-note js-clone-ignore">
 								Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нижче. Додати ще члена сім’ї можна, натиснувши на кнопку &laquo;+&raquo; справа
@@ -271,13 +265,12 @@
 						<td>
 							<div class="l-weiss-form__row">
 								<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
-
 								<p class="declaration-small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 							</div>
 						</td>
 						<td>
 							<div class="l-weiss-form__row">
-								<input type="text" id="general__family__inn" name="general[family][][inn]" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear"/>
+								<input type="text" id="general__family__inn" name="general[family][][inn]" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
 							</div>
 						</td>
 						<td class="weiss-table__cell_bd-l">
@@ -302,10 +295,10 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="33"/>
-					<col/>
-					<col width="200"/>
-					<col width="200"/>
+					<col width="33" />
+					<col />
+					<col width="200" />
+					<col width="200" />
 				</colgroup>
 				<caption>
 					А. Одержані (нараховані) з усіх джерел України
@@ -320,9 +313,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-<span class="i-wai">
-	№
-</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Перелік доходів
@@ -346,24 +339,23 @@
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Загальна сума сукупного доходу, гривні, у т.ч.
+						<p class="l-weiss-form__item declaration-small-note">Тут і далі у поле &laquo;Сума доходу&raquo; вносяться виключно цифри, вказані декларантом.<br /> Усі інші дані виписуються у поле &laquo;Коментар&raquo;</p>
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__5" name="income[5][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__5" name="income[5][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__5_comment" name="income[5][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-
 							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__5_family" name="income[5][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__5_family" name="income[5][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__5_family_comment" name="income[5][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-
 							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						</div>
 					</td>
@@ -373,12 +365,11 @@
 						6.
 					</td>
 					<th class="weiss-table__cell_fwn">
-						Заробітна плата, інші виплати та винагороди, нараховані (виплачені) декларанту відповідно до умов трудового або цивільно-правового договору
-						<em>(крім виплат, зазначених у позиціях 7, 8)</em>
+						Заробітна плата, інші виплати та винагороди, нараховані (виплачені) декларанту відповідно до умов трудового або цивільно-правового договору <em>(крім виплат, зазначених у позиціях 7, 8)</em>
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__6" name="income[6][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__6" name="income[6][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__6_comment" name="income[6][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -386,7 +377,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__6_family" name="income[6][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__6_family" name="income[6][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__6_family_comment" name="income[6][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -402,7 +393,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__7" name="income[7][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__7" name="income[7][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__7_comment" name="income[7][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -410,7 +401,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__7_family" name="income[7][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__7_family" name="income[7][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__7_family_comment" name="income[7][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -422,17 +413,17 @@
 						&nbsp;
 					</td>
 					<td colspan="3" class="weiss-table__cell_unspaced">
-						<textarea class="weiss-form__textarea weiss-form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="weiss-form__textarea weiss-form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear" placeholder="(назва закладу, установи тощо, в яких одержано (нараховано) зазначені у цій позиції доходи)"></textarea>
 					</td>
 				</tr>
 			</table>
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col width="200"/>
-					<col width="200"/>
+					<col width="35" />
+					<col />
+					<col width="200" />
+					<col width="200" />
 				</colgroup>
 				<tr>
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
@@ -443,7 +434,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__8" name="income[8][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__8" name="income[8][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__8_comment" name="income[8][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -451,7 +442,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__8_family" name="income[8][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__8_family" name="income[8][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__8_family_comment" name="income[8][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -467,7 +458,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__9" name="income[9][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__9" name="income[9][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__9_comment" name="income[9][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -475,7 +466,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__9_family" name="income[9][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__9_family" name="income[9][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__9_family_comment" name="income[9][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -491,7 +482,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__10" name="income[10][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__10" name="income[10][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__10_comment" name="income[10][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -499,7 +490,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__10_family" name="income[10][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__10_family" name="income[10][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__10_family_comment" name="income[10][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -515,7 +506,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__11" name="income[11][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__11" name="income[11][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__11_comment" name="income[11][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -523,7 +514,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__11_family" name="income[11][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__11_family" name="income[11][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__11_family_comment" name="income[11][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -539,7 +530,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__12" name="income[12][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__12" name="income[12][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__12_comment" name="income[12][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -547,7 +538,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__12_family" name="income[12][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__12_family" name="income[12][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__12_family_comment" name="income[12][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -563,7 +554,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__13" name="income[13][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__13" name="income[13][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__13_comment" name="income[13][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -571,7 +562,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__13_family" name="income[13][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__13_family" name="income[13][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__13_family_comment" name="income[13][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -587,7 +578,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__14" name="income[14][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__14" name="income[14][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__14_comment" name="income[14][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -595,7 +586,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__14_family" name="income[14][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__14_family" name="income[14][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__14_family_comment" name="income[14][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -611,7 +602,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__15" name="income[15][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__15" name="income[15][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__15_comment" name="income[15][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -619,7 +610,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__15_family" name="income[15][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__15_family" name="income[15][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__15_family_comment" name="income[15][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -635,7 +626,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__16" name="income[16][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__16" name="income[16][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__16_comment" name="income[16][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -643,7 +634,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__16_family" name="income[16][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__16_family" name="income[16][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__16_family_comment" name="income[16][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -659,7 +650,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__17" name="income[17][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__17" name="income[17][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__17_comment" name="income[17][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -667,7 +658,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__17_family" name="income[17][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__17_family" name="income[17][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__17_family_comment" name="income[17][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -683,7 +674,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__18" name="income[18][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__18" name="income[18][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__18_comment" name="income[18][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -691,7 +682,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__18_family" name="income[18][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__18_family" name="income[18][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__18_family_comment" name="income[18][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -707,7 +698,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__19" name="income[19][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__19" name="income[19][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__19_comment" name="income[19][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -715,7 +706,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__19_family" name="income[19][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__19_family" name="income[19][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__19_family_comment" name="income[19][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -731,7 +722,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__20" name="income[20][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__20" name="income[20][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__20_comment" name="income[20][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -739,7 +730,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__20_family" name="income[20][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__20_family" name="income[20][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__20_family_comment" name="income[20][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -750,11 +741,11 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col width="200"/>
-					<col width="200"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col width="200" />
+					<col width="200" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					Б. Одержані (нараховані) з джерел за межами України декларантом
@@ -762,9 +753,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-<span class="i-wai">
-	№
-</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Назва країни
@@ -788,13 +779,13 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-<span>
-	21.
-</span>
+					<span>
+						21.
+					</span>
 					</td>
 					<td class="weiss-table__cell_fwn">
 						<div class="l-weiss-form__row">
-							<input type="text" id="income__21__country" name="income[21][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear"/>
+							<input type="text" id="income__21__country" name="income[21][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__21__country_comment" name="income[21][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -802,20 +793,25 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Дохід в іноземній валюті" data-inp-act="hidden,unclear" />
 						</div>
-						<div class="l-weiss-form__row">
+						<div class="l-weiss-form__row js-related-control">
 							<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
 								<option value="usd" selected="">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="gbp">фунти стерлінгів</option>
+								<option value="rub">російскі рублі</option>
+								<option value="chf">швейцарський франк</option>
 								<option value="other">інша</option>
 							</select>
+						</div>
+						<div class="l-weiss-form__row js-related-section">
+							<input type="text" name="income[21][][cur_units_other]" placeholder="Iнший тип валюти" />
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income[21][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income[21][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td class="weiss-table__cell_bd-l">
@@ -828,11 +824,11 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col width="200"/>
-					<col width="200"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col width="200" />
+					<col width="200" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					В. Одержані (нараховані) з джерел за межами України членами сім’ї декларанта
@@ -840,9 +836,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-<span class="i-wai">
-	№
-</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Назва країни
@@ -866,13 +862,13 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-<span>
-	22.
-</span>
+					<span>
+						22.
+					</span>
 					</td>
 					<td class="weiss-table__cell_fwn">
 						<div class="l-weiss-form__row">
-							<input type="text" id="income__22_family__country" name="income[22][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear"/>
+							<input type="text" id="income__22_family__country" name="income[22][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="income__22_family__country_comment" name="income[22][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -880,20 +876,25 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Дохід в іноземній валюті" data-inp-act="hidden,unclear" />
 						</div>
-						<div class="l-weiss-form__row">
-							<select id="income__22_family__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
+						<div class="l-weiss-form__row js-related-control">
+							<select id="income__22__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
 								<option value="usd" selected="">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="gbp">фунти стерлінгів</option>
+								<option value="rub">російскі рублі</option>
+								<option value="chf">швейцарський франк</option>
 								<option value="other">інша</option>
 							</select>
+						</div>
+						<div class="l-weiss-form__row js-related-section">
+							<input type="text" name="income[22][][cur_units_other]" placeholder="Iнший тип валюти" />
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income[22][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income[22][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td class="weiss-table__cell_bd-l">
@@ -928,13 +929,13 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col width="200"/>
-					<col width="150"/>
-					<col width="150"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col />
+					<col width="200" />
+					<col width="150" />
+					<col width="150" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					А. Майно, що перебуває у власності, в оренді чи на іншому праві користування декларанта
@@ -942,9 +943,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-<span class="i-wai">
-	№
-</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Перелік об’єктів
@@ -974,9 +975,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-<span>
-	23.
-</span>
+					<span>
+						23.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Земельні ділянки
@@ -986,7 +987,7 @@
 							<select id="estate__23__region" name="estate[23][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -998,6 +999,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1020,16 +1022,15 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__23__space" name="estate[23][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__23__space" name="estate[23][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__23__space_units" name="estate[23][][space_units]" data-inp-act="hidden,unclear">
-								<option value="meters" selected="">м3</option>
+								<option value="meters" selected="">м2</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
-
 							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
@@ -1037,19 +1038,16 @@
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="estate__23__space_comment" name="estate[23][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-
 							<p class="declaration-small-note js-clone-ignore">
-								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;.
-								<br/>
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м.
-								<br/>
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__23__costs" name="estate[23][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__23__costs" name="estate[23][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__23__costs_comment" name="estate[23][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1057,7 +1055,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__23__costs_rent" name="estate[23][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__23__costs_rent" name="estate[23][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__23__costs_rent_comment" name="estate[23][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1072,9 +1070,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-<span>
-	24.
-</span>
+					<span>
+						24.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Житлові будинки
@@ -1084,7 +1082,7 @@
 							<select id="estate__24__region" name="estate[24][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1096,6 +1094,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1118,14 +1117,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__24__space" name="estate[24][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__24__space" name="estate[24][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__24__space_units" name="estate[24][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1134,7 +1133,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__24__costs" name="estate[24][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__24__costs" name="estate[24][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__24__costs_comment" name="estate[24][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1142,7 +1141,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__24__costs_rent" name="estate[24][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__24__costs_rent" name="estate[24][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__24__costs_rent_comment" name="estate[24][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1157,9 +1156,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-<span>
-	25.
-</span>
+					<span>
+						25.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Квартири
@@ -1169,7 +1168,7 @@
 							<select id="estate__25__region" name="estate[25][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1181,6 +1180,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1203,14 +1203,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__25__space" name="estate[25][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__25__space" name="estate[25][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__25__space_units" name="estate[25][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1219,7 +1219,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__25__costs" name="estate[25][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__25__costs" name="estate[25][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__25__costs_comment" name="estate[25][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1227,7 +1227,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__25__costs_rent" name="estate[25][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__25__costs_rent" name="estate[25][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__25__costs_rent_comment" name="estate[25][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1242,9 +1242,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							26.
-						</span>
+					<span>
+						26.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Садовий (дачний) будинок
@@ -1254,7 +1254,7 @@
 							<select id="estate__26__region" name="estate[26][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1266,6 +1266,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1288,14 +1289,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__26__space" name="estate[26][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__26__space" name="estate[26][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__26__space_units" name="estate[26][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1304,7 +1305,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__26__costs" name="estate[26][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__26__costs" name="estate[26][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__26__costs_comment" name="estate[26][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1312,7 +1313,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__26__costs_rent" name="estate[26][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__26__costs_rent" name="estate[26][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__26__costs_rent_comment" name="estate[26][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1327,9 +1328,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							27.
-						</span>
+					<span>
+						27.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Гаражі
@@ -1339,7 +1340,7 @@
 							<select id="estate__27__region" name="estate[27][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1351,6 +1352,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1373,14 +1375,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__27__space" name="estate[27][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__27__space" name="estate[27][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__27__space_units" name="estate[27][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1389,7 +1391,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__27__costs" name="estate[27][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__27__costs" name="estate[27][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__27__costs_comment" name="estate[27][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1397,7 +1399,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__27__costs_rent" name="estate[27][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__27__costs_rent" name="estate[27][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__27__costs_rent_comment" name="estate[27][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1412,9 +1414,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							28.
-						</span>
+					<span>
+						28.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Інше нерухоме майно
@@ -1424,7 +1426,7 @@
 							<select id="estate__28__region" name="estate[28][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1436,6 +1438,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1458,14 +1461,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__28__space" name="estate[28][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__28__space" name="estate[28][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__28__space_units" name="estate[28][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1474,7 +1477,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__28__costs" name="estate[28][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__28__costs" name="estate[28][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__28__costs_comment" name="estate[28][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1482,7 +1485,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__28__costs_rent" name="estate[28][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__28__costs_rent" name="estate[28][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__28__costs_rent_comment" name="estate[28][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1498,13 +1501,13 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col width="150"/>
-					<col width="150"/>
-					<col width="150"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col />
+					<col width="150" />
+					<col width="150" />
+					<col width="150" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					Б. Майно, що перебуває у власності, в оренді чи на іншому праві користування сім’ї декларанта
@@ -1512,9 +1515,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Перелік об’єктів
@@ -1546,9 +1549,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							29.
-						</span>
+					<span>
+						29.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Земельні ділянки
@@ -1557,8 +1560,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__29__region" name="estate[29][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1570,6 +1573,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1592,16 +1596,15 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__29__space" name="estate[29][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__29__space" name="estate[29][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__29__space_units" name="estate[29][][space_units]" data-inp-act="hidden,unclear">
-								<option value="meters" selected="">м3</option>
+								<option value="meters" selected="">м2</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
-
 							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
@@ -1609,19 +1612,16 @@
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="estate__29__space_comment" name="estate[29][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-
 							<p class="declaration-small-note js-clone-ignore">
-								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;.
-								<br/>
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м.
-								<br/>
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate[29][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate[29][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1629,7 +1629,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_rent" name="estate[29][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_rent" name="estate[29][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__29__costs_rent_comment" name="estate[29][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1644,9 +1644,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							30.
-						</span>
+					<span>
+						30.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Житлові будинки
@@ -1655,8 +1655,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__30__region" name="estate[30][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1668,6 +1668,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1690,14 +1691,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__30__space" name="estate[30][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__30__space" name="estate[30][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__30__space_units" name="estate[30][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1706,7 +1707,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate[30][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate[30][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1714,7 +1715,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_rent" name="estate[30][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_rent" name="estate[30][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__30__costs_rent_comment" name="estate[30][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1729,9 +1730,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							31.
-						</span>
+					<span>
+						31.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Квартири
@@ -1740,8 +1741,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__31__region" name="estate[31][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1753,6 +1754,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1775,14 +1777,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__31__space" name="estate[31][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__31__space" name="estate[31][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__31__space_units" name="estate[31][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1791,7 +1793,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate[31][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate[31][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1799,7 +1801,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_rent" name="estate[31][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_rent" name="estate[31][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__31__costs_rent_comment" name="estate[31][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1814,9 +1816,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							32.
-						</span>
+					<span>
+						32.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Садовий (дачний) будинок
@@ -1825,8 +1827,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__32__region" name="estate[32][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1838,6 +1840,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1860,14 +1863,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__32__space" name="estate[32][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__32__space" name="estate[32][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__32__space_units" name="estate[32][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1876,7 +1879,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate[32][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate[32][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1884,7 +1887,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_rent" name="estate[32][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_rent" name="estate[32][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__32__costs_rent_comment" name="estate[32][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1899,9 +1902,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							33.
-						</span>
+					<span>
+						33.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Гаражі
@@ -1910,8 +1913,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__33__region" name="estate[33][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1923,6 +1926,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1945,14 +1949,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__33__space" name="estate[33][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__33__space" name="estate[33][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__33__space_units" name="estate[33][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -1961,7 +1965,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate[33][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate[33][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1969,7 +1973,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_rent" name="estate[33][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_rent" name="estate[33][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__33__costs_rent_comment" name="estate[33][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1984,9 +1988,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							34.
-						</span>
+					<span>
+						34.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Інше нерухоме майно
@@ -1995,8 +1999,8 @@
 						<div class="l-weiss-form__row">
 							<select id="estate__34__region" name="estate[34][][region]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-								<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -2008,6 +2012,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -2030,14 +2035,14 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__34__space" name="estate[34][][space]" placeholder="Площа" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__34__space" name="estate[34][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<select id="estate__34__space_units" name="estate[34][][space_units]" data-inp-act="hidden,unclear">
 								<option value="meters" selected="">м3</option>
 								<option value="gectars">га</option>
 								<option value="sotok">соток</option>
-								<option value="nodata">Немає данних</option>
+								<option value="other">інше</option>
 							</select>
 						</div>
 						<div class="l-weiss-form__row">
@@ -2046,7 +2051,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate[34][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate[34][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea type="text" id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2054,7 +2059,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_rent" name="estate[34][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_rent" name="estate[34][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form_row">
 							<textarea id="estate__34__costs_rent_comment" name="estate[34][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2067,10 +2072,7 @@
 				</tr>
 				</tbody>
 			</table>
-
-
 		</fieldset>
-
 
 		<div class="declaration-nav">
 			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="0">Попередній розділ</button>
@@ -2093,13 +2095,13 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col width="120"/>
-					<col width="150"/>
-					<col width="150"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col />
+					<col width="120" />
+					<col width="150" />
+					<col width="150" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					А. Транспортні засоби, що перебувають у властності, в оренді чи на іншому праві користування декларанта
@@ -2107,9 +2109,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Перелік транспортних засобів
@@ -2139,27 +2141,28 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							35.
-						</span>
+					<span>
+						35.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Автомобілі легкові
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__35__brand" name="vehicle[35][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__35__brand" name="vehicle[35][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__35__brand_info" name="vehicle[35][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__35__brand_info" name="vehicle[35][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 					</td>
 					<td>
 						<select id="vehicle__35__year" name="vehicle[35][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -2300,7 +2303,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum" name="vehicle[35][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum" name="vehicle[35][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__35__sum_comment" name="vehicle[35][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2308,7 +2311,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum_rent" name="vehicle[35][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum_rent" name="vehicle[35][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__35__sum_rent_comment" name="vehicle[35][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2323,24 +2326,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							36.
-						</span>
+					<span>
+						36.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Автомобілі вантажні (спеціальні)
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__36__brand" name="vehicle[36][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__36__brand" name="vehicle[36][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__36__brand_info" name="vehicle[36][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__36__brand_info" name="vehicle[36][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__36__year" name="vehicle[36][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -2481,7 +2485,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum" name="vehicle[36][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum" name="vehicle[36][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__36__sum_comment" name="vehicle[36][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2489,7 +2493,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum_rent" name="vehicle[36][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum_rent" name="vehicle[36][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__36__sum_rent_comment" name="vehicle[36][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2504,24 +2508,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							37.
-						</span>
+					<span>
+						37.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Водні засоби
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__37__brand" name="vehicle[37][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__37__brand" name="vehicle[37][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__37__brand_info" name="vehicle[37][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__37__brand_info" name="vehicle[37][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__37__year" name="vehicle[37][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -2662,7 +2667,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum" name="vehicle[37][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum" name="vehicle[37][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__37__sum_comment" name="vehicle[37][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2670,7 +2675,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum_rent" name="vehicle[37][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum_rent" name="vehicle[37][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__37__sum_rent_comment" name="vehicle[37][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2685,24 +2690,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							38.
-						</span>
+					<span>
+						38.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Повітряні судна
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__38__brand" name="vehicle[38][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__38__brand" name="vehicle[38][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__38__brand_info" name="vehicle[38][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__38__brand_info" name="vehicle[38][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__38__year" name="vehicle[38][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -2843,7 +2849,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum" name="vehicle[38][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum" name="vehicle[38][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__38__sum_comment" name="vehicle[38][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2851,7 +2857,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum_rent" name="vehicle[38][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum_rent" name="vehicle[38][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__38__sum_rent_comment" name="vehicle[38][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2866,24 +2872,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							39.
-						</span>
+					<span>
+						39.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Інші засоби
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__39__brand" name="vehicle[39][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__39__brand" name="vehicle[39][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__39__brand_info" name="vehicle[39][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__39__brand_info" name="vehicle[39][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__39__year" name="vehicle[39][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3024,7 +3031,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum" name="vehicle[39][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum" name="vehicle[39][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__39__sum_comment" name="vehicle[39][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3032,7 +3039,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum_rent" name="vehicle[39][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum_rent" name="vehicle[39][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__39__sum_rent_comment" name="vehicle[39][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3048,13 +3055,13 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col width="120"/>
-					<col width="150"/>
-					<col width="150"/>
-					<col width="30"/>
+					<col width="35" />
+					<col />
+					<col />
+					<col width="120" />
+					<col width="150" />
+					<col width="150" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					Б. Транспортні засоби, що перебувають у власності, в оренді чи на іншому праві користування членів сім’ї декларанта
@@ -3062,9 +3069,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th rowspan="2">
 						Перелік транспортних засобів
@@ -3094,27 +3101,28 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							40.
-						</span>
+					<span>
+						40.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Автомобілі легкові
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__40__brand" name="vehicle[40][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__40__brand" name="vehicle[40][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__40__brand_info" name="vehicle[40][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__40__brand_info" name="vehicle[40][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 					</td>
 					<td>
 						<select id="vehicle__40__year" name="vehicle[40][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3255,7 +3263,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum" name="vehicle[40][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum" name="vehicle[40][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__40__sum_comment" name="vehicle[40][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3263,7 +3271,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum_rent" name="vehicle[40][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum_rent" name="vehicle[40][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__40__sum_rent_comment" name="vehicle[40][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3278,24 +3286,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							41.
-						</span>
+					<span>
+						41.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Автомобілі вантажні (спеціальні)
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__41__brand" name="vehicle[41][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__41__brand" name="vehicle[41][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__41__brand_info" name="vehicle[41][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__41__brand_info" name="vehicle[41][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__41__year" name="vehicle[41][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3436,7 +3445,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum" name="vehicle[41][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum" name="vehicle[41][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__41__sum_comment" name="vehicle[41][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3444,7 +3453,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum_rent" name="vehicle[41][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum_rent" name="vehicle[41][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__41__sum_rent_comment" name="vehicle[41][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3459,24 +3468,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							42.
-						</span>
+					<span>
+						42.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Водні засоби
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__42__brand" name="vehicle[42][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__42__brand" name="vehicle[42][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__42__brand_info" name="vehicle[42][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__42__brand_info" name="vehicle[42][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__42__year" name="vehicle[42][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3617,7 +3627,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum" name="vehicle[42][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum" name="vehicle[42][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__42__sum_comment" name="vehicle[42][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3625,7 +3635,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum_rent" name="vehicle[42][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum_rent" name="vehicle[42][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__42__sum_rent_comment" name="vehicle[42][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3640,24 +3650,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							43.
-						</span>
+					<span>
+						43.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Повітряні судна
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__43__brand" name="vehicle[43][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__43__brand" name="vehicle[43][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__43__brand_info" name="vehicle[43][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__43__brand_info" name="vehicle[43][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__43__year" name="vehicle[43][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3798,7 +3809,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum" name="vehicle[43][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum" name="vehicle[43][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__43__sum_comment" name="vehicle[43][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3806,7 +3817,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum_rent" name="vehicle[43][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum_rent" name="vehicle[43][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__43__sum_rent_comment" name="vehicle[43][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3821,24 +3832,25 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							44.
-						</span>
+					<span>
+						44.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Інші засоби
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__44__brand" name="vehicle[44][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__44__brand" name="vehicle[44][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
-							<input type="text" id="vehicle__44__brand_info" name="vehicle[44][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear"/>
+							<input type="text" id="vehicle__44__brand_info" name="vehicle[44][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td>
 						<select id="vehicle__44__year" name="vehicle[44][][year]" data-inp-act="hidden,unclear">
-							<option value="nodata">Рік випуску</option>
+							<option selected="" disabled="">Рік випуску</option>
+							<option value="nodata">Невідомий</option>
 							<option value=2015>2015</option>
 							<option value=2014>2014</option>
 							<option value=2013>2013</option>
@@ -3979,7 +3991,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum" name="vehicle[44][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum" name="vehicle[44][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__44__sum_comment" name="vehicle[44][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -3987,7 +3999,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum_rent" name="vehicle[44][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum_rent" name="vehicle[44][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="vehicle__44__sum_rent_comment" name="vehicle[44][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4002,7 +4014,6 @@
 			</table>
 
 		</fieldset>
-
 
 		<div class="declaration-nav">
 			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="1">Попередній розділ</button>
@@ -4025,11 +4036,11 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col width="200"/>
-					<col/>
-					<col width="265"/>
-					<col width="30"/>
+					<col width="35" />
+					<col width="200"  />
+					<col />
+					<col width="265" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					А. Вклади у банках, цінні папери та інші активи, що перебувають у власності декларанта (грн)
@@ -4037,9 +4048,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th>
 						Перелік
@@ -4058,9 +4069,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							45.
-						</span>
+					<span>
+						45.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Сума коштів на рахунках у банках та інших фінансових установах, у т. ч.:
@@ -4068,8 +4079,7 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__45__sum" name="banks[45][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
-
+								<input class="js-is-DigitsOnly" type="text" id="banks__45__sum" name="banks[45][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 								<p class="declaration-small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
@@ -4078,13 +4088,11 @@
 								<select id="banks__45__sum_units" name="banks[45][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
-
 								<p class="declaration-small-note js-clone-ignore">
-									Якщо валюта не вказана, вважаємо, що це гривні.
-									<br/>
+									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
 							</div>
@@ -4092,19 +4100,22 @@
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item">
 								<textarea id="banks__45__sum_comment" name="banks[45][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 							</div>
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__45__sum_foreign" name="banks[45][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__45__sum_foreign" name="banks[45][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__45__sum_foreign_units" name="banks[45][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4112,6 +4123,9 @@
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item">
 								<textarea id="banks__45__sum_foreign_comment" name="banks[45][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 							</div>
 						</div>
 					</td>
@@ -4124,9 +4138,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							46.
-						</span>
+					<span>
+						46.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						вкладених у звітному році
@@ -4134,13 +4148,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__46__sum" name="banks[46][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__46__sum" name="banks[46][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__46__sum_units" name="banks[46][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4154,13 +4168,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__46__sum_foreign" name="banks[46][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__46__sum_foreign" name="banks[46][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__46__sum_foreign_units" name="banks[46][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4180,9 +4194,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							47.
-						</span>
+					<span>
+						47.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Номінальна вартість цінних паперів, у т. ч.:
@@ -4190,13 +4204,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__47__sum" name="banks[47][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__47__sum" name="banks[47][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__47__sum_units" name="banks[47][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4210,13 +4224,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__47__sum_foreign" name="banks[47][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__47__sum_foreign" name="banks[47][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__47__sum_foreign_units" name="banks[47][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4236,9 +4250,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							48.
-						</span>
+					<span>
+						48.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						придбаних у звітному році
@@ -4246,13 +4260,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__48__sum" name="banks[48][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__48__sum" name="banks[48][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__48__sum_units" name="banks[48][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4266,13 +4280,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__48__sum_foreign" name="banks[48][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__48__sum_foreign" name="banks[48][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__48__sum_foreign_units" name="banks[48][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4292,9 +4306,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							49.
-						</span>
+					<span>
+						49.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації, у т. ч.:
@@ -4302,13 +4316,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__49__sum" name="banks[49][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__49__sum" name="banks[49][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__49__sum_units" name="banks[49][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4322,13 +4336,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__49__sum_foreign" name="banks[49][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__49__sum_foreign" name="banks[49][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__49__sum_foreign_units" name="banks[49][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4348,9 +4362,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							50.
-						</span>
+					<span>
+						50.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						внесених у звітному році
@@ -4358,13 +4372,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__50__sum" name="banks[50][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__50__sum" name="banks[50][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__50__sum_units" name="banks[50][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4378,13 +4392,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__50__sum_foreign" name="banks[50][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__50__sum_foreign" name="banks[50][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__50__sum_foreign_units" name="banks[50][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4405,11 +4419,11 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col width="200"/>
-					<col/>
-					<col width="265"/>
-					<col width="30"/>
+					<col width="35" />
+					<col width="200"  />
+					<col />
+					<col width="265" />
+					<col width="30" />
 				</colgroup>
 				<caption>
 					Б. Вклади у банках, цінні папери та інші активи, що перебувають у власності членів сім’ї декларанта (грн)
@@ -4417,9 +4431,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th>
 						Перелік
@@ -4438,9 +4452,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							51.
-						</span>
+					<span>
+						51.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Сума коштів на рахунках у банках та інших фінансових установах
@@ -4448,8 +4462,7 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__51__sum" name="banks[51][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
-
+								<input class="js-is-DigitsOnly" type="text" id="banks__51__sum" name="banks[51][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 								<p class="declaration-small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
@@ -4458,13 +4471,11 @@
 								<select id="banks__51__sum_units" name="banks[51][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
-
 								<p class="declaration-small-note js-clone-ignore">
-									Якщо валюта не вказана, вважаємо, що це гривні.
-									<br/>
+									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
 							</div>
@@ -4472,19 +4483,22 @@
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item">
 								<textarea id="banks__51__sum_comment" name="banks[51][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 							</div>
 						</div>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks51__sum_foreign" name="banks[51][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks51__sum_foreign" name="banks[51][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__51__sum_foreign_units" name="banks[51][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4492,6 +4506,9 @@
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item">
 								<textarea id="banks__51__sum_foreign_comment" name="banks[51][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 							</div>
 						</div>
 					</td>
@@ -4504,9 +4521,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							52.
-						</span>
+					<span>
+						52.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Номінальна вартість цінних паперів
@@ -4514,13 +4531,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__52__sum" name="banks[52][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__52__sum" name="banks[52][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__52__sum_units" name="banks[52][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4534,13 +4551,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks52__sum_foreign" name="banks[52][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks52__sum_foreign" name="banks[52][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__52__sum_foreign_units" name="banks[52][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4560,9 +4577,9 @@
 				<tbody class="js-clone-wrapper">
 				<tr class="js-toclone">
 					<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
-						<span>
-							53.
-						</span>
+					<span>
+						53.
+					</span>
 					</td>
 					<th class="weiss-table__cell_fwn">
 						Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації
@@ -4570,13 +4587,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks__53__sum" name="banks[53][][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks__53__sum" name="banks[53][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__53__sum_units" name="banks[53][][sum_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4590,13 +4607,13 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-								<input class="js-is-DigitsOnly" type="text" id="banks53__sum_foreign" name="banks[53][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+								<input class="js-is-DigitsOnly" type="text" id="banks53__sum_foreign" name="banks[53][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 							</div>
 							<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 								<select id="banks__53__sum_foreign_units" name="banks[53][][sum_foreign_units]" data-inp-act="hidden,unclear">
 									<option value="uah" selected="">грн.</option>
 									<option value="usd">долл.</option>
-									<option value="eur">евро</option>
+									<option value="eur">євро</option>
 									<option value="other">інша</option>
 								</select>
 							</div>
@@ -4616,9 +4633,7 @@
 
 			</table>
 
-
 		</fieldset>
-
 
 		<div class="declaration-nav">
 			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="2">Попередній розділ</button>
@@ -4641,10 +4656,10 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col/>
+					<col width="35" />
+					<col />
+					<col />
+					<col />
 				</colgroup>
 				<caption>
 					А. Фінансові зобов’язання декларанта та інші його витрати (грн)
@@ -4652,9 +4667,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th>
 						Перелік фінансових зобов’язань
@@ -4676,7 +4691,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum" name="liabilities[54][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum" name="liabilities[54][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__54__sum_comment" name="liabilities[54][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4684,7 +4699,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum_foreign" name="liabilities[54][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum_foreign" name="liabilities[54][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__54__sum_foreign_comment" name="liabilities[54][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4700,7 +4715,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum" name="liabilities[55][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum" name="liabilities[55][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__55__sum_comment" name="liabilities[55][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4708,7 +4723,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum_foreign" name="liabilities[55][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum_foreign" name="liabilities[55][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__55__sum_foreign_comment" name="liabilities[55][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4724,7 +4739,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum" name="liabilities[56][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum" name="liabilities[56][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__56__sum_comment" name="liabilities[56][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4732,7 +4747,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum_foreign" name="liabilities[56][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum_foreign" name="liabilities[56][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__56__sum_foreign_comment" name="liabilities[56][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4748,7 +4763,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum" name="liabilities[57][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum" name="liabilities[57][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__57__sum_comment" name="liabilities[57][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4756,7 +4771,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum_foreign" name="liabilities[57][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum_foreign" name="liabilities[57][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__57__sum_foreign_comment" name="liabilities[57][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4772,7 +4787,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum" name="liabilities[58][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum" name="liabilities[58][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__58__sum_comment" name="liabilities[58][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4780,7 +4795,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum_foreign" name="liabilities[58][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum_foreign" name="liabilities[58][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__58__sum_foreign_comment" name="liabilities[58][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4796,7 +4811,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum" name="liabilities[59][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum" name="liabilities[59][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__59__sum_comment" name="liabilities[59][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4804,7 +4819,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum_foreign" name="liabilities[59][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum_foreign" name="liabilities[59][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__59__sum_foreign_comment" name="liabilities[59][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4815,10 +4830,10 @@
 
 			<table class="weiss-table weiss-table_decl">
 				<colgroup>
-					<col width="35"/>
-					<col/>
-					<col/>
-					<col/>
+					<col width="35" />
+					<col />
+					<col />
+					<col />
 				</colgroup>
 				<caption>
 					Б. Фінансові зобов’язання членів сім’ї декларанта (грн)
@@ -4826,9 +4841,9 @@
 				<thead>
 				<tr>
 					<th rowspan="2" class="weiss-table__cell_bd-r">
-						<span class="i-wai">
-							№
-						</span>
+					<span class="i-wai">
+						№
+					</span>
 					</th>
 					<th>
 						Перелік фінансових зобов’язань
@@ -4850,7 +4865,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum" name="liabilities[60][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum" name="liabilities[60][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__60__sum_comment" name="liabilities[60][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4858,7 +4873,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum_foreign" name="liabilities[60][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum_foreign" name="liabilities[60][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__60__sum_foreign_comment" name="liabilities[60][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4874,7 +4889,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum" name="liabilities[61][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum" name="liabilities[61][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__61__sum_comment" name="liabilities[61][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4882,7 +4897,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum_foreign" name="liabilities[61][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum_foreign" name="liabilities[61][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__61__sum_foreign_comment" name="liabilities[61][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4898,7 +4913,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum" name="liabilities[62][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum" name="liabilities[62][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__62__sum_comment" name="liabilities[62][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4906,7 +4921,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum_foreign" name="liabilities[62][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum_foreign" name="liabilities[62][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__62__sum_foreign_comment" name="liabilities[62][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4922,7 +4937,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum" name="liabilities[63][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum" name="liabilities[63][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__63__sum_comment" name="liabilities[63][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4930,7 +4945,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum_foreign" name="liabilities[63][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum_foreign" name="liabilities[63][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__63__sum_foreign_comment" name="liabilities[63][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4946,7 +4961,7 @@
 					</th>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum" name="liabilities[64][sum]" placeholder="Сума" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum" name="liabilities[64][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__64__sum_comment" name="liabilities[64][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4954,7 +4969,7 @@
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
-							<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum_foreign" name="liabilities[64][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear"/>
+							<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum_foreign" name="liabilities[64][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-weiss-form__row">
 							<textarea id="liabilities__64__sum_foreign_comment" name="liabilities[64][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -4964,7 +4979,6 @@
 			</table>
 
 		</fieldset>
-
 
 		<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 			<legend class="i-wai">
@@ -5072,7 +5086,7 @@
 					</label>
 				</div>
 				<div class="l-weiss-form__item">
-					<input type="checkbox" id="declaration__notfull" name="declaration[notfull]" value="1"/>
+					<input type="checkbox" id="declaration__notfull" name="declaration[notfull]" value="1" />
 				</div>
 			</div>
 
@@ -5083,7 +5097,7 @@
 					</label>
 				</div>
 				<div class="l-weiss-form__item">
-					<input type="text" id="declaration__notfull__lostpages" name="declaration[notfull_lostpages]"/>
+					<input type="text" id="declaration__notfull__lostpages" name="declaration[notfull_lostpages]" />
 				</div>
 			</div>
 
@@ -5094,7 +5108,7 @@
 					</label>
 				</div>
 				<div class="l-weiss-form__item">
-					<input type="checkbox" id="declaration__additional-info" name="declaration[additional_info]" value="1"/>
+					<input type="checkbox" id="declaration__additional-info" name="declaration[additional_info]" value="1" />
 				</div>
 			</div>
 
@@ -5114,8 +5128,6 @@
 					<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="3">Попередній розділ</button>
 				</div>
 				<!-- to align this on right -->
-				<input type="reset" class="weiss-btn weiss-btn_small weiss-btn_grey js-section-go" data-section-go="0" value="Стерти усі поля"/>
-				<input type="submit" class="weiss-btn weiss-btn_medium weiss-btn_blue" value="Отправити форму" title="Відправити форму"/>
 			</div>
 
 		</fieldset>
