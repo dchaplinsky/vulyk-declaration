@@ -159,9 +159,16 @@ scripts.Common = {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
+		$.validator.addMethod("lastnameonly", function(value, element) {
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
+		}, "Tільки букви, будьласка");
+
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
+			},
+			'js-is-lastnameonly': {
+				lastnameonly: true
 			},
 			'js-is-DigitsOnly': {
 				digits: true
