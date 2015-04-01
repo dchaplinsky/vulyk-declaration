@@ -18,10 +18,10 @@ scripts.Common = {
 
 	isModernBrowser: function () {
 		if ( // modernizer alternative
-			'querySelector' in document &&
-			'localStorage' in window &&
-			'addEventListener' in window 
-			) {
+		'querySelector' in document &&
+		'localStorage' in window &&
+		'addEventListener' in window
+		) {
 			return true;
 		} else {
 			return false;
@@ -72,16 +72,16 @@ scripts.Common = {
 
 				switch (value) {
 					case "hidden":
-						var title = 'Це поле скрите';
+						var title = 'Поле містить приховану інформацію';
 						break;
 					case "unclear":
-						var title = 'Це поле нерозбірливе';
+						var title = 'Поле містить нерозбірливу інформацію';
 						break;
 				}
 
 				$(input.next('.weiss-form__input-w-ico__ico'))
 					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
+					'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
@@ -159,9 +159,16 @@ scripts.Common = {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
+		$.validator.addMethod("lastnameonly", function(value, element) {
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
+		}, "Tільки букви, будьласка");
+
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
+			},
+			'js-is-lastnameonly': {
+				lastnameonly: true
 			},
 			'js-is-DigitsOnly': {
 				digits: true
@@ -247,6 +254,7 @@ scripts.Common = {
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
 				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
+				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
 				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
 				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
@@ -257,7 +265,7 @@ scripts.Common = {
 				var $form = $('#form-declaration'),
 					data = $form.serializeJSON();
 
-				if ($("#section-4").is(":visible")) {
+				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
 					$form.remove();
 					callback(data);
 				} else {

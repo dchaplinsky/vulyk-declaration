@@ -376,10 +376,11 @@ dd {
   display: inline-block;
   overflow: hidden;
   width: 50px;
-  height: 10px;
+  height: 18px;
   vertical-align: middle;
-  text-indent: -999px;
   background: #ccc;
+  color: #fff;
+  font: bold 12px/18px Arial, FreeSans, sans-serif;
 }
 
 .declaration-progress-indicator__step_inactive {

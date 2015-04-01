@@ -5,11 +5,11 @@
 	<div id="section-0" class="js-tab-content">
 		<div class="declaration-action">
 			<p class="declaration-action_head">Завантажити pdf декларацію</p>
-			<p><a class="js-declaration-pdf" href="{{ link }}">Декларація</a></p>
+			<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
 		</div>
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
-			про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
+			про майно, доходи, витрати і зобов’язання фінансового характеру
 		</h1>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
@@ -37,7 +37,6 @@
 		<div class="l-weiss-form__item">
 			<select id="intro__declaration-year" name="intro[declaration_year]" data-inp-act="hidden,unclear">
 				<option value="nodata" selected="">Немає данних</option>
-				<option value=2015>2015</option>
 				<option value=2014>2014</option>
 				<option value=2013>2013</option>
 				<option value=2012>2012</option>
@@ -45,23 +44,6 @@
 				<option value=2010>2010</option>
 				<option value=2009>2009</option>
 				<option value=2008>2008</option>
-				<option value=2007>2007</option>
-				<option value=2006>2006</option>
-				<option value=2005>2005</option>
-				<option value=2004>2004</option>
-				<option value=2003>2003</option>
-				<option value=2002>2002</option>
-				<option value=2001>2001</option>
-				<option value=2000>2000</option>
-				<option value=1999>1999</option>
-				<option value=1998>1998</option>
-				<option value=1997>1997</option>
-				<option value=1996>1996</option>
-				<option value=1995>1995</option>
-				<option value=1994>1994</option>
-				<option value=1993>1993</option>
-				<option value=1992>1992</option>
-				<option value=1991>1991</option>
 			</select>
 		</div>
 	</div>
@@ -81,15 +63,15 @@
 		</legend>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__last-name" class="i-wai">Прізвище</label>
-			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
-			<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__patronymic" class="i-wai">По батькові</label>
-			<input class="js-is-LettersOnly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
@@ -108,7 +90,7 @@
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="" disabled="">Область</option>
 						<option value="nodata">Немає данних</option>
-							<option value="kiev">Київ</option>
+							<option value="kiev">м. Київ</option>
 							<option value="1">Івано-Франківська область</option>
 							<option value="2">Вінницька область</option>
 							<option value="3">Волинська область</option>
@@ -120,6 +102,7 @@
 							<option value="9">Кіровоградська область</option>
 							<option value="10">Київська область</option>
 							<option value="11">Кримська Автономна Республіка</option>
+							<option value="Sevostopol">м. Севостополь</option>
 							<option value="12">Луганська область</option>
 							<option value="13">Львівська область</option>
 							<option value="14">Миколаївська область</option>
@@ -158,15 +141,6 @@
 					<label for="general__place_address" class="i-wai">Решта адреси</label>
 					<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
-				<div class="l-weiss-form__item l-weiss-form__item_lined">
-					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="" disabled="">Тип адреси</option>
-						<option value="nodata">Немає данних</option>
-						<option value="registration">Адреса реестрації</option>
-						<option value="actual">Фактична адреса</option>
-					</select>
-				</div>
 				<div class="l-weiss-form__item">
 					<span class="weiss-btn weiss-btn_small weiss-btn_w-30 weiss-btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="weiss-btn weiss-btn_small weiss-btn_w-30 weiss-btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
@@ -174,56 +148,68 @@
 			</div>
 		</div>
 	</fieldset>
-	<fieldset class="l-weiss-form__row">
-		<legend class="l-weiss-form__item weiss-form__label">
-			<span>3. Посада:</span>
-		</legend>
-		<p class="l-weiss-form__item declaration-small-note">
-			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
-		</p>
-		<div class="l-weiss-form__item">
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
-				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="" disabled="">Область</option>
-					<option value="nodata">Немає данних</option>
-						<option value="kiev">Київ</option>
-						<option value="1">Івано-Франківська область</option>
-						<option value="2">Вінницька область</option>
-						<option value="3">Волинська область</option>
-						<option value="4">Дніпропетровська область</option>
-						<option value="5">Донецька область</option>
-						<option value="6">Житомирська область</option>
-						<option value="7">Закарпатська область</option>
-						<option value="8">Запорізька область</option>
-						<option value="9">Кіровоградська область</option>
-						<option value="10">Київська область</option>
-						<option value="11">Кримська Автономна Республіка</option>
-						<option value="12">Луганська область</option>
-						<option value="13">Львівська область</option>
-						<option value="14">Миколаївська область</option>
-						<option value="15">Одеська область</option>
-						<option value="16">Полтавська область</option>
-						<option value="17">Рівненська область</option>
-						<option value="18">Сумська область</option>
-						<option value="19">Тернопільська область</option>
-						<option value="20">Харківська область</option>
-						<option value="21">Херсонська область</option>
-						<option value="22">Хмельницька область</option>
-						<option value="23">Черкаська область</option>
-						<option value="24">Чернівецька область</option>
-						<option value="25">Чернігівська область</option>
-				</select>
-			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
-				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
+	<fieldset>
+		<div class="l-weiss-form__row">
+			<legend class="l-weiss-form__item weiss-form__label">
+				<span>3. Посада:</span>
+			</legend>
+			<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
 				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 		</div>
+		<div class="l-weiss-form__row">
+			<legend class="l-weiss-form__item weiss-form__label">
+				<span>Претендент:</span>
+			</legend>
+			<div class="l-weiss-form__item">
+				<label for="general__post_candidate" class="i-wai">Претендент</label>
+				<input type="checkbox" id="general__post_candidate" name="general[post][candidate]" value="1" />
+			</div>
+		</div>
+		<div class="l-weiss-form__row">
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
+				<label for="general__post_region" class="i-wai">Область</label>
+				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
+					<option value="unspecified" selected="" disabled="">Область</option>
+					<option value="nodata">Немає данних</option>
+					<option value="kiev">м. Київ</option>
+					<option value="1">Івано-Франківська область</option>
+					<option value="2">Вінницька область</option>
+					<option value="3">Волинська область</option>
+					<option value="4">Дніпропетровська область</option>
+					<option value="5">Донецька область</option>
+					<option value="6">Житомирська область</option>
+					<option value="7">Закарпатська область</option>
+					<option value="8">Запорізька область</option>
+					<option value="9">Кіровоградська область</option>
+					<option value="10">Київська область</option>
+					<option value="11">Кримська Автономна Республіка</option>
+					<option value="Sevostopol">м. Севостополь</option>
+					<option value="12">Луганська область</option>
+					<option value="13">Львівська область</option>
+					<option value="14">Миколаївська область</option>
+					<option value="15">Одеська область</option>
+					<option value="16">Полтавська область</option>
+					<option value="17">Рівненська область</option>
+					<option value="18">Сумська область</option>
+					<option value="19">Тернопільська область</option>
+					<option value="20">Харківська область</option>
+					<option value="21">Херсонська область</option>
+					<option value="22">Хмельницька область</option>
+					<option value="23">Черкаська область</option>
+					<option value="24">Чернівецька область</option>
+					<option value="25">Чернігівська область</option>
+				</select>
+			</div>
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
+				<label for="general__post_office" class="i-wai">Відомство</label>
+				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
+			</div>
+		</div>
+		<p class="l-weiss-form__item declaration-small-note">
+			Запишіть посаду так, як її вказав декларант (повністю). Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте «Структуру органів державної влади (лінк)», або погугліть. Якщо нічого не допомогло - вводіть що бачите в посаді. У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними.
+		</p>
 	</fieldset>
 
 	<fieldset class="weiss-form__set">
@@ -243,7 +229,7 @@
 						Ступінь зв’язку
 					</th>
 					<th>
-						Прізвище ініціали, дата народження
+						ПІБ, дата народження
 					</th>
 					<th>
 						Реєстраційний номер облікової картки платника податків/ серія та номер паспорта громадянина України (якщо вказано)
@@ -258,9 +244,9 @@
 					<td>
 						<div class="l-weiss-form__row js-related-control">
 							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
-								<option value="unspecified" selected="">Ступінь зв’язку</option>
+								<option value="unspecified" selected="" disabled="">Ступінь зв’язку</option>
 								<option value="nodata">Немає данних</option>
-								<option value="spouse">Супруг</option>
+								<option value="spouse">Подружжя</option>
 								<option value="parents">Батькі</option>
 								<option value="children">Дитина</option>
 								<option value="other">Інше</option>
@@ -350,6 +336,7 @@
 				</td>
 				<th class="weiss-table__cell_fwn">
 					Загальна сума сукупного доходу, гривні, у т.ч.
+						<p class="l-weiss-form__item declaration-small-note">Тут і далі у поле &laquo;Сума доходу&raquo; вносяться виключно цифри, вказані декларантом.<br /> Усі інші дані виписуються у поле &laquo;Коментар&raquo;</p>
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
@@ -423,7 +410,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="weiss-table__cell_unspaced">
-				<textarea class="weiss-form__textarea weiss-form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear"></textarea>
+				<textarea class="weiss-form__textarea weiss-form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear" placeholder="(назва закладу, установи тощо, в яких одержано (нараховано) зазначені у цій позиції доходи)"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -803,15 +790,20 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Дохід в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row js-related-control">
 						<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
 							<option value="usd" selected="">долл.</option>
-							<option value="eur">евро</option>
+							<option value="eur">євро</option>
 							<option value="gbp">фунти стерлінгів</option>
+							<option value="rub">російскі рублі</option>
+							<option value="chf">швейцарський франк</option>
 							<option value="other">інша</option>
 						</select>
+					</div>
+					<div class="l-weiss-form__row js-related-section">
+						<input type="text" name="income[21][][cur_units_other]" placeholder="Iнший тип валюти" />
 					</div>
 				</td>
 				<td>
@@ -881,15 +873,20 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Дохід в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-weiss-form__row">
-						<select id="income__22_family__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
+					<div class="l-weiss-form__row js-related-control">
+						<select id="income__22__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
 							<option value="usd" selected="">долл.</option>
-							<option value="eur">евро</option>
+							<option value="eur">євро</option>
 							<option value="gbp">фунти стерлінгів</option>
+							<option value="rub">російскі рублі</option>
+							<option value="chf">швейцарський франк</option>
 							<option value="other">інша</option>
 						</select>
+					</div>
+					<div class="l-weiss-form__row js-related-section">
+						<input type="text" name="income[22][][cur_units_other]" placeholder="Iнший тип валюти" />
 					</div>
 				</td>
 				<td>
@@ -987,7 +984,7 @@
 						<select id="estate__23__region" name="estate[23][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -999,6 +996,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1025,10 +1023,10 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__23__space_units" name="estate[23][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м2</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
@@ -1081,7 +1079,7 @@
 						<select id="estate__24__region" name="estate[24][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1093,6 +1091,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1122,7 +1121,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1166,7 +1165,7 @@
 						<select id="estate__25__region" name="estate[25][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1178,6 +1177,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1207,7 +1207,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1251,7 +1251,7 @@
 						<select id="estate__26__region" name="estate[26][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1263,6 +1263,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1292,7 +1293,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1336,7 +1337,7 @@
 						<select id="estate__27__region" name="estate[27][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1348,6 +1349,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1377,7 +1379,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1421,7 +1423,7 @@
 						<select id="estate__28__region" name="estate[28][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1433,6 +1435,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1462,7 +1465,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1554,8 +1557,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__29__region" name="estate[29][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1567,6 +1570,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1593,10 +1597,10 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__29__space_units" name="estate[29][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м2</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
@@ -1648,8 +1652,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__30__region" name="estate[30][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1661,6 +1665,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1690,7 +1695,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1733,8 +1738,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__31__region" name="estate[31][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1746,6 +1751,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1775,7 +1781,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1818,8 +1824,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__32__region" name="estate[32][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1831,6 +1837,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1860,7 +1867,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1903,8 +1910,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__33__region" name="estate[33][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -1916,6 +1923,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1945,7 +1953,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -1988,8 +1996,8 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__34__region" name="estate[34][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
-								<option value="kiev">Київ</option>
+							<option value="nodata">Інше</option>
+								<option value="kiev">м. Київ</option>
 								<option value="1">Івано-Франківська область</option>
 								<option value="2">Вінницька область</option>
 								<option value="3">Волинська область</option>
@@ -2001,6 +2009,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
+								<option value="Sevostopol">м. Севостополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -2030,7 +2039,7 @@
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
-							<option value="nodata">Немає данних</option>
+							<option value="other">інше</option>
 						</select>
 					</div>
 					<div class="l-weiss-form__row">
@@ -2147,12 +2156,13 @@
 						<input type="text" id="vehicle__35__brand_info" name="vehicle[35][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 				</td>
 				<td>
 					<select id="vehicle__35__year" name="vehicle[35][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -2333,7 +2343,8 @@
 				</td>
 				<td>
 					<select id="vehicle__36__year" name="vehicle[36][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -2514,7 +2525,8 @@
 				</td>
 				<td>
 					<select id="vehicle__37__year" name="vehicle[37][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -2695,7 +2707,8 @@
 				</td>
 				<td>
 					<select id="vehicle__38__year" name="vehicle[38][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -2876,7 +2889,8 @@
 				</td>
 				<td>
 					<select id="vehicle__39__year" name="vehicle[39][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -3102,12 +3116,13 @@
 						<input type="text" id="vehicle__40__brand_info" name="vehicle[40][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 				</td>
 				<td>
 					<select id="vehicle__40__year" name="vehicle[40][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -3288,7 +3303,8 @@
 				</td>
 				<td>
 					<select id="vehicle__41__year" name="vehicle[41][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -3469,7 +3485,8 @@
 				</td>
 				<td>
 					<select id="vehicle__42__year" name="vehicle[42][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -3650,7 +3667,8 @@
 				</td>
 				<td>
 					<select id="vehicle__43__year" name="vehicle[43][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -3831,7 +3849,8 @@
 				</td>
 				<td>
 					<select id="vehicle__44__year" name="vehicle[44][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<option value=2015>2015</option>
 						<option value=2014>2014</option>
 						<option value=2013>2013</option>
@@ -4070,7 +4089,7 @@
 							<select id="banks__45__sum_units" name="banks[45][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 								<p class="declaration-small-note js-clone-ignore">
@@ -4082,6 +4101,9 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
 							<textarea id="banks__45__sum_comment" name="banks[45][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 						</div>
 					</div>
 				</td>
@@ -4094,7 +4116,7 @@
 							<select id="banks__45__sum_foreign_units" name="banks[45][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4102,6 +4124,9 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
 							<textarea id="banks__45__sum_foreign_comment" name="banks[45][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 						</div>
 					</div>
 				</td>
@@ -4130,7 +4155,7 @@
 							<select id="banks__46__sum_units" name="banks[46][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4150,7 +4175,7 @@
 							<select id="banks__46__sum_foreign_units" name="banks[46][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4186,7 +4211,7 @@
 							<select id="banks__47__sum_units" name="banks[47][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4206,7 +4231,7 @@
 							<select id="banks__47__sum_foreign_units" name="banks[47][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4242,7 +4267,7 @@
 							<select id="banks__48__sum_units" name="banks[48][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4262,7 +4287,7 @@
 							<select id="banks__48__sum_foreign_units" name="banks[48][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4298,7 +4323,7 @@
 							<select id="banks__49__sum_units" name="banks[49][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4318,7 +4343,7 @@
 							<select id="banks__49__sum_foreign_units" name="banks[49][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4354,7 +4379,7 @@
 							<select id="banks__50__sum_units" name="banks[50][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4374,7 +4399,7 @@
 							<select id="banks__50__sum_foreign_units" name="banks[50][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4447,7 +4472,7 @@
 							<select id="banks__51__sum_units" name="banks[51][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 								<p class="declaration-small-note js-clone-ignore">
@@ -4459,6 +4484,9 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
 							<textarea id="banks__51__sum_comment" name="banks[51][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 						</div>
 					</div>
 				</td>
@@ -4471,7 +4499,7 @@
 							<select id="banks__51__sum_foreign_units" name="banks[51][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4479,6 +4507,9 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
 							<textarea id="banks__51__sum_foreign_comment" name="banks[51][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+								<p class="declaration-small-note js-clone-ignore">
+									Назви банків та будь які текстові значення вносяться у це поле
+								</p>
 						</div>
 					</div>
 				</td>
@@ -4507,7 +4538,7 @@
 							<select id="banks__52__sum_units" name="banks[52][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4527,7 +4558,7 @@
 							<select id="banks__52__sum_foreign_units" name="banks[52][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4563,7 +4594,7 @@
 							<select id="banks__53__sum_units" name="banks[53][][sum_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -4583,7 +4614,7 @@
 							<select id="banks__53__sum_foreign_units" name="banks[53][][sum_foreign_units]" data-inp-act="hidden,unclear">
 								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
-								<option value="eur">евро</option>
+								<option value="eur">євро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
@@ -5102,8 +5133,6 @@
 			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="3">Попередній розділ</button>
 		</div>
 		<!-- to align this on right -->
-		<input type="reset" class="weiss-btn weiss-btn_small weiss-btn_grey js-section-go" data-section-go="0" value="Стерти усі поля" />
-		<input type="submit" class="weiss-btn weiss-btn_medium weiss-btn_blue" value="Отправити форму" title="Відправити форму" />
 	</div>
 
 </fieldset>
