@@ -163,14 +163,21 @@ scripts.Common = {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
+		$.validator.addMethod("fractdigitsonly", function(value, element) {
+			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри");
+
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
 			},
+			'js-is-DigitsOnly': {
+				fractdigitsonly: true
+			},
 			'js-is-lastnameonly': {
 				lastnameonly: true
 			},
-			'js-is-DigitsOnly': {
+			'js-is-strictDigitsOnly': {
 				digits: true
 			}
 		});

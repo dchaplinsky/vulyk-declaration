@@ -10,7 +10,7 @@
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
 			про майно, доходи, витрати і зобов’язання фінансового характеру
-		</h1>
+		</h1>		
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 	<legend class="i-wai">
@@ -75,7 +75,7 @@
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
-			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
+			<input class="js-is-strictDigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 		</div>
 	</fieldset>
 
@@ -927,9 +927,9 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
+			<col width="100" />
 			<col />
-			<col />
-			<col width="200" />
+			<col width="150" />
 			<col width="150" />
 			<col width="150" />
 			<col width="30" />
@@ -1023,13 +1023,13 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__23__space_units" name="estate[23][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м2</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
@@ -1118,7 +1118,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__24__space_units" name="estate[24][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1204,7 +1204,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__25__space_units" name="estate[25][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1290,7 +1290,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__26__space_units" name="estate[26][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1376,7 +1376,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__27__space_units" name="estate[27][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1462,7 +1462,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__28__space_units" name="estate[28][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1499,7 +1499,7 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
-			<col />
+			<col width="100" />
 			<col />
 			<col width="150" />
 			<col width="150" />
@@ -1597,13 +1597,13 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__29__space_units" name="estate[29][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м2</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
@@ -1621,7 +1621,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate[29][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1692,7 +1692,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__30__space_units" name="estate[30][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1707,7 +1707,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate[30][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1778,7 +1778,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__31__space_units" name="estate[31][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1793,7 +1793,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate[31][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1864,7 +1864,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__32__space_units" name="estate[32][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1879,7 +1879,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate[32][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1950,7 +1950,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__33__space_units" name="estate[33][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -1965,7 +1965,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate[33][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2036,7 +2036,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__34__space_units" name="estate[34][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2051,7 +2051,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate[34][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
