@@ -28,6 +28,15 @@ scripts.Common = {
 		}
 	},
 
+	globalInit: function() {
+		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
+			var self = $(this);
+
+			self.parent().toggleClass('js-ico-checked');
+			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
+		});
+	},
+
 	jsPlaceholderInit: function () {
 		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
@@ -83,13 +92,6 @@ scripts.Common = {
 					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
 					'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
-		});
-
-		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
-			var self = $(this);
-
-			self.parent().toggleClass('js-ico-checked');
-			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
 		});
 	},
 
@@ -247,6 +249,7 @@ scripts.Common = {
 
 		scrpt.initializeCache();
 		scrpt.detecting();
+		scrpt.globalInit();
 
 		$(function () { // DOM Ready
 			var template = Handlebars.compile($('#decl_form_template').html()),
