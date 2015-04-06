@@ -1,4 +1,5 @@
 ;
+var scripts = scripts || {};
 
 scripts.Common = {
 
@@ -66,17 +67,17 @@ scripts.Common = {
 	},
 
 	inputActions: function() {
-		var inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
+		var $inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
 
-		inputs.wrap("<span class='weiss-form__input-w-ico'></span>");
-		$('<i class="weiss-form__input-w-ico__ico weiss-form__input-act"></i>').insertAfter(inputs);
+		$inputs.wrap("<span class='weiss-form__input-w-ico'></span>");
+		$('<i class="weiss-form__input-w-ico__ico weiss-form__input-act"></i>').insertAfter($inputs);
 
-		inputs.each(function() {
-			var input = $(this),
-				inputName = input.attr('name'),
-				inputActions = input.data('inp-act').split(',');
+		$inputs.each(function() {
+			var $input = $(this),
+				$inputName = $input.attr('name'),
+				$inputActions = $input.data('inp-act').split(',');
 
-			$.each(inputActions, function (key, value) {
+			$.each($inputActions, function (key, value) {
 				var title;
 
 				switch (value) {
@@ -88,9 +89,9 @@ scripts.Common = {
 						break;
 				}
 
-				$(input.next('.weiss-form__input-w-ico__ico'))
+				$($input.next('.weiss-form__input-w-ico__ico'))
 					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
-					'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
+					'<input type="checkbox" name="'+ $inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 	},
@@ -131,7 +132,7 @@ scripts.Common = {
 	},
 
 	addAutoComplete: function(elem, source) {
-		var elemPar = $(elem).parent();
+		var $elemPar = $(elem).parent();
 
 		$(elem).autocomplete({
 			source: function(request, response) {
@@ -139,7 +140,7 @@ scripts.Common = {
 
 				response(results.slice(0, 7));
 			},
-			appendTo: elemPar
+			appendTo: $elemPar
 		});
 	},
 
@@ -184,7 +185,7 @@ scripts.Common = {
 			}
 		});
 
-		var form = $('#form-declaration'),
+		var $form = $('#form-declaration'),
 			validateSettings = {
 				errorClass: "js-invalid",
 				errorElement: "p",
@@ -206,12 +207,18 @@ scripts.Common = {
 
 				}
 			},
-			validateThis = form.validate(validateSettings),
+			validateThis = $form.validate(validateSettings),
 			current = 0,
 			content = $('.js-tab-content');
 
-		this.$cache.body.on('reset', form, function () {
-			form.validate().resetForm();
+		this.$cache.body.on('reset', $form, function () {
+			$form.validate().resetForm();
+		}).on('click', '#intro__isnotdeclaration', function () {
+			if($(this).is(':checked')) {
+				$form.validate().settings.ignore = "*"; // disable all validation
+			} else {
+				$form.validate().settings.ignore = "";
+			}
 		});
 
 		content.hide();
@@ -264,9 +271,10 @@ scripts.Common = {
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
 				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
 				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
+				scrpt.addAutoComplete("#general__place_district", scripts.Data.autocompliteData.districts);
+				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
 				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
 				scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);

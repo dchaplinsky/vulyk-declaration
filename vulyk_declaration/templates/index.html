@@ -10,7 +10,7 @@
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
 			про майно, доходи, витрати і зобов’язання фінансового характеру
-		</h1>		
+		</h1>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 	<legend class="i-wai">
@@ -71,7 +71,7 @@
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__patronymic" class="i-wai">По батькові</label>
-			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
@@ -90,7 +90,6 @@
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="" disabled="">Область</option>
 						<option value="nodata">Немає даних</option>
-							<option value="ukraine">Загальнодержавний</option>
 							<option value="kiev">м. Київ</option>
 							<option value="1">Івано-Франківська область</option>
 							<option value="2">Вінницька область</option>
@@ -103,7 +102,7 @@
 							<option value="9">Кіровоградська область</option>
 							<option value="10">Київська область</option>
 							<option value="11">Кримська Автономна Республіка</option>
-							<option value="Sevostopol">м. Севастополь</option>
+							<option value="Sevastopol">м. Севастополь</option>
 							<option value="12">Луганська область</option>
 							<option value="13">Львівська область</option>
 							<option value="14">Миколаївська область</option>
@@ -154,17 +153,12 @@
 			<legend class="l-weiss-form__item weiss-form__label">
 				<span>3. Посада:</span>
 			</legend>
-			<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
+			<div class="l-weiss-form__item l-weiss-form__item_w-post-input l-weiss-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
 				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
-		</div>
-		<div class="l-weiss-form__row">
-			<legend class="l-weiss-form__item weiss-form__label">
-				<span>Претендент:</span>
-			</legend>
+			<label class="l-weiss-form__item" for="general__post_candidate">Претендент:</label>
 			<div class="l-weiss-form__item">
-				<label for="general__post_candidate" class="i-wai">Претендент</label>
 				<input type="checkbox" id="general__post_candidate" name="general[post][candidate]" value="1" />
 			</div>
 		</div>
@@ -174,6 +168,7 @@
 				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="" disabled="">Область</option>
 					<option value="nodata">Немає даних</option>
+					<option value="ukraine">Загальнодержавний регіон</option>
 					<option value="kiev">м. Київ</option>
 					<option value="1">Івано-Франківська область</option>
 					<option value="2">Вінницька область</option>
@@ -186,7 +181,7 @@
 					<option value="9">Кіровоградська область</option>
 					<option value="10">Київська область</option>
 					<option value="11">Кримська Автономна Республіка</option>
-					<option value="Sevostopol">м. Севостополь</option>
+					<option value="Sevastopol">м. Севастополь</option>
 					<option value="12">Луганська область</option>
 					<option value="13">Львівська область</option>
 					<option value="14">Миколаївська область</option>
@@ -997,7 +992,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1092,7 +1087,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1178,7 +1173,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1264,7 +1259,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1350,7 +1345,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1436,7 +1431,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1571,7 +1566,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1666,7 +1661,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1752,7 +1747,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1838,7 +1833,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -1924,7 +1919,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>
@@ -2010,7 +2005,7 @@
 								<option value="9">Кіровоградська область</option>
 								<option value="10">Київська область</option>
 								<option value="11">Кримська Автономна Республіка</option>
-								<option value="Sevostopol">м. Севостополь</option>
+								<option value="Sevastopol">м. Севастополь</option>
 								<option value="12">Луганська область</option>
 								<option value="13">Львівська область</option>
 								<option value="14">Миколаївська область</option>

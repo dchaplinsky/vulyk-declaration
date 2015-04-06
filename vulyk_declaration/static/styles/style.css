@@ -310,6 +310,9 @@ dd {
   border-style: solid;
   border-color: transparent transparent #fa3 transparent;
 }
+.declaration-small-note a {
+  color: #fff;
+}
 
 /* @end */
 /* @group ui-autocomplete
