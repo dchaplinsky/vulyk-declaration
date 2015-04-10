@@ -1,18 +1,35 @@
 <script id="decl_form_template" type="text/x-handlebars-template">
 	{% raw %}
 		<form class="weiss-form weiss-form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
-
 	<div id="section-0" class="js-tab-content">
-		<div class="declaration-action">
-			<p class="declaration-action_head">Завантажити декларацію для розшифровки</p>
-			<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
-		</div>
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
 			про майно, доходи, витрати і зобов’язання фінансового характеру
 		</h1>
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="1">Наступний розділ</button>
+	</div>
+</div>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
+
+	<div class="declaration-action">
+		<p class="declaration-action_head">Завантажити декларацію для розшифровки</p>
+		<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
+	</div>
+
 	<legend class="i-wai">
 		<span>Загальне про декларацію</span>
 	</legend>
@@ -153,9 +170,14 @@
 			<legend class="l-weiss-form__item weiss-form__label">
 				<span>3. Посада:</span>
 			</legend>
-			<div class="l-weiss-form__item l-weiss-form__item_w-post-input l-weiss-form__item_lined">
-				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+			<div class="l-weiss-form__item l-weiss-form__item_w-post-input">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_post" class="i-wai">Посада</label>
+					<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					Запишіть посаду так, як її вказав декларант (повністю)
+				</p>
 			</div>
 			<label class="l-weiss-form__item" for="general__post_candidate">Претендент:</label>
 			<div class="l-weiss-form__item">
@@ -163,49 +185,56 @@
 			</div>
 		</div>
 		<div class="l-weiss-form__row">
-			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
-				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="" disabled="">Область</option>
-					<option value="nodata">Немає даних</option>
-					<option value="ukraine">Загальнодержавний регіон</option>
-					<option value="kiev">м. Київ</option>
-					<option value="1">Івано-Франківська область</option>
-					<option value="2">Вінницька область</option>
-					<option value="3">Волинська область</option>
-					<option value="4">Дніпропетровська область</option>
-					<option value="5">Донецька область</option>
-					<option value="6">Житомирська область</option>
-					<option value="7">Закарпатська область</option>
-					<option value="8">Запорізька область</option>
-					<option value="9">Кіровоградська область</option>
-					<option value="10">Київська область</option>
-					<option value="11">Кримська Автономна Республіка</option>
-					<option value="Sevastopol">м. Севастополь</option>
-					<option value="12">Луганська область</option>
-					<option value="13">Львівська область</option>
-					<option value="14">Миколаївська область</option>
-					<option value="15">Одеська область</option>
-					<option value="16">Полтавська область</option>
-					<option value="17">Рівненська область</option>
-					<option value="18">Сумська область</option>
-					<option value="19">Тернопільська область</option>
-					<option value="20">Харківська область</option>
-					<option value="21">Херсонська область</option>
-					<option value="22">Хмельницька область</option>
-					<option value="23">Черкаська область</option>
-					<option value="24">Чернівецька область</option>
-					<option value="25">Чернігівська область</option>
-				</select>
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_region" class="i-wai">Область</label>
+					<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
+						<option value="unspecified" selected="" disabled="">Область</option>
+						<option value="nodata">Немає даних</option>
+						<option value="ukraine">Загальнодержавний регіон</option>
+						<option value="kiev">м. Київ</option>
+						<option value="1">Івано-Франківська область</option>
+						<option value="2">Вінницька область</option>
+						<option value="3">Волинська область</option>
+						<option value="4">Дніпропетровська область</option>
+						<option value="5">Донецька область</option>
+						<option value="6">Житомирська область</option>
+						<option value="7">Закарпатська область</option>
+						<option value="8">Запорізька область</option>
+						<option value="9">Кіровоградська область</option>
+						<option value="10">Київська область</option>
+						<option value="11">Кримська Автономна Республіка</option>
+						<option value="Sevastopol">м. Севастополь</option>
+						<option value="12">Луганська область</option>
+						<option value="13">Львівська область</option>
+						<option value="14">Миколаївська область</option>
+						<option value="15">Одеська область</option>
+						<option value="16">Полтавська область</option>
+						<option value="17">Рівненська область</option>
+						<option value="18">Сумська область</option>
+						<option value="19">Тернопільська область</option>
+						<option value="20">Харківська область</option>
+						<option value="21">Херсонська область</option>
+						<option value="22">Хмельницька область</option>
+						<option value="23">Черкаська область</option>
+						<option value="24">Чернівецька область</option>
+						<option value="25">Чернігівська область</option>
+					</select>
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними
+				</p>
 			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
-				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_office" class="i-wai">Відомство</label>
+					<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта і нема жодної динамічної підказки - вводіть що бачите в посаді
+				</p>
 			</div>
 		</div>
-		<p class="l-weiss-form__item declaration-small-note">
-			Запишіть посаду так, як її вказав декларант (повністю). Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank">«Структуру органів державної влади»</a>, або погугліть. Якщо нічого не допомогло - вводіть що бачите в посаді. У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними.
-		</p>
 	</fieldset>
 
 	<fieldset class="weiss-form__set">
@@ -903,17 +932,40 @@
 
 
 		<div class="declaration-nav">
-			<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go js-section-validate" data-section-go="1">Наступний розділ</button>
-		</div>
+	<div class="declaration-nav__l">
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="1">Наступний розділ</button>
+	</div>
+</div>
 	</div>
 	<div id="section-1" class="js-tab-content">
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="0">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
 		<ul class="declaration-progress-indicator">
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">2</li>
-			<li class="declaration-progress-indicator__step">3</li>
-			<li class="declaration-progress-indicator__step">4</li>
-			<li class="declaration-progress-indicator__step">5</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
 		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="2">Наступний розділ</button>
+	</div>
+</div>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
 	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
@@ -2071,18 +2123,41 @@
 
 
 		<div class="declaration-nav">
-			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="0">Попередній розділ</button>
-			<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go js-section-validate" data-section-go="2">Наступний розділ</button>
-		</div>
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="0">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="2">Наступний розділ</button>
+	</div>
+</div>
 	</div>
 	<div id="section-2" class="js-tab-content">
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="1">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
 		<ul class="declaration-progress-indicator">
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">3</li>
-			<li class="declaration-progress-indicator__step">4</li>
-			<li class="declaration-progress-indicator__step">5</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
 		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="3">Наступний розділ</button>
+	</div>
+</div>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
 	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
@@ -4013,18 +4088,41 @@
 
 
 		<div class="declaration-nav">
-			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="1">Попередній розділ</button>
-			<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go js-section-validate" data-section-go="3">Наступний розділ</button>
-		</div>
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="1">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="3">Наступний розділ</button>
+	</div>
+</div>
 	</div>
 	<div id="section-3" class="js-tab-content">
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="2">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
 		<ul class="declaration-progress-indicator">
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive  js-section-go" data-section-go="0">1</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">4</li>
-			<li class="declaration-progress-indicator__step">5</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
 		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="4">Наступний розділ</button>
+	</div>
+</div>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
 	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
@@ -4635,18 +4733,40 @@
 
 
 		<div class="declaration-nav">
-			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="2">Попередній розділ</button>
-			<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go js-section-validate" data-section-go="4">Наступний розділ</button>
-		</div>
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="2">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="4" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="4">Наступний розділ</button>
+	</div>
+</div>
 	</div>
 	<div id="section-4" class="js-tab-content">
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="3">Попередній розділ</button>
+	</div>
+	<div class="declaration-nav__c">
 		<ul class="declaration-progress-indicator">
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="3">4</li>
-			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">5</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про фінансові зобов’язання">5</li>
 		</ul>
+	</div>
+	<div class="declaration-nav__r">
+	</div>
+</div>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
 	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
@@ -5123,19 +5243,26 @@
 			<textarea id="declaration__additional-info__text" name="declaration[additional_info_text]" rows="10"></textarea>
 		</div>
 	</div>
-
-	<div class="l-weiss-form__row l-weiss-form__row_submit l-weiss-form__row_submit_right">
-		<div class="l-weiss-form__item">
-			<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="3">Попередній розділ</button>
-		</div>
-		<!-- to align this on right -->
-	</div>
-
 </fieldset>
 
 
+		<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="3">Попередній розділ</button>
 	</div>
-
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="0" title="Загальні відомості / Відомості про доходи">1</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="1" title="Відомості про нерухоме майно">2</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="2" title="Відомості про транспортні засоби">3</li>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="3" title="Відомості про вклади у банках, цінні папери та інші активи">4</li>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="Відомості про фінансові зобов’язання">5</li>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+	</div>
+</div>
+	</div>
 </form>
 	{% endraw %}
 </script>

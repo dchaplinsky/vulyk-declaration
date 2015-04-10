@@ -328,8 +328,9 @@ dd {
   box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5);
 }
 .ui-autocomplete li {
+  line-height: 1;
   margin: 0;
-  padding: 0 10px;
+  padding: 10px;
   cursor: default;
 }
 .ui-autocomplete .ui-state-hover,
@@ -357,9 +358,29 @@ dd {
 /* @group declaration-nav
   --------------------------------------------------------------------------- */
 .declaration-nav {
-  padding: 20px;
-  text-align: right;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
   background: #ffffe0;
+}
+
+.declaration-nav__l,
+.declaration-nav__c,
+.declaration-nav__r {
+  display: table-cell;
+  padding: 10px;
+}
+
+.declaration-nav__l {
+  text-align: left;
+}
+
+.declaration-nav__c {
+  text-align: center;
+}
+
+.declaration-nav__r {
+  text-align: right;
 }
 
 /* @end */
@@ -367,34 +388,37 @@ dd {
   --------------------------------------------------------------------------- */
 .declaration-progress-indicator {
   display: block;
-  margin: 0 0 20px;
+  margin: 0;
   padding: 0;
   text-align: center;
+  white-space: nowrap;
 }
 
 .declaration-progress-indicator__step {
   -moz-transition: all linear 0.2s;
   -webkit-transition: all linear 0.2s;
   transition: all linear 0.2s;
+  font: bold 12px/18px Arial, FreeSans, sans-serif;
   display: inline-block;
   overflow: hidden;
   width: 50px;
   height: 18px;
-  vertical-align: middle;
-  background: #ccc;
-  color: #fff;
-  font: bold 12px/18px Arial, FreeSans, sans-serif;
-}
-
-.declaration-progress-indicator__step_inactive {
   cursor: pointer;
+  vertical-align: middle;
+  color: #434343;
   background: #eee;
+  border-radius: 2px;
 }
-.declaration-progress-indicator__step_inactive:hover {
-  background: #66c2ff;
+.declaration-progress-indicator__step:hover {
+  background: #d4d4d4;
 }
 
 .declaration-progress-indicator__step_cur {
+  cursor: default;
+  color: #fff;
+  background: #09f;
+}
+.declaration-progress-indicator__step_cur:hover {
   background: #09f;
 }
 

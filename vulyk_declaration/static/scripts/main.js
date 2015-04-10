@@ -230,7 +230,6 @@ scripts.Common = {
 			}
 
 			var self = $(this),
-				validateBefore = self.hasClass('js-section-validate'),
 				section = self.data('section-go'),
 				goTo = '#section-' + section,
 				showSection = function () {
@@ -240,12 +239,10 @@ scripts.Common = {
 					$('html, body').animate({scrollTop:0}, 500);
 				};
 
-			if (validateBefore) {
-				if (validateThis.form()) {
-					showSection();
-				}
-			} else {
+			if (validateThis.form()) { // this validate only current section. If we skip some sections they dont validating.
 				showSection();
+			} else {
+				return false;
 			}
 		});
 
