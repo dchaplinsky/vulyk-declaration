@@ -55,5 +55,6 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
     test_suite='tests',
+    scripts=['bin/export_to_xlsx.py'],
     tests_require=test_requirements
 )
