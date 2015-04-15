@@ -105,7 +105,7 @@
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
-						<option value="unspecified" selected="" disabled="">Область</option>
+						<option value="unspecified" selected="">Область</option>
 						<option value="nodata">Немає даних</option>
 							<option value="kiev">м. Київ</option>
 							<option value="1">Івано-Франківська область</option>
@@ -138,7 +138,7 @@
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_district" class="i-wai">Район</label>
-					<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_district" class="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_city" class="i-wai">Населений пункт</label>
@@ -147,7 +147,7 @@
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
 					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="" disabled="">Тип населенного пункту</option>
+						<option value="unspecified" selected="" disabled="">Тип населенного пункту</option>
 						<option value="nodata">Немає даних</option>
 						<option value="city">Місто</option>
 						<option value="pgt">ПГТ</option>
@@ -231,7 +231,7 @@
 					<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 				</div>
 				<p class="l-weiss-form__item declaration-small-note">
-					Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта і нема жодної динамічної підказки - вводіть що бачите в посаді
+					Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank">«Структуру органів державної влади»</a>,
 				</p>
 			</div>
 		</div>
@@ -2221,7 +2221,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__35__brand" name="vehicle[35][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__35__brand" class="vehicle__35__brand" name="vehicle[35][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__35__brand_info" name="vehicle[35][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -2406,7 +2406,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__36__brand" name="vehicle[36][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__36__brand" class="vehicle__36__brand" name="vehicle[36][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__36__brand_info" name="vehicle[36][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -2588,7 +2588,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__37__brand" name="vehicle[37][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__37__brand" class="vehicle__37__brand" name="vehicle[37][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__37__brand_info" name="vehicle[37][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -2770,7 +2770,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__38__brand" name="vehicle[38][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__38__brand" class="vehicle__38__brand" name="vehicle[38][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__38__brand_info" name="vehicle[38][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -2952,7 +2952,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__39__brand" name="vehicle[39][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__39__brand" class="vehicle__39__brand" name="vehicle[39][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__39__brand_info" name="vehicle[39][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -3181,7 +3181,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__40__brand" name="vehicle[40][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__40__brand" class="vehicle__40__brand" name="vehicle[40][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__40__brand_info" name="vehicle[40][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -3366,7 +3366,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__41__brand" name="vehicle[41][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__41__brand" class="vehicle__41__brand" name="vehicle[41][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__41__brand_info" name="vehicle[41][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -3548,7 +3548,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__42__brand" name="vehicle[42][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__42__brand" class="vehicle__42__brand" name="vehicle[42][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__42__brand_info" name="vehicle[42][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -3730,7 +3730,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__43__brand" name="vehicle[43][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__43__brand" class="vehicle__43__brand" name="vehicle[43][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__43__brand_info" name="vehicle[43][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
@@ -3912,7 +3912,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<input type="text" id="vehicle__44__brand" name="vehicle[44][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__44__brand" class="vehicle__44__brand" name="vehicle[44][][brand]" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__44__brand_info" name="vehicle[44][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />

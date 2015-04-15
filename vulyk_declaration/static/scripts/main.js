@@ -9,6 +9,7 @@ scripts.Common = {
 
 		$cache.html = $('html');
 		$cache.body = $('body');
+		$cache.cloneWrapper = $('.js-clone-wrapper');
 
 		this.$cache = $cache;
 	},
@@ -112,35 +113,60 @@ scripts.Common = {
 		});
 	},
 
-	cloneyaInit: function () {
-		var $clonewrapper = $('.js-clone-wrapper');
+	autoCompliteInit: function () {
+		var autoCompliteData = {
+				"#general__last-name": scripts.Data.autocompliteData.lastname,
+				"#general__name": scripts.Data.autocompliteData.firstname,
+				"#general__patronymic": scripts.Data.autocompliteData.patronymic,
+				".general__place_district": scripts.Data.autocompliteData.districts,
+				"#general__post_office": scripts.Data.autocompliteData.offices,
+				".vehicle__35__brand": scripts.Data.autocompliteData.cars,
+				".vehicle__36__brand": scripts.Data.autocompliteData.trucks,
+				".vehicle__37__brand": scripts.Data.autocompliteData.boats,
+				".vehicle__39__brand": scripts.Data.autocompliteData.motos
+			},
+			addAutoComplite = function (selector, data) {
+				$(selector).autocomplete({
+					source: function(request, response) {
+						var results = $.ui.autocomplete.filter(data, request.term);
+						response(results.slice(0, 7));
+					},
+					appendTo: $(selector).parent()
+				});
+			};
 
-		$clonewrapper.cloneya({
-			limit: 2000,
-			cloneThis: '.js-toclone',
-			valueClone: false,
-			dataClone: false,
-			deepClone: false,
-			cloneButton: '.js-clone',
-			deleteButton: '.js-clone-delete',
-			clonePosition: 'after',
-			serializeID: false,
-			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete',
-			defaultRender: true,
-			preserveChildCount: true
-		});
+		$.each(autoCompliteData, addAutoComplite);
+
+		this.$cache.cloneWrapper
+			.on('clone_before_clone', function (event, toclone) {
+				$.each(autoCompliteData, function(element, data) {
+					var $elem = toclone.find(element);
+
+					if ($elem.length > 0)
+						$elem.autocomplete('destroy');
+				});
+			})
+			.on('clone_after_append', function (event, toclone, newclone) {
+				//newclone.addClass('js-cloned');
+				var $container = $(newclone).parent('.js-clone-wrapper');
+
+				$.each(autoCompliteData, function(element, data) {
+					var $elem = $container.find(element);
+
+					if ($elem.length > 0) {
+						addAutoComplite($elem, data);
+					}
+				});
+			});
 	},
 
-	addAutoComplete: function(elem, source) {
-		var $elemPar = $(elem).parent();
-
-		$(elem).autocomplete({
-			source: function(request, response) {
-				var results = $.ui.autocomplete.filter(source, request.term);
-
-				response(results.slice(0, 7));
-			},
-			appendTo: $elemPar
+	cloneyaInit: function () {
+		this.$cache.cloneWrapper.cloneya({
+			serializeID: false,
+			cloneThis: '.js-toclone',
+			cloneButton: '.js-clone',
+			deleteButton: '.js-clone-delete',
+			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete'
 		});
 	},
 
@@ -265,17 +291,9 @@ scripts.Common = {
 				scrpt.jqueryValidateInit();
 				scrpt.toggleFormSection();
 				scrpt.inputActions();
+				scrpt.autoCompliteInit();
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
-				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
-				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
-				scrpt.addAutoComplete("#general__place_district", scripts.Data.autocompliteData.districts);
-				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
-				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
-				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
-				scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
-				scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
 			}).on("vulyk.save", function(e, callback) {
 				var $form = $('#form-declaration'),
 					data = $form.serializeJSON();
