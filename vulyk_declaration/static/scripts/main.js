@@ -186,11 +186,11 @@ scripts.Common = {
 
 		$.validator.addMethod("lettersonly", function(value, element) {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z]+$/i.test(value);
-		}, "Tільки букви, будьласка");
+		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("lastnameonly", function(value, element) {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
-		}, "Tільки букви, будьласка");
+		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
 			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
@@ -307,6 +307,15 @@ scripts.Common = {
 			}).on("vulyk.skip", function(e, callback) {
 				$('#form-declaration').remove();
 				callback();
+			}).on("vulyk.task_error", function(e, data) {
+				$.magnificPopup.open({
+				  items: {
+				    src: '<div class="zoom-anim-dialog small-dialog">' + 
+				    		'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
+				    	  '</div>',
+                    type: 'inline',
+				  }
+				});
 			});
 		});
 
