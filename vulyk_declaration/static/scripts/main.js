@@ -9,8 +9,6 @@ scripts.Common = {
 
 		$cache.html = $('html');
 		$cache.body = $('body');
-		$cache.cloneWrapper = $('.js-clone-wrapper');
-
 		this.$cache = $cache;
 	},
 
@@ -137,7 +135,7 @@ scripts.Common = {
 
 		$.each(autoCompliteData, addAutoComplite);
 
-		this.$cache.cloneWrapper
+		$('.js-clone-wrapper')
 			.on('clone_before_clone', function (event, toclone) {
 				$.each(autoCompliteData, function(element, data) {
 					var $elem = toclone.find(element);
@@ -161,7 +159,7 @@ scripts.Common = {
 	},
 
 	cloneyaInit: function () {
-		this.$cache.cloneWrapper.cloneya({
+		$('.js-clone-wrapper').cloneya({
 			serializeID: false,
 			cloneThis: '.js-toclone',
 			cloneButton: '.js-clone',
