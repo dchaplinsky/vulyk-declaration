@@ -92,14 +92,19 @@ if __name__ == '__main__':
             x = Counter(values)
             _, freq = x.most_common(1)[0]
 
-            fmt = workbook.add_format()
+            fmt = None
             if freq == 1:
+                fmt = workbook.add_format()
                 fmt.set_bg_color('red')
             elif freq == 2:
+                fmt = workbook.add_format()
                 fmt.set_bg_color('yellow')
 
             for j, val in enumerate(values):
-                worksheet.write_string(line_no + j, i, unicode(val), fmt)
+                if fmt is not None:
+                    worksheet.write_string(line_no + j, i, unicode(val), fmt)
+                else:
+                    worksheet.write_string(line_no + j, i, unicode(val))
 
         line_no += len(task)
 
