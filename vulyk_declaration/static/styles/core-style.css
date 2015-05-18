@@ -158,7 +158,10 @@ blockquote {
 a {
   color: #09f;
 }
-a:hover, a:active {
+a:hover,
+a:active,
+a:focus,
+a:visited {
   color: #4db8ff;
   outline: none;
 }
