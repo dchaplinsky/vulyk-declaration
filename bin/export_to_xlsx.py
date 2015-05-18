@@ -3,54 +3,24 @@
 from __future__ import unicode_literals
 import json
 import sys
-import re
 
-from collections import defaultdict, Counter
+from collections import Counter
 from operator import itemgetter
 
 import xlsxwriter
-from natsort import natsorted
-
-lists = {}
-fields = []
-current_answer = {}
+from flattener import Flattener, to_str
 
 
-def cleanup(s):
-    if isinstance(s, basestring):
-        s = s.replace("—", " - ")
-        s = re.sub("([^\s])\-\s+", r"\1-", s)
-        s = re.sub("\s+\-([^\s])", r"-\1", s)
-        s = re.sub("\.([^\s])", r". \1", s)
-        s = re.sub("\s*\(\s*", " (", s)
-        s = re.sub("\s*\)\s*", ") ", s)
-        s = s.replace(" ,", ", ")
-        s = s.replace(" .", ". ")
-        s = re.sub("\s+", " ", s)
-        return s.strip().rstrip(".")
-    else:
-        return s
+def parse_in_file(in_file):
+    flattener = Flattener()
+    all_tasks = []
 
+    with open(in_file, "r") as fp:
+        for r in fp:
+            answers = json.loads(r)
+            all_tasks.append(flattener.process_task(answers))
 
-def traverse(dct, path):
-    if isinstance(dct, dict):
-        for k, v in dct.iteritems():
-            if path:
-                current_path = "%s.%s" % (path, k)
-            else:
-                current_path = k
-
-            if isinstance(v, list):
-                lists[current_path] = max(lists.get(current_path, 0), len(v))
-                for i, val in enumerate(v):
-                    traverse(val, "%s.%02d" % (current_path, i + 1))
-            else:
-                traverse(v, current_path)
-    else:
-        if path not in fields:
-            fields.append(path)
-
-        current_answer[path] = cleanup(dct)
+    return flattener.sorted_fields, all_tasks
 
 
 if __name__ == '__main__':
@@ -59,30 +29,17 @@ if __name__ == '__main__':
 
     in_file = sys.argv[1]
     out_file = sys.argv[2]
-    all_tasks = []
 
-    with open(in_file, "r") as fp:
-        for r in fp:
-            # print(r)
-            answers = json.loads(r)
-            current_task = []
-
-            for answer in answers:
-                current_answer = defaultdict(str)
-                traverse(answer, "")
-                current_task.append(current_answer)
-
-            all_tasks.append(current_task)
-
-    fields = natsorted(fields)
+    fields, all_tasks = parse_in_file(in_file)
 
     workbook = xlsxwriter.Workbook(out_file)
     worksheet = workbook.add_worksheet('Group&Clean')
     for i, f in enumerate(fields):
-        worksheet.write_string(0, i, f)
+        worksheet.write_string(0, i, ".".join(map(to_str, f)))
 
     line_no = 1
     for task in all_tasks:
+
         if not task:
             print("Oups, no answers")
             continue
