@@ -31,6 +31,7 @@ if __name__ == '__main__':
     out_file = sys.argv[2]
 
     fields, all_tasks = parse_in_file(in_file)
+    conflicts_counter = Counter()
 
     workbook = xlsxwriter.Workbook(out_file)
     worksheet = workbook.add_worksheet('Group&Clean')
@@ -51,9 +52,11 @@ if __name__ == '__main__':
 
             fmt = None
             if freq == 1:
+                conflicts_counter.update([freq])
                 fmt = workbook.add_format()
                 fmt.set_bg_color('red')
             elif freq == 2:
+                conflicts_counter.update([freq])
                 fmt = workbook.add_format()
                 fmt.set_bg_color('yellow')
 
@@ -66,3 +69,5 @@ if __name__ == '__main__':
         line_no += len(task)
 
     workbook.close()
+
+    print(conflicts_counter.most_common())
