@@ -9,6 +9,8 @@ scripts.Common = {
 
 		$cache.html = $('html');
 		$cache.body = $('body');
+		$cache.cloneWrapper = $('.js-clone-wrapper');
+
 		this.$cache = $cache;
 	},
 
@@ -18,9 +20,9 @@ scripts.Common = {
 
 	isModernBrowser: function () {
 		if ( // modernizer alternative
-		'querySelector' in document &&
-		'localStorage' in window &&
-		'addEventListener' in window
+			'querySelector' in document &&
+			'localStorage' in window &&
+			'addEventListener' in window
 		) {
 			return true;
 		} else {
@@ -121,7 +123,25 @@ scripts.Common = {
 				".vehicle__35__brand": scripts.Data.autocompliteData.cars,
 				".vehicle__36__brand": scripts.Data.autocompliteData.trucks,
 				".vehicle__37__brand": scripts.Data.autocompliteData.boats,
-				".vehicle__39__brand": scripts.Data.autocompliteData.motos
+				".vehicle__39__brand": scripts.Data.autocompliteData.motos,
+				".vehicle__40__brand": scripts.Data.autocompliteData.cars,
+				".vehicle__41__brand": scripts.Data.autocompliteData.trucks,
+				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
+				".vehicle__44__brand": scripts.Data.autocompliteData.motos
+			},
+			focus_next = function(current) {
+				var selectables = $(":tabbable").not(":checkbox")
+						.not(".ui-menu-item").not(".ui-autocomplete"),
+					nextIndex = 0;
+
+				if (current.length === 1) {
+					var currentIndex = selectables.index(current);
+					if (currentIndex + 1 < selectables.length) {
+						nextIndex = currentIndex + 1;
+					}
+				}
+
+				selectables.eq(nextIndex).focus();
 			},
 			addAutoComplite = function (selector, data) {
 				$(selector).autocomplete({
@@ -129,7 +149,10 @@ scripts.Common = {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					appendTo: $(selector).parent()
+					select: function(event, ui) {
+						focus_next($(event.target));
+					},
+					appendTo: $(selector).parent(),
 				});
 			};
 
@@ -307,13 +330,13 @@ scripts.Common = {
 				callback();
 			}).on("vulyk.task_error", function(e, data) {
 				$.magnificPopup.open({
-				  items: {
-				    src: '<div class="zoom-anim-dialog small-dialog">' + 
-				    		'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
-				    	  '</div>',
-                    type: 'inline',
-				  }
-				});
+					items: {
+						src: '<div class="zoom-anim-dialog small-dialog">' +
+						'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
+						'</div>',
+						type: 'inline'
+					}
+				})
 			});
 		});
 
