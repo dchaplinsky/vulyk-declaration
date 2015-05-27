@@ -440,6 +440,23 @@ dd {
   font-weight: bold;
 }
 
+.weiss-digit {
+  display: block;
+}
+
+.weiss-digit_currency {
+  text-align: right;
+  font: 14px/1.2 "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+}
+
+.i-value-empty {
+  display: block;
+  font-style: normal;
+  text-align: center;
+  color: #999;
+  font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+}
+
 /* ============================================================================
 	Generic button
 ============================================================================ */

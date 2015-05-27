@@ -19,15 +19,7 @@ scripts.Common = {
 	},
 
 	isModernBrowser: function () {
-		if ( // modernizer alternative
-			'querySelector' in document &&
-			'localStorage' in window &&
-			'addEventListener' in window
-		) {
-			return true;
-		} else {
-			return false;
-		}
+		return 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window
 	},
 
 	globalInit: function() {
@@ -149,11 +141,15 @@ scripts.Common = {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					select: function(event, ui) {
+					close: function(event, ui) {
 						focus_next($(event.target));
 					},
-					appendTo: $(selector).parent(),
+					appendTo: $(selector).parent()
 				});
+
+				// $(selector).on("blur", function(e) {
+				// 	focus_next($(e.target));	
+				// })
 			};
 
 		$.each(autoCompliteData, addAutoComplite);
@@ -214,8 +210,12 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри");
+			return this.optional(element) || /^\d+([,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри. Використовуйте кому");
+
+		$.validator.addMethod("nocurrency", function(value, element) {
+			return this.optional(element) || /^[\D]+$/i.test(value);
+		}, "Суми потрібно вводити у полі вище");
 
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
@@ -229,6 +229,9 @@ scripts.Common = {
 			},
 			'js-is-strictDigitsOnly': {
 				digits: true
+			},
+			'js-is-nocurrency': {
+				nocurrency: true
 			}
 		});
 

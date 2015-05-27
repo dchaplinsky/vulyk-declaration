@@ -158,10 +158,7 @@ blockquote {
 a {
   color: #09f;
 }
-a:hover,
-a:active,
-a:focus,
-a:visited {
+a:hover, a:active {
   color: #4db8ff;
   outline: none;
 }
@@ -279,6 +276,15 @@ figure {
 }
 .weiss-table .weiss-table__psdo-th {
   font-weight: bold;
+}
+.weiss-table .weiss-table__cell_tar {
+  text-align: right;
+}
+.weiss-table .weiss-table__cell_tal {
+  text-align: left;
+}
+.weiss-table .weiss-table__cell_tac {
+  text-align: center;
 }
 
 /* @end */
