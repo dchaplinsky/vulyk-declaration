@@ -8,7 +8,8 @@ from collections import Counter
 from operator import itemgetter
 
 import xlsxwriter
-from flattener import Flattener, to_str
+from flattener import (
+    Flattener, to_str, TWO_IS_ENOUGH, FIELDS_TO_IGNORE, unify_path)
 
 
 def parse_in_file(in_file):
@@ -45,20 +46,31 @@ if __name__ == '__main__':
             print("Oups, no answers")
             continue
         for i, field in enumerate(fields):
+            unified_path = unify_path(field)
+
             values = map(itemgetter(field), task)
 
             x = Counter(values)
-            _, freq = x.most_common(1)[0]
+            common_value, freq = x.most_common(1)[0]
 
             fmt = None
-            if freq == 1:
-                conflicts_counter.update([freq])
-                fmt = workbook.add_format()
-                fmt.set_bg_color('red')
-            elif freq == 2:
-                conflicts_counter.update([freq])
-                fmt = workbook.add_format()
-                fmt.set_bg_color('yellow')
+
+            # Do not apply formatting for some fields like email or username
+            if unified_path not in FIELDS_TO_IGNORE:
+                if freq == 1:
+                    conflicts_counter.update([freq])
+                    fmt = workbook.add_format()
+                    fmt.set_bg_color('red')
+                elif freq == 2:
+                    fmt = workbook.add_format()
+
+                    # Check if field that has two common answers out of 3+
+                    # belongs to the list of fields where two answers is enough
+                    if unified_path in TWO_IS_ENOUGH and common_value:
+                        fmt.set_bg_color('cyan')
+                    else:
+                        fmt.set_bg_color('yellow')
+                        conflicts_counter.update([freq])
 
             for j, val in enumerate(values):
                 if fmt is not None:
@@ -70,4 +82,5 @@ if __name__ == '__main__':
 
     workbook.close()
 
+    # Print, how many conflicts in groups we have
     print(conflicts_counter.most_common())
