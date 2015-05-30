@@ -34,7 +34,7 @@
 		<span>Загальне про декларацію</span>
 	</legend>
 
-	<div class="l-weiss-form__row">
+	<div class="l-weiss-form__row" style="width: 500px">
 		<div class="l-weiss-form__item">
 			<label class="weiss-form__label" for="intro__isnotdeclaration">
 				<span>Це не декларація</span>
@@ -43,6 +43,9 @@
 		<div class="l-weiss-form__item">
 			<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus="" />
 		</div>
+		<p class="l-weiss-form__item declaration-small-note">
+			Будь ласка, придивиться уважно, деякі декларації починаються з заяв про проходження перевірки
+		</p>
 	</div>
 
 	<div class="l-weiss-form__row">
@@ -231,7 +234,7 @@
 					<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 				</div>
 				<p class="l-weiss-form__item declaration-small-note">
-					Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank">«Структуру органів державної влади»</a>,
+					Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank" style="text-decoration: underline">«Структуру органів державної влади»</a>,
 				</p>
 			</div>
 		</div>
@@ -289,7 +292,7 @@
 					<td>
 						<div class="l-weiss-form__row">
 							<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
-							<p class="declaration-small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="declaration-small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут</p>
 						</div>
 					</td>
 					<td>
@@ -368,10 +371,11 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__5" name="income[5][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+                            <p class="declaration-small-note">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__5_comment" name="income[5][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+						<textarea class="js-is-nocurrency" id="income__5_comment" name="income[5][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут</p>
 					</div>
 				</td>
 				<td>
@@ -379,8 +383,8 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__5_family" name="income[5][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__5_family_comment" name="income[5][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+						<textarea class="js-is-nocurrency" id="income__5_family_comment" name="income[5][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут</p>
 					</div>
 				</td>
 			</tr>
@@ -396,7 +400,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__6" name="income[6][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__6_comment" name="income[6][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__6_comment" name="income[6][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -404,7 +408,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__6_family" name="income[6][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__6_family_comment" name="income[6][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__6_family_comment" name="income[6][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -420,7 +424,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__7" name="income[7][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__7_comment" name="income[7][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__7_comment" name="income[7][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -428,7 +432,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__7_family" name="income[7][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__7_family_comment" name="income[7][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__7_family_comment" name="income[7][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -461,7 +465,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__8" name="income[8][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__8_comment" name="income[8][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__8_comment" name="income[8][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -469,7 +473,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__8_family" name="income[8][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__8_family_comment" name="income[8][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__8_family_comment" name="income[8][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -485,7 +489,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__9" name="income[9][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__9_comment" name="income[9][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__9_comment" name="income[9][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -493,7 +497,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__9_family" name="income[9][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__9_family_comment" name="income[9][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__9_family_comment" name="income[9][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -509,7 +513,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__10" name="income[10][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__10_comment" name="income[10][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__10_comment" name="income[10][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -517,7 +521,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__10_family" name="income[10][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__10_family_comment" name="income[10][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__10_family_comment" name="income[10][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -533,7 +537,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__11" name="income[11][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__11_comment" name="income[11][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__11_comment" name="income[11][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -541,7 +545,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__11_family" name="income[11][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__11_family_comment" name="income[11][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__11_family_comment" name="income[11][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -557,7 +561,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__12" name="income[12][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__12_comment" name="income[12][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__12_comment" name="income[12][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -565,7 +569,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__12_family" name="income[12][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__12_family_comment" name="income[12][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__12_family_comment" name="income[12][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -581,7 +585,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__13" name="income[13][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__13_comment" name="income[13][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__13_comment" name="income[13][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -589,7 +593,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__13_family" name="income[13][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__13_family_comment" name="income[13][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__13_family_comment" name="income[13][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -605,7 +609,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__14" name="income[14][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__14_comment" name="income[14][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__14_comment" name="income[14][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -613,7 +617,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__14_family" name="income[14][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__14_family_comment" name="income[14][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__14_family_comment" name="income[14][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -629,7 +633,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__15" name="income[15][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__15_comment" name="income[15][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__15_comment" name="income[15][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -637,7 +641,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__15_family" name="income[15][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__15_family_comment" name="income[15][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__15_family_comment" name="income[15][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -653,7 +657,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__16" name="income[16][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__16_comment" name="income[16][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__16_comment" name="income[16][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -661,7 +665,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__16_family" name="income[16][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__16_family_comment" name="income[16][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__16_family_comment" name="income[16][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -677,7 +681,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__17" name="income[17][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__17_comment" name="income[17][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__17_comment" name="income[17][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -685,7 +689,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__17_family" name="income[17][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__17_family_comment" name="income[17][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__17_family_comment" name="income[17][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -701,7 +705,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__18" name="income[18][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__18_comment" name="income[18][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__18_comment" name="income[18][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -709,7 +713,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__18_family" name="income[18][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__18_family_comment" name="income[18][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__18_family_comment" name="income[18][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -725,7 +729,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__19" name="income[19][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__19_comment" name="income[19][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__19_comment" name="income[19][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -733,7 +737,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__19_family" name="income[19][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__19_family_comment" name="income[19][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__19_family_comment" name="income[19][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -749,7 +753,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__20" name="income[20][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__20_comment" name="income[20][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__20_comment" name="income[20][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -757,7 +761,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="income__20_family" name="income[20][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="income__20_family_comment" name="income[20][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="income__20_family_comment" name="income[20][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -818,6 +822,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Дохід в іноземній валюті" data-inp-act="hidden,unclear" />
+                        <p class="declaration-small-note js-clone-ignore">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
 					</div>
 					<div class="l-weiss-form__row js-related-control">
 						<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
@@ -1095,9 +1100,10 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__23__costs" name="estate[23][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+                            <p class="js-clone-ignore declaration-small-note">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__23__costs_comment" name="estate[23][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__23__costs_comment" name="estate[23][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1105,7 +1111,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__23__costs_rent" name="estate[23][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__23__costs_rent_comment" name="estate[23][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__23__costs_rent_comment" name="estate[23][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1183,7 +1189,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__24__costs" name="estate[24][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__24__costs_comment" name="estate[24][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__24__costs_comment" name="estate[24][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1191,7 +1197,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__24__costs_rent" name="estate[24][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__24__costs_rent_comment" name="estate[24][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__24__costs_rent_comment" name="estate[24][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1269,7 +1275,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__25__costs" name="estate[25][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__25__costs_comment" name="estate[25][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__25__costs_comment" name="estate[25][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1277,7 +1283,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__25__costs_rent" name="estate[25][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__25__costs_rent_comment" name="estate[25][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__25__costs_rent_comment" name="estate[25][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1355,7 +1361,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__26__costs" name="estate[26][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__26__costs_comment" name="estate[26][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__26__costs_comment" name="estate[26][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1363,7 +1369,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__26__costs_rent" name="estate[26][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__26__costs_rent_comment" name="estate[26][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__26__costs_rent_comment" name="estate[26][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1441,7 +1447,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__27__costs" name="estate[27][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__27__costs_comment" name="estate[27][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__27__costs_comment" name="estate[27][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1449,7 +1455,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__27__costs_rent" name="estate[27][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__27__costs_rent_comment" name="estate[27][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__27__costs_rent_comment" name="estate[27][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1527,7 +1533,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__28__costs" name="estate[28][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__28__costs_comment" name="estate[28][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__28__costs_comment" name="estate[28][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1535,7 +1541,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__28__costs_rent" name="estate[28][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__28__costs_rent_comment" name="estate[28][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__28__costs_rent_comment" name="estate[28][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1671,7 +1677,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate[29][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1679,7 +1685,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_rent" name="estate[29][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__29__costs_rent_comment" name="estate[29][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__29__costs_rent_comment" name="estate[29][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1757,7 +1763,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate[30][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1765,7 +1771,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_rent" name="estate[30][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__30__costs_rent_comment" name="estate[30][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__30__costs_rent_comment" name="estate[30][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1843,7 +1849,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate[31][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1851,7 +1857,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_rent" name="estate[31][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__31__costs_rent_comment" name="estate[31][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__31__costs_rent_comment" name="estate[31][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -1929,7 +1935,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate[32][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -1937,7 +1943,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_rent" name="estate[32][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__32__costs_rent_comment" name="estate[32][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__32__costs_rent_comment" name="estate[32][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2015,7 +2021,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate[33][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2023,7 +2029,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_rent" name="estate[33][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__33__costs_rent_comment" name="estate[33][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__33__costs_rent_comment" name="estate[33][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2101,7 +2107,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate[34][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2109,7 +2115,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_rent" name="estate[34][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__34__costs_rent_comment" name="estate[34][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="estate__34__costs_rent_comment" name="estate[34][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2377,9 +2383,10 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum" name="vehicle[35][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
+                            <p class="declaration-small-note js-clone-ignore">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__35__sum_comment" name="vehicle[35][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__35__sum_comment" name="vehicle[35][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2387,7 +2394,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__35__sum_rent" name="vehicle[35][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__35__sum_rent_comment" name="vehicle[35][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__35__sum_rent_comment" name="vehicle[35][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2561,7 +2568,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum" name="vehicle[36][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__36__sum_comment" name="vehicle[36][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__36__sum_comment" name="vehicle[36][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2569,7 +2576,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__36__sum_rent" name="vehicle[36][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__36__sum_rent_comment" name="vehicle[36][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__36__sum_rent_comment" name="vehicle[36][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2743,7 +2750,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum" name="vehicle[37][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__37__sum_comment" name="vehicle[37][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__37__sum_comment" name="vehicle[37][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2751,7 +2758,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__37__sum_rent" name="vehicle[37][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__37__sum_rent_comment" name="vehicle[37][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__37__sum_rent_comment" name="vehicle[37][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -2925,7 +2932,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum" name="vehicle[38][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__38__sum_comment" name="vehicle[38][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__38__sum_comment" name="vehicle[38][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2933,7 +2940,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__38__sum_rent" name="vehicle[38][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__38__sum_rent_comment" name="vehicle[38][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__38__sum_rent_comment" name="vehicle[38][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -3107,7 +3114,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum" name="vehicle[39][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__39__sum_comment" name="vehicle[39][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__39__sum_comment" name="vehicle[39][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -3115,7 +3122,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__39__sum_rent" name="vehicle[39][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__39__sum_rent_comment" name="vehicle[39][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__39__sum_rent_comment" name="vehicle[39][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -3339,7 +3346,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum" name="vehicle[40][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__40__sum_comment" name="vehicle[40][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__40__sum_comment" name="vehicle[40][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -3347,7 +3354,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__40__sum_rent" name="vehicle[40][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__40__sum_rent_comment" name="vehicle[40][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__40__sum_rent_comment" name="vehicle[40][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -3521,7 +3528,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum" name="vehicle[41][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__41__sum_comment" name="vehicle[41][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__41__sum_comment" name="vehicle[41][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -3529,7 +3536,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__41__sum_rent" name="vehicle[41][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__41__sum_rent_comment" name="vehicle[41][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__41__sum_rent_comment" name="vehicle[41][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -3703,7 +3710,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum" name="vehicle[42][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__42__sum_comment" name="vehicle[42][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__42__sum_comment" name="vehicle[42][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -3711,7 +3718,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__42__sum_rent" name="vehicle[42][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__42__sum_rent_comment" name="vehicle[42][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__42__sum_rent_comment" name="vehicle[42][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -3885,7 +3892,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum" name="vehicle[43][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__43__sum_comment" name="vehicle[43][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__43__sum_comment" name="vehicle[43][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -3893,7 +3900,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__43__sum_rent" name="vehicle[43][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__43__sum_rent_comment" name="vehicle[43][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__43__sum_rent_comment" name="vehicle[43][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -4067,7 +4074,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum" name="vehicle[44][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__44__sum_comment" name="vehicle[44][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__44__sum_comment" name="vehicle[44][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4075,7 +4082,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__44__sum_rent" name="vehicle[44][][sum_rent]" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="vehicle__44__sum_rent_comment" name="vehicle[44][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="vehicle__44__sum_rent_comment" name="vehicle[44][][sum_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="weiss-table__cell_bd-l">
@@ -4196,7 +4203,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__45__sum_comment" name="banks[45][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__45__sum_comment" name="banks[45][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 								<p class="declaration-small-note js-clone-ignore">
 									Назви банків та будь які текстові значення вносяться у це поле
 								</p>
@@ -4207,6 +4214,7 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__45__sum_foreign" name="banks[45][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
+                                <p class="js-clone-ignore declaration-small-note">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<select id="banks__45__sum_foreign_units" name="banks[45][][sum_foreign_units]" data-inp-act="hidden,unclear">
@@ -4219,7 +4227,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__45__sum_foreign_comment" name="banks[45][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__45__sum_foreign_comment" name="banks[45][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 								<p class="declaration-small-note js-clone-ignore">
 									Назви банків та будь які текстові значення вносяться у це поле
 								</p>
@@ -4258,7 +4266,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__46__sum_comment" name="banks[46][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__46__sum_comment" name="banks[46][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4278,7 +4286,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__46__sum_foreign_comment" name="banks[46][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__46__sum_foreign_comment" name="banks[46][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4314,7 +4322,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__47__sum_comment" name="banks[47][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__47__sum_comment" name="banks[47][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4334,7 +4342,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__47__sum_foreign_comment" name="banks[47][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__47__sum_foreign_comment" name="banks[47][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4370,7 +4378,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__48__sum_comment" name="banks[48][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__48__sum_comment" name="banks[48][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4390,7 +4398,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__48__sum_foreign_comment" name="banks[48][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__48__sum_foreign_comment" name="banks[48][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4426,7 +4434,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__49__sum_comment" name="banks[49][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__49__sum_comment" name="banks[49][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4446,7 +4454,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__49__sum_foreign_comment" name="banks[49][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__49__sum_foreign_comment" name="banks[49][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4482,7 +4490,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__50__sum_comment" name="banks[50][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__50__sum_comment" name="banks[50][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4502,7 +4510,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__50__sum_foreign_comment" name="banks[50][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__50__sum_foreign_comment" name="banks[50][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4579,7 +4587,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__51__sum_comment" name="banks[51][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__51__sum_comment" name="banks[51][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 								<p class="declaration-small-note js-clone-ignore">
 									Назви банків та будь які текстові значення вносяться у це поле
 								</p>
@@ -4602,7 +4610,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__51__sum_foreign_comment" name="banks[51][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__51__sum_foreign_comment" name="banks[51][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 								<p class="declaration-small-note js-clone-ignore">
 									Назви банків та будь які текстові значення вносяться у це поле
 								</p>
@@ -4641,7 +4649,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__52__sum_comment" name="banks[52][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__52__sum_comment" name="banks[52][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4661,7 +4669,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__52__sum_foreign_comment" name="banks[52][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__52__sum_foreign_comment" name="banks[52][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4697,7 +4705,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__53__sum_comment" name="banks[53][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__53__sum_comment" name="banks[53][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4717,7 +4725,7 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item">
-							<textarea id="banks__53__sum_foreign_comment" name="banks[53][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea class="js-is-nocurrency" id="banks__53__sum_foreign_comment" name="banks[53][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -4813,9 +4821,10 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum" name="liabilities[54][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
+                            <p class="declaration-small-note">Суми з копійками треба <br/> вводити через кому, <br/>наприклад: 10000,27</p>
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__54__sum_comment" name="liabilities[54][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__54__sum_comment" name="liabilities[54][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4823,7 +4832,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__54__sum_foreign" name="liabilities[54][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__54__sum_foreign_comment" name="liabilities[54][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__54__sum_foreign_comment" name="liabilities[54][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4839,7 +4848,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum" name="liabilities[55][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__55__sum_comment" name="liabilities[55][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__55__sum_comment" name="liabilities[55][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4847,7 +4856,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__55__sum_foreign" name="liabilities[55][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__55__sum_foreign_comment" name="liabilities[55][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__55__sum_foreign_comment" name="liabilities[55][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4863,7 +4872,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum" name="liabilities[56][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__56__sum_comment" name="liabilities[56][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__56__sum_comment" name="liabilities[56][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4871,7 +4880,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__56__sum_foreign" name="liabilities[56][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__56__sum_foreign_comment" name="liabilities[56][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__56__sum_foreign_comment" name="liabilities[56][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4887,7 +4896,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum" name="liabilities[57][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__57__sum_comment" name="liabilities[57][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__57__sum_comment" name="liabilities[57][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4895,7 +4904,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__57__sum_foreign" name="liabilities[57][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__57__sum_foreign_comment" name="liabilities[57][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__57__sum_foreign_comment" name="liabilities[57][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4911,7 +4920,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum" name="liabilities[58][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__58__sum_comment" name="liabilities[58][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__58__sum_comment" name="liabilities[58][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4919,7 +4928,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__58__sum_foreign" name="liabilities[58][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__58__sum_foreign_comment" name="liabilities[58][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__58__sum_foreign_comment" name="liabilities[58][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4935,7 +4944,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum" name="liabilities[59][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__59__sum_comment" name="liabilities[59][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__59__sum_comment" name="liabilities[59][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4943,7 +4952,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__59__sum_foreign" name="liabilities[59][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__59__sum_foreign_comment" name="liabilities[59][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__59__sum_foreign_comment" name="liabilities[59][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -4989,7 +4998,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum" name="liabilities[60][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__60__sum_comment" name="liabilities[60][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__60__sum_comment" name="liabilities[60][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -4997,7 +5006,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__60__sum_foreign" name="liabilities[60][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__60__sum_foreign_comment" name="liabilities[60][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__60__sum_foreign_comment" name="liabilities[60][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -5013,7 +5022,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum" name="liabilities[61][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__61__sum_comment" name="liabilities[61][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__61__sum_comment" name="liabilities[61][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -5021,7 +5030,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__61__sum_foreign" name="liabilities[61][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__61__sum_foreign_comment" name="liabilities[61][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__61__sum_foreign_comment" name="liabilities[61][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -5037,7 +5046,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum" name="liabilities[62][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__62__sum_comment" name="liabilities[62][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__62__sum_comment" name="liabilities[62][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -5045,7 +5054,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__62__sum_foreign" name="liabilities[62][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__62__sum_foreign_comment" name="liabilities[62][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__62__sum_foreign_comment" name="liabilities[62][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -5061,7 +5070,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum" name="liabilities[63][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__63__sum_comment" name="liabilities[63][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__63__sum_comment" name="liabilities[63][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -5069,7 +5078,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__63__sum_foreign" name="liabilities[63][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__63__sum_foreign_comment" name="liabilities[63][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__63__sum_foreign_comment" name="liabilities[63][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -5085,7 +5094,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum" name="liabilities[64][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__64__sum_comment" name="liabilities[64][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__64__sum_comment" name="liabilities[64][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -5093,7 +5102,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="liabilities__64__sum_foreign" name="liabilities[64][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-weiss-form__row">
-						<textarea id="liabilities__64__sum_foreign_comment" name="liabilities[64][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea class="js-is-nocurrency" id="liabilities__64__sum_foreign_comment" name="liabilities[64][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
