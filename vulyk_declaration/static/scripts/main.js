@@ -146,10 +146,6 @@ scripts.Common = {
 					},
 					appendTo: $(selector).parent()
 				});
-
-				// $(selector).on("blur", function(e) {
-				// 	focus_next($(e.target));	
-				// })
 			};
 
 		$.each(autoCompliteData, addAutoComplite);
@@ -210,12 +206,8 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри. Використовуйте кому");
-
-		$.validator.addMethod("nocurrency", function(value, element) {
-			return this.optional(element) || /^[\D]+$/i.test(value);
-		}, "Суми потрібно вводити у полі вище");
+			return this.optional(element) || /^\d+([.,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри");
 
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
@@ -229,9 +221,6 @@ scripts.Common = {
 			},
 			'js-is-strictDigitsOnly': {
 				digits: true
-			},
-			'js-is-nocurrency': {
-				nocurrency: true
 			}
 		});
 
@@ -264,7 +253,7 @@ scripts.Common = {
 		this.$cache.body.on('reset', $form, function () {
 			$form.validate().resetForm();
 		}).on('click', '#intro__isnotdeclaration', function () {
-			if($(this).is(':checked')) {
+			if ($(this).is(':checked')) {
 				$form.validate().settings.ignore = "*"; // disable all validation
 			} else {
 				$form.validate().settings.ignore = "";
@@ -273,6 +262,23 @@ scripts.Common = {
 
 		content.hide();
 		$(content[0]).show();
+
+		this.$cache.body.on('blur', ".js-is-nocurrency", function(e) {
+			var el = $(this),
+				val = $.trim(el.val()),
+				note;
+
+			if (/^\d+([.,]\d+)?/i.test(val)) {
+				note = el.parent().siblings(".declaration-small-note");
+				if (note.length == 0) {
+					el.parent().after('<p class="l-weiss-form__item declaration-small-note optional-note">');
+					note = el.parent().siblings(".declaration-small-note");
+				}
+				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
+			} else {
+				el.parent().siblings(".optional-note").remove();
+			}
+		});
 
 		this.$cache.body.on('click', '.js-section-go', function(e) {
 			if (!$(this).is('[type="reset"]')) {
