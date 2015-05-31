@@ -68,6 +68,7 @@ if __name__ == '__main__':
                     # belongs to the list of fields where two answers is enough
                     if unified_path in TWO_IS_ENOUGH and common_value:
                         fmt.set_bg_color('cyan')
+                        val = common_value
                     else:
                         fmt.set_bg_color('yellow')
                         conflicts_counter.update([freq])

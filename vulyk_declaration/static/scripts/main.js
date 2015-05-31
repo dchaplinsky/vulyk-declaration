@@ -136,15 +136,30 @@ scripts.Common = {
 				selectables.eq(nextIndex).focus();
 			},
 			addAutoComplite = function (selector, data) {
+				var selected = false;
+
+				$(selector).on("focus", function(e) {
+					selected = false;
+				});
+
 				$(selector).autocomplete({
+					delay: 100,
 					source: function(request, response) {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					close: function(event, ui) {
+					change: function(event, ui) {
+						focus_next($(event.target));
+					},
+					select: function(event, ui) {
+						selected = true;
 						focus_next($(event.target));
 					},
 					appendTo: $(selector).parent()
+				}).on("keydown", function(e) {
+					if (e.which === 9 && !e.shiftKey && selected) {
+						e.preventDefault();
+					}
 				});
 			};
 
