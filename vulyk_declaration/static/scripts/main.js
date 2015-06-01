@@ -122,8 +122,7 @@ scripts.Common = {
 				".vehicle__44__brand": scripts.Data.autocompliteData.motos
 			},
 			focus_next = function(current) {
-				var selectables = $(":tabbable").not(":checkbox")
-						.not(".ui-menu-item").not(".ui-autocomplete"),
+				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox)"),
 					nextIndex = 0;
 
 				if (current.length === 1) {
