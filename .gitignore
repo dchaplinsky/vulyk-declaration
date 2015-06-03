@@ -40,6 +40,8 @@ output/*/index.html
 
 # Sphinx
 docs/_build
-bin/*.xlsx
-bin/*.json
+bin/xlsx/*
+bin/csvs/*
+bin/aux/*
+bin/json/*
 .DS_Store

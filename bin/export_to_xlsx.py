@@ -52,8 +52,12 @@ if __name__ == '__main__':
 
             x = Counter(values)
             common_value, freq = x.most_common(1)[0]
+            other_values_empty = all(
+                map(lambda x: not x[0], x.most_common()[1:])
+            )
 
             fmt = None
+            use_common_value = False
 
             # Do not apply formatting for some fields like email or username
             if unified_path not in FIELDS_TO_IGNORE:
@@ -66,14 +70,19 @@ if __name__ == '__main__':
 
                     # Check if field that has two common answers out of 3+
                     # belongs to the list of fields where two answers is enough
-                    if unified_path in TWO_IS_ENOUGH and common_value:
+                    if (unified_path in TWO_IS_ENOUGH and common_value and
+                            other_values_empty):
                         fmt.set_bg_color('cyan')
-                        val = common_value
+                        use_common_value = True
                     else:
                         fmt.set_bg_color('yellow')
                         conflicts_counter.update([freq])
 
             for j, val in enumerate(values):
+                # TODO: move to flattener?
+                if use_common_value:
+                    val = common_value
+
                 if fmt is not None:
                     worksheet.write_string(line_no + j, i, unicode(val), fmt)
                 else:
