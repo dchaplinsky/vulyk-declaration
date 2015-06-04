@@ -1,0 +1,1303 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "додержанням",
+          "доержанням",
+          "додерженням",
+          "додержаннім"
+        ],
+        "to": "додержанням"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "шевченківскього",
+          "шевченківського",
+          "шевченківского"
+        ],
+        "to": "шевченківського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "монастирського",
+          "монатириського",
+          "монастириського"
+        ],
+        "to": "монастирського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "управліня",
+          "уравління",
+          "управління"
+        ],
+        "to": "управління"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "прокуратури",
+          "прокуратри",
+          "прокуратири"
+        ],
+        "to": "прокуратури"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "університету",
+          "університет",
+          "університета"
+        ],
+        "to": "університету"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "прокурору",
+          "прокурорв",
+          "прокурора"
+        ],
+        "to": "прокурора"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "додержанням",
+          "доержанням",
+          "додержаннім"
+        ],
+        "to": "додержанням"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "зпорізькій",
+          "запорізькій"
+        ],
+        "to": "запорізький"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "додержанням",
+          "додержання"
+        ],
+        "to": "додержанням"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "миколаївській",
+          "миколаївський"
+        ],
+        "to": "миколаївській"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "виконаннім",
+          "виконанням"
+        ],
+        "to": "виконанні"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "закарпатської",
+          "закарпарської"
+        ],
+        "to": "закарпатської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "фастівської",
+          "фстівської"
+        ],
+        "to": "фастівської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "соціально-побутових",
+          "соціально-побудових"
+        ],
+        "to": "соціально-побутових"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "суворівський",
+          "суворовський"
+        ],
+        "to": "суворівський"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "октябрьського",
+          "октябрського"
+        ],
+        "to": "октябрського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "представницької",
+          "представницкої"
+        ],
+        "to": "представницької"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "івано-франківській",
+          "івано-фронківській"
+        ],
+        "to": "івано-франківській"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "теонопільської",
+          "тернопільської"
+        ],
+        "to": "тернопільської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "шевченківського",
+          "щевченківського"
+        ],
+        "to": "шевченківського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "провадженях",
+          "провадженнях"
+        ],
+        "to": "провадженнях"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "укримінальних",
+          "кримінальних"
+        ],
+        "to": "кримінальних"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "війскового",
+          "військового"
+        ],
+        "to": "військового"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "організації",
+          "організацій"
+        ],
+        "to": "організації"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кримського",
+          "кримсього"
+        ],
+        "to": "кримського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "громадян",
+          "громадан"
+        ],
+        "to": "громадян"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "івано-франківської",
+          "івано-франгківської"
+        ],
+        "to": "івано-франківської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "сімферополя",
+          "сімферополь"
+        ],
+        "to": "сімферополя"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "білоцерківського",
+          "білолцерківського"
+        ],
+        "to": "білоцерківського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "захисту",
+          "захистру"
+        ],
+        "to": "захисту"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "миколаїва",
+          "миколаєва"
+        ],
+        "to": "миколаєва"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "п'ятихатьського",
+          "п'ятихатського"
+        ],
+        "to": "п'ятихатського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "межрайонної",
+          "міжрайонної"
+        ],
+        "to": "міжрайонної"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "відділа",
+          "відділу"
+        ],
+        "to": "відділу"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "одеській",
+          "одеський"
+        ],
+        "to": "одеській"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "дарницьуого",
+          "дарницького"
+        ],
+        "to": "дарницького"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "компьютерного",
+          "комп'ютерного"
+        ],
+        "to": "комп’ютерного"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "внуирішніх",
+          "внутрішніх"
+        ],
+        "to": "внутрішніх"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "міжрайонної",
+          "міжнайонної"
+        ],
+        "to": "міжрайонної"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "камёянець-подільського",
+          "кам`янець-подільського"
+        ],
+        "to": "кам’янець-подільського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "додержанням",
+          "додержаннаям"
+        ],
+        "to": "додержанням"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "тернопільскої",
+          "тернопільської"
+        ],
+        "to": "тернопільської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "львівської",
+          "лвівської"
+        ],
+        "to": "львівської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "львівський",
+          "львовський"
+        ],
+        "to": "львівський"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "міжрайоної",
+          "міжрайонної"
+        ],
+        "to": "міжрайонної"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "проурорська",
+          "прокурорська"
+        ],
+        "to": "прокурорська"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "тернопільского",
+          "тернопільського"
+        ],
+        "to": "тернопільського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "підтриманням"
+        ],
+        "to": "підтриманням"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "миколаївської",
+          "миколаїввської"
+        ],
+        "to": "миколаївської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кореспонденції",
+          "корреспонденції"
+        ],
+        "to": "кореспонденції"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кам'янець-подільського",
+          "кам'янець-подільского"
+        ],
+        "to": "кам’янець-подільського"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "прокуратури",
+          "прокуратурі"
+        ],
+        "to": "прокуратури"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кам'янець-подільського",
+          "кам’янець-подільського"
+        ],
+        "to": "кам’янець-подільського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "організованою",
+          "організованною"
+        ],
+        "to": "організованною"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "суворівського",
+          "суворовського"
+        ],
+        "to": "суворівського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "горохівського",
+          "горохівсткого"
+        ],
+        "to": "горохівського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "миколаївської",
+          "миколайвської"
+        ],
+        "to": "миколаївської"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "новоодесського",
+          "новоодеського"
+        ],
+        "to": "новоодеського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "дніпровського",
+          "дніпровсього"
+        ],
+        "to": "дніпровського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "спеціалист",
+          "спеціаліст"
+        ],
+        "to": "спеціаліст"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "управіння",
+          "управілння"
+        ],
+        "to": "управління"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "управління",
+          "кправління"
+        ],
+        "to": "управління"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "подільського",
+          "подільского"
+        ],
+        "to": "подільського"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кременецького",
+          "еременецького"
+        ],
+        "to": "кременецького"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "invert": false,
+          "selectError": false,
+          "omitError": false,
+          "name": "Column 1",
+          "selectBlank": false,
+          "columnName": "Column 1",
+          "omitBlank": false,
+          "type": "list",
+          "selection": [
+            {
+              "v": {
+                "v": "начальника",
+                "l": "начальника"
+              }
+            },
+            {
+              "v": {
+                "v": "начкальник",
+                "l": "начкальник"
+              }
+            },
+            {
+              "v": {
+                "v": "начальник",
+                "l": "начальник"
+              }
+            }
+          ]
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "начкальник"
+        ],
+        "to": "начальник"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ii"
+        ],
+        "to": "і"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "южно-українська"
+        ],
+        "to": "южноукраїнська"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "старшмй"
+        ],
+        "to": "старший"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "старщий"
+        ],
+        "to": "старший"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "старовижківського"
+        ],
+        "to": "старовижівського"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "слідчного"
+        ],
+        "to": "слідчого"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "слідного"
+        ],
+        "to": "слідчого"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "раону"
+        ],
+        "to": "району"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "раойну"
+        ],
+        "to": "району"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "р-ну"
+        ],
+        "to": "району"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "р-на"
+        ],
+        "to": "района"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "р-н"
+        ],
+        "to": "район"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "проурора"
+        ],
+        "to": "прокурора"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "прокуроську"
+        ],
+        "to": "прокурорську"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "продовольства"
+        ],
+        "to": "продовольства"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "проводольства"
+        ],
+        "to": "продовольства"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "проважданні"
+        ],
+        "to": "провадженні"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "проважденні"
+        ],
+        "to": "провадженні"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "предстваництва"
+        ],
+        "to": "представництва"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "правозихсної"
+        ],
+        "to": "правозахисної"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "подтавької"
+        ],
+        "to": "податкової"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "одесської"
+        ],
+        "to": "одеської"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "одесси"
+        ],
+        "to": "одеси"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "нагялду"
+        ],
+        "to": "нагляду"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "кріминальному"
+        ],
+        "to": "крімінальному"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "крімінальному"
+        ],
+        "to": "кримінальному"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "київа"
+        ],
+        "to": "києва"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "киеєва"
+        ],
+        "to": "києва"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "інетерсів"
+        ],
+        "to": "інтересів"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "громодян"
+        ],
+        "to": "громадян"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "веоєнній"
+        ],
+        "to": "воєнній"
+      }
+    ]
+  }
+]

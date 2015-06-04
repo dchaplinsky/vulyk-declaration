@@ -4,12 +4,15 @@ from __future__ import unicode_literals
 import re
 from string import capwords
 from collections import defaultdict
+from openrefine import OpenRefine
+from glob2 import glob
 
 from natsort import natsorted
 
 
 lists = {}
 to_str = lambda x: "%02d" % (x + 1) if isinstance(x, int) else x
+OPREF = OpenRefine(glob("edits/*.json"))
 
 
 def title(s):
@@ -33,7 +36,8 @@ FIELDS_TO_TITLIZE = [
 ]
 
 FIELDS_TO_CAPITALIZE = ["answer.general.family.xxx.name"]
-FIELDS_TO_LOWERCASIZE = ["answer.general.post.post"]
+FIELDS_TO_LOWERCASIZE = []
+FIELDS_TO_PROOFREAD = ["answer.general.post.post"]
 
 FIELDS_TO_NUM_NORMALIZE = [
     "answer.banks.45.xxx.sum",
@@ -329,6 +333,9 @@ def cleanup(s, path):
         return s
 
     if isinstance(s, basestring):
+        if path in FIELDS_TO_PROOFREAD:
+            s = OPREF.process(s)
+
         s = s.replace("—", " - ")
         s = re.sub("([^\s])\-\s+", r"\1-", s)
         s = re.sub("\s+\-([^\s])", r"-\1", s)
