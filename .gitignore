@@ -43,5 +43,6 @@ docs/_build
 bin/xlsx/*
 bin/csvs/*
 bin/aux/*
+bin/out/*
 bin/json/*
 .DS_Store

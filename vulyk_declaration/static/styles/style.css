@@ -697,4 +697,12 @@ dd {
   margin: 0 10px;
 }
 
+.declaration-action ul {
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
 /* @end */

@@ -28,6 +28,20 @@
 	<div class="declaration-action">
 		<p class="declaration-action_head">Завантажити декларацію для розшифровки</p>
 		<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
+		<ul>
+		{{#if full_name }}
+			<li><strong>ПІБ: </strong>{{ full_name }}</li>
+		{{/if}}
+		{{#if office }}
+			<li><strong>Відомоство: </strong>{{ office }}</li>
+		{{/if}}
+		{{#if region }}
+			<li><strong>Регіон: </strong>{{ region }}</li>
+		{{/if}}
+		{{#if position }}
+			<li><strong>Посада: </strong>{{ position }}</li>
+		{{/if}}
+		</ul>
 	</div>
 
 	<legend class="i-wai">
