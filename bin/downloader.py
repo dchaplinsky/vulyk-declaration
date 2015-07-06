@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 import re
 import sys
+import shutil
 import os.path
 from collections import Counter
 from pprint import pprint
@@ -12,6 +13,7 @@ from unicodecsv import DictReader, DictWriter
 from rfc6266 import parse_requests_response
 import requests
 import requests_ftp
+from urllib2 import unquote, urlopen, URLError
 from translitua import translitua
 
 
@@ -32,7 +34,7 @@ def expand_gdrive_download_url(url):
 
     m = re.search(r"file\/d\/([^\/]+)\/", url)
     if m is None:
-        m = re.search(r"open\?id=([^&]+)&", url)
+        m = re.search(r"open\?id=([^&]+)", url)
 
     if m:
         return "https://docs.google.com/uc?export=download&id=%s" % m.group(1)
@@ -47,12 +49,34 @@ def download_file(url, fname):
     if "://" not in url.lower():
         return "!error=local_file"
 
+    # if url.startswith("ftp://"):
+    #     url = unquote(url.encode('ascii')).decode('utf8')
+
     try:
         resp = s.get(url, stream=True, verify=False, timeout=30)
     except requests.exceptions.ConnectionError:
         return "!error=connection_error"
     except requests.exceptions.Timeout:
         return "!error=timeout"
+    except UnicodeEncodeError:
+        # Special case for FTP with cyrillic names
+        try:
+            req = urlopen(url, timeout=60)
+
+            fname = "%s.%s" % (
+                fname,
+                os.path.splitext(url)[-1].strip(".").lower()
+                or "html")
+
+            if os.path.exists(fname):
+                return fname
+
+            with open(fname, 'wb') as f:
+                shutil.copyfileobj(req, f)
+            req.close()
+
+        except URLError:
+            return "!error=404"
 
     if resp.ok:
         parsed = parse_requests_response(resp)
@@ -113,7 +137,7 @@ if __name__ == '__main__':
 
         for line in r:
             if (line["Ведомство"] and line["ФИО"] and
-                    line["Взято в работу"].lower() != "да"):
+                    line["Взято в работу"].lower() == ""):
 
                 print(line["ФИО"])
 
@@ -133,7 +157,10 @@ if __name__ == '__main__':
 
                     bname, ext = os.path.splitext(fname)
                     ext = ext.strip(".").lower()
+                    if ext == "html":
+                        fname = "!error=html"
 
+                    line["Локальный файл"] = fname
                     if fname.startswith("!"):
                         cnt.update([fname])
 
@@ -141,7 +168,6 @@ if __name__ == '__main__':
                     else:
                         types.update([ext])
 
-                        line["Локальный файл"] = fname
                         line["Локальный pdf"] = (
                             fname if ext == "pdf" else bname + ".pdf")
 
