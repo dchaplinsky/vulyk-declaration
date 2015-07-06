@@ -1,6 +1,7 @@
 import io
 import sys
 import json
+from collections import Counter
 from operator import itemgetter
 from flattener import Flattener
 
@@ -35,6 +36,7 @@ if __name__ == '__main__':
 
     in_file = sys.argv[1]
     out_file = sys.argv[2]
+    count = Counter()
 
     results = []
     with open(in_file, "r") as fp:
@@ -48,8 +50,9 @@ if __name__ == '__main__':
             grouped_answer = {}
 
             for field in fields:
-                values = list(set(map(itemgetter(field), task_answers)))
-                set_answer(grouped_answer, field, values)
+                count.update(map(itemgetter(field), task_answers))
+                set_answer(grouped_answer, field, dict(count))
+                count.clear()
 
             results.append(traverse_and_convert(grouped_answer))
 
