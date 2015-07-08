@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import os
 import re
 import sys
 import shutil
+import json
 import os.path
 from collections import Counter
 from pprint import pprint
@@ -13,7 +15,7 @@ from unicodecsv import DictReader, DictWriter
 from rfc6266 import parse_requests_response
 import requests
 import requests_ftp
-from urllib2 import unquote, urlopen, URLError
+from urllib2 import urlopen, URLError
 from translitua import translitua
 
 
@@ -49,19 +51,10 @@ def download_file(url, fname):
     if "://" not in url.lower():
         return "!error=local_file"
 
-    # if url.startswith("ftp://"):
-    #     url = unquote(url.encode('ascii')).decode('utf8')
-
-    try:
-        resp = s.get(url, stream=True, verify=False, timeout=30)
-    except requests.exceptions.ConnectionError:
-        return "!error=connection_error"
-    except requests.exceptions.Timeout:
-        return "!error=timeout"
-    except UnicodeEncodeError:
-        # Special case for FTP with cyrillic names
+    if url.startswith("ftp://"):
+        # Special case for FTP
         try:
-            req = urlopen(url, timeout=60)
+            req = urlopen(str(url), timeout=60)
 
             fname = "%s.%s" % (
                 fname,
@@ -74,9 +67,18 @@ def download_file(url, fname):
             with open(fname, 'wb') as f:
                 shutil.copyfileobj(req, f)
             req.close()
-
+            return fname
         except URLError:
             return "!error=404"
+
+    try:
+        resp = s.get(url, stream=True, verify=False, timeout=30)
+    except requests.exceptions.ConnectionError:
+        return "!error=connection_error"
+    except requests.exceptions.Timeout:
+        return "!error=timeout"
+    except UnicodeEncodeError:
+        return "!error=russian"
 
     if resp.ok:
         parsed = parse_requests_response(resp)
@@ -129,7 +131,8 @@ if __name__ == '__main__':
         "Конверсия")
 
     with open(in_file, "r") as fp, \
-            open(os.path.join(out_dir, "out.csv"), "w") as f_out:
+            open(os.path.join(out_dir, "out.csv"), "w") as f_out, \
+            open(os.path.join(out_dir, "out.json"), "w") as f_json_out:
 
         r = DictReader(fp)
         w = DictWriter(f_out, new_header)
@@ -173,8 +176,20 @@ if __name__ == '__main__':
 
                     line["Конверсия"] = "Да" if ext == "pdf" else ""
 
-                line["Локальный pdf"] = line["Локальный pdf"].replace(
-                    "out/", "")
+                if line["Конверсия"] == "Да":
+                    f_json_out.write(json.dumps({
+                        "office": line["Ведомство"],
+                        "region": line["Регион"],
+                        "position": line["Должность"],
+                        "full_name": line["ФИО"],
+                        "link": "http://unshred.it/static/declarations/chosen_ones/mega_batch/%s" % os.path.basename(line["Локальный pdf"])
+                    }) + os.linesep)
+
+                    # shutil.copy(
+                    #     line["Локальный pdf"],
+                    #     os.path.join(out_dir, "to_upload"))
+
+                line["Локальный pdf"] = os.path.basename(line["Локальный pdf"])
                 w.writerow(line)
 
     pprint(cnt.most_common())
