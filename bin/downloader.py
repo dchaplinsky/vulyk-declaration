@@ -14,12 +14,8 @@ from pprint import pprint
 from unicodecsv import DictReader, DictWriter
 from rfc6266 import parse_requests_response
 import requests
-import requests_ftp
 from urllib2 import urlopen, URLError
 from translitua import translitua
-
-
-requests_ftp.monkeypatch_session()
 
 
 def expand_gdrive_download_url(url):
@@ -118,6 +114,8 @@ if __name__ == '__main__':
 
     cnt = Counter()
     types = Counter()
+    names = Counter()
+
     new_header = (
         "Ведомство",
         "Регион",
@@ -146,6 +144,11 @@ if __name__ == '__main__':
 
                 desired_name = os.path.join(
                     out_dir, prepare_fullname(line["ФИО"]))
+
+                if desired_name in names:
+                    desired_name += "_" + str(names[desired_name])
+
+                names.update([desired_name])
                 desired_file = desired_name + ".pdf"
 
                 if os.path.exists(desired_file):
@@ -156,7 +159,7 @@ if __name__ == '__main__':
                 else:
                     fname = download_file(
                         unicode(line["Ссылка"]),
-                        os.path.join(out_dir, prepare_fullname(line["ФИО"])))
+                        desired_name)
 
                     bname, ext = os.path.splitext(fname)
                     ext = ext.strip(".").lower()
