@@ -317,11 +317,9 @@ TWO_IS_ENOUGH = [
 def normalize_number(s):
     s = s.strip().replace(" ", "").replace(",", ".").rstrip(".")
     s = s.lstrip("0")
-    if s.endswith(".0"):
-        s = s[:-2]
 
-    if s.endswith(".00"):
-        s = s[:-3]
+    if "." in s:
+        s = s.rstrip("0").rstrip(".")
 
     return s
 
@@ -336,7 +334,7 @@ def cleanup(s, path):
         if path in FIELDS_TO_PROOFREAD:
             s = OPREF.process(s)
 
-        s = s.replace("—", " - ")
+        s = s.replace("—", " - ").strip().strip("()")
         s = re.sub("([^\s])\-\s+", r"\1-", s)
         s = re.sub("\s+\-([^\s])", r"-\1", s)
         s = re.sub("\.([^\s])", r". \1", s)
@@ -344,8 +342,12 @@ def cleanup(s, path):
         s = re.sub("\s*\)\s*", ") ", s)
         s = s.replace(" ,", ", ")
         s = s.replace(" .", ". ")
+
+        s = s.replace('"', "'")
+        s = s.replace('`', "'")
+
         s = re.sub("\s+", " ", s)
-        s.strip().rstrip(".")
+        s = s.rstrip(".")
 
         if path in FIELDS_TO_TITLIZE:
             s = title(s)
