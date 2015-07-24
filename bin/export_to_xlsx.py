@@ -70,8 +70,7 @@ if __name__ == '__main__':
 
                     # Check if field that has two common answers out of 3+
                     # belongs to the list of fields where two answers is enough
-                    if (unified_path in TWO_IS_ENOUGH and common_value and
-                            other_values_empty):
+                    if (common_value and other_values_empty):
                         fmt.set_bg_color('cyan')
                         use_common_value = True
                     else:

@@ -314,6 +314,50 @@ TWO_IS_ENOUGH = [
 ]
 
 
+BANKS_TO_CLEAN = [
+    "answer.banks.45.xxx.sum_comment",
+    "answer.banks.45.xxx.sum_foreign_comment",
+    "answer.banks.46.xxx.sum_comment",
+    "answer.banks.46.xxx.sum_foreign_comment",
+    "answer.banks.47.xxx.sum_comment",
+    "answer.banks.47.xxx.sum_foreign_comment",
+    "answer.banks.48.xxx.sum_comment",
+    "answer.banks.48.xxx.sum_foreign_comment",
+    "answer.banks.49.xxx.sum_comment",
+    "answer.banks.49.xxx.sum_foreign_comment",
+    "answer.banks.50.xxx.sum_comment",
+    "answer.banks.50.xxx.sum_foreign_comment",
+    "answer.banks.51.xxx.sum_comment",
+    "answer.banks.51.xxx.sum_foreign_comment",
+    "answer.banks.52.xxx.sum_comment",
+    "answer.banks.52.xxx.sum_foreign_comment",
+    "answer.banks.53.xxx.sum_comment",
+    "answer.banks.53.xxx.sum_foreign_comment",
+    "answer.liabilities.54.sum_comment",
+    "answer.liabilities.54.sum_foreign_comment",
+    "answer.liabilities.55.sum_comment",
+    "answer.liabilities.55.sum_foreign_comment",
+    "answer.liabilities.56.sum_comment",
+    "answer.liabilities.56.sum_foreign_comment",
+    "answer.liabilities.57.sum_comment",
+    "answer.liabilities.57.sum_foreign_comment",
+    "answer.liabilities.58.sum_comment",
+    "answer.liabilities.58.sum_foreign_comment",
+    "answer.liabilities.59.sum_comment",
+    "answer.liabilities.59.sum_foreign_comment",
+    "answer.liabilities.60.sum_comment",
+    "answer.liabilities.60.sum_foreign_comment",
+    "answer.liabilities.61.sum_comment",
+    "answer.liabilities.61.sum_foreign_comment",
+    "answer.liabilities.62.sum_comment",
+    "answer.liabilities.62.sum_foreign_comment",
+    "answer.liabilities.63.sum_comment",
+    "answer.liabilities.63.sum_foreign_comment",
+    "answer.liabilities.64.sum_comment",
+    "answer.liabilities.64.sum_foreign_comment",
+]
+
+
 def normalize_number(s):
     s = s.strip().replace(" ", "").replace(",", ".").rstrip(".")
     s = s.lstrip("0")
@@ -324,6 +368,16 @@ def normalize_number(s):
     return s
 
 
+def cleanup_bank_name(s):
+    if s:
+        for r in ["КБ", "АКБ", "ПАТ", "АТ"]:
+            s = re.sub(r"(:?\b)%s(:?\b)" % r, "", s, flags=re.I | re.U)
+
+        return s.replace("(", "").replace(")", "")
+
+    return ""
+
+
 def cleanup(s, path):
     path = ".".join(map(lambda x: "xxx" if isinstance(x, int) else x, path))
 
@@ -331,10 +385,17 @@ def cleanup(s, path):
         return s
 
     if isinstance(s, basestring):
+        if s in ["nodata", "unspecified"]:
+            return ""
+
         if path in FIELDS_TO_PROOFREAD:
             s = OPREF.process(s)
 
-        s = s.replace("—", " - ").strip().strip("()")
+        if path in BANKS_TO_CLEAN:
+            s = cleanup_bank_name(s)
+
+        s = s.replace("—", " - ").strip("()").strip()
+
         s = re.sub("([^\s])\-\s+", r"\1-", s)
         s = re.sub("\s+\-([^\s])", r"-\1", s)
         s = re.sub("\.([^\s])", r". \1", s)
