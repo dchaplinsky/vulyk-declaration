@@ -119,10 +119,36 @@ scripts.Common = {
 				".vehicle__40__brand": scripts.Data.autocompliteData.cars,
 				".vehicle__41__brand": scripts.Data.autocompliteData.trucks,
 				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
-				".vehicle__44__brand": scripts.Data.autocompliteData.motos
+				".vehicle__44__brand": scripts.Data.autocompliteData.motos,
+				"#banks__45__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__45__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__46__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__46__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__47__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__47__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__48__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__48__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__49__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__49__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__50__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__50__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__51__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__51__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__52__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__52__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#banks__53__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__53__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__63__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__63__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__64__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__64__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__54__sum_comment": scripts.Data.autocompliteData.insurances,
+				"#liabilities__54__sum_foreign_comment": scripts.Data.autocompliteData.insurancesForeign,
+				"#liabilities__60__sum_comment": scripts.Data.autocompliteData.insurances,
+				"#liabilities__60__sum_foreign_comment": scripts.Data.autocompliteData.insurancesForeign
 			},
 			focus_next = function(current) {
-				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox)"),
+				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox), textarea"),
 					nextIndex = 0;
 
 				if (current.length === 1) {
@@ -285,7 +311,7 @@ scripts.Common = {
 			if (/^\d+([.,]\d+)?/i.test(val)) {
 				note = el.parent().siblings(".declaration-small-note");
 				if (note.length == 0) {
-					el.parent().after('<p class="l-weiss-form__item declaration-small-note optional-note">');
+					el.parent().after('<p class="l-weiss-form__item declaration-small-note declaration-small-note_optional">');
 					note = el.parent().siblings(".declaration-small-note");
 				}
 				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
