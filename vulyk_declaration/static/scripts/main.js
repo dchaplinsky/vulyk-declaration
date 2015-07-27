@@ -138,6 +138,11 @@ scripts.Common = {
 				"#banks__52__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__53__sum_comment": scripts.Data.autocompliteData.banks,
 				"#banks__53__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__57__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__57__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__58__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__58__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+
 				"#liabilities__63__sum_comment": scripts.Data.autocompliteData.banks,
 				"#liabilities__63__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#liabilities__64__sum_comment": scripts.Data.autocompliteData.banks,
