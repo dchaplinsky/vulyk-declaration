@@ -316,7 +316,7 @@ scripts.Common = {
 				}
 				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
 			} else {
-				el.parent().siblings(".optional-note").remove();
+				el.parent().siblings(".declaration-small-note_optional").remove();
 			}
 		});
 
