@@ -142,7 +142,6 @@ scripts.Common = {
 				"#liabilities__57__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#liabilities__58__sum_comment": scripts.Data.autocompliteData.banks,
 				"#liabilities__58__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
-
 				"#liabilities__63__sum_comment": scripts.Data.autocompliteData.banks,
 				"#liabilities__63__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#liabilities__64__sum_comment": scripts.Data.autocompliteData.banks,
@@ -247,7 +246,7 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("lastnameonly", function(value, element) {
-			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z,\-\(\)\ ]+$/i.test(value);
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
