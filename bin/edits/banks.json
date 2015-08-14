@@ -1,0 +1,2789 @@
+[
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "1/Кредобанк;"
+        ],
+        "to": "Кредобанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "13370 - Райффайзен Банк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "1310 - Ренесанс кредит,"
+        ],
+        "to": "Ренесанс кредит"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "-",
+          "*",
+          "**",
+          "----------"
+        ],
+        "to": ""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ КБ Приватбанк",
+          "ПАТ КБ ПРиватбанк",
+          "ПАТ КБ ПриватБанк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Приватбанк",
+          "ПриватБанк",
+          "приватбанк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ВАТ",
+          "ВАТ "
+        ],
+        "to": ""
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"Ощадбанк\" ",
+          "АТ Ощадбанк"
+        ],
+        "to": "Ощадбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "грн.",
+          "грн"
+        ],
+        "to": "грн."
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "+1843",
+          "1843"
+        ],
+        "to": "+1843"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Квартира",
+          "квартира"
+        ],
+        "to": "rвартира"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ДельтаБанк",
+          "Дельтабанк"
+        ],
+        "to": "Дельта Банк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "+5322",
+          "5322"
+        ],
+        "to": "+5322"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Райффайзен Банк Аваль",
+          "райффайзен банк аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Російський Стандарт",
+          "Російський стандарт"
+        ],
+        "to": "Російський Стандарт"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Порше Мобіліті",
+          "Порше мобіліті"
+        ],
+        "to": "Порше Мобіліті"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Дельта Банк",
+          "Дельта банк"
+        ],
+        "to": "Дельта Банк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ОТР Банк",
+          "ОТР банк"
+        ],
+        "to": "ОТР Банк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Утримання авто",
+          "утримання авто"
+        ],
+        "to": "Утримання авто"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "(414350)",
+          "414350"
+        ],
+        "to": "(414350)"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Приват банк",
+          "Приват Банк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Unicredit",
+          "UniCredit"
+        ],
+        "to": "Unicredit"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "55.89%",
+          "55,89%"
+        ],
+        "to": "55.89%"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "простих іменних акцій",
+          "простих іменних акцій акцій"
+        ],
+        "to": "простих іменних акцій"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "записано  5 різних сум",
+          "записано 5 різних сум"
+        ],
+        "to": "записано  5 різних сум"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ КБ \"Приватбанк\nПАТ КБ \"Приватбанк",
+          "ПАТ КБ \"ПриватБанк\nПАТ КБ \"ПриватБанк",
+          "ПАТ КБ \"ПриватБанк\nПАТ КБ \"Приватбанк",
+          "ПАТ КБ \"Приватбанк\nПАТ КБ Приватбанк\nПАТ КБ Приватбанк\nПАТ КБ \"Приватбанк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"КРЕДІ АГРІКОЛЬ БАНК\nПАТ \"КРЕДІ АГРІКОЛЬ БАНК",
+          "ПАТ \"Креді Агріколь Банк\nПАТ \"Креді Агріколь Банк",
+          "ПАТ \"Креді Агріколь банк\nПАТ \"Креді Агріколь банк"
+        ],
+        "to": "Креді Агріколь Банк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Банк \"Київська Русь\nПАТ \"Банк \"Київська Русь",
+          "ПАТ \"Банк Київська Русь\nПАТ \"Банк Київська Русь",
+          "ПАТ Банк \"Київська Русь\nПАТ Банк Київська Русь\nПАТ банк \"КИЇВСЬКА РУСЬ"
+        ],
+        "to": "Київська Русь"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Укрсиббанк\nПАТ \"Укрсиббанк",
+          "ПАТ \"УкрСибБанк\nПАТ \"УкрСибБанк"
+        ],
+        "to": "Укрсиббанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Українська пожарно страхова компанія\nПАТ \"Українська пожежно-страхова компанія",
+          "ПАТ \"Українська пожежно-страхова компанія\nПАТ \"Українська пожарно страхова компанія"
+        ],
+        "to": "Українська пожежно-страхова компанія"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"КБ \"Хрещатик\nПАТ \"КБ \"Хрещатик",
+          "ПАТ \"КБ \"Хрещатик\nПАТ \"КБ\" Хрещатик"
+        ],
+        "to": "Хрещатик"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Приватбанк\nПАТ \"Приватбанк",
+          "ПАТ \"ПриватБанк\nПАТ \"ПриватБанк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"ДЕЛЬТА БАНК\nАТ \"Дельта Банк",
+          "АТ \"Дельта Банк\nАТ \"Дельта Банк"
+        ],
+        "to": "Дельта Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АКБ \"Райффайзен Банк Аваль\nАКБ \"Райффайзен Банк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Агриколь Банк"
+        ],
+        "to": "Креді Агріколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"Банк Богуслав\nАТ \"Банк Богуслав"
+        ],
+        "to": "Банк Богуслав"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"БМ Банк\"; "
+        ],
+        "to": "БМ Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"БМБанк\nПАТ КБ \"Хрещатик"
+        ],
+        "to": "БМ Банк\nХрещатик"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"Ощадбанк\nАТ \"Ощадбанк"
+        ],
+        "to": "Ощадбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "АТ \"Таскомбанк\nАТ \"Таскомбанк"
+        ],
+        "to": "Таскомбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Банк \"Фінанси і кредит\nбанк \"Фінанси і кредит"
+        ],
+        "to": "Фінанси і кредит"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Банк Російський Стандарт"
+        ],
+        "to": "Російський Стандарт"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Дельта"
+        ],
+        "to": "Дельта Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Державного Ощадбанку України"
+        ],
+        "to": "Ощадбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "дол сша"
+        ],
+        "to": "долларів США"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "доларів США"
+        ],
+        "to": "долларів США"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "долл. США"
+        ],
+        "to": "долларів США"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "долл."
+        ],
+        "to": "долларів"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "долларів"
+        ],
+        "to": "долларів США"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "КБ \"Приватбанк\nКБ \"Приватбанк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "КБ Приватбанк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Кредит Абриколь Банк"
+        ],
+        "to": "Кредит Агріколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Кредит Агриколь Банк"
+        ],
+        "to": "Кредит Агріколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Кредит Агріколь Банк"
+        ],
+        "to": "Креді Агріколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Морфінбанк"
+        ],
+        "to": "Марфінбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ОТП Банк"
+        ],
+        "to": "ОТР Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ОТР Bank"
+        ],
+        "to": "ОТР Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАО \"Райффайзен Банк Аваль\nПАО \"Райффайзен Банк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАО КБ Приватбанк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Альфа банк\nПАТ \"Альфа банк"
+        ],
+        "to": "Альфа банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Альфа-Банк\nПАТ \"Альфа-Банк"
+        ],
+        "to": "Альфа-Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Банк інвестицій та заощаджень\";"
+        ],
+        "to": "Банк інвестицій та заощаджень"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"ВіЕйБі Банк\nПАТ \"ВіЕйБі Банк"
+        ],
+        "to": "ВАБ Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"ВТБ Банк\nПАТ \"ВТБ Банк"
+        ],
+        "to": "ВТБ Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Державний ощадний банк України\nПАТ \"Державний ощадний банк України"
+        ],
+        "to": "Ощадбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Райфайзен банк Аваль\nПАТ \"Райффайзен банк Аваль"
+        ],
+        "to": "Райфайзен банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Райффазен банк Аваль\nПАТ \"Райффазен банк Аваль"
+        ],
+        "to": "Райффазен банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"Укрсоцбанк\nПАТ \"Укрсоцбанк"
+        ],
+        "to": "Укрсоцбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ \"UniCredit Bank\nПАТ \"UniCreditBank"
+        ],
+        "to": "UniCredit Bank"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Банк \"Київська Русь\" м. Київ"
+        ],
+        "to": "Київська Русь"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Банк \"Київська Русь\", м.Київ"
+        ],
+        "to": "Київська Русь"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Банк Київська Русь"
+        ],
+        "to": "Київська Русь"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Граве Україна"
+        ],
+        "to": "Граве Україна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Державний ощадний банк України"
+        ],
+        "to": "Ощадбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Російський Стандарт"
+        ],
+        "to": "Банк Російський Стандарт"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Київська Русь"
+        ],
+        "to": "Банк Київська Русь"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ КБ \"Приватбанк\nПриватБанк\nПАТ КБ \"Приватбанк",
+          "ПАТ КБ\"Приватбанк\nПАТ КБ\"Приватбанк",
+          "ПАТКБ \"Приват банк\nПАТКБ \"Приватбанк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Райфайзен Банк Аваль",
+          "Райфайзен банк Аваль",
+          "РайфайзенБанкАваль"
+        ],
+        "to": "Райфайзен Банк Аваль"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Приватбанк",
+          "ПАТ Приват банк"
+        ],
+        "to": "Приватбанк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Альфа банк",
+          "Альфа-Банк"
+        ],
+        "to": "Альфа-банк"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Райффайзен Банк Аваль",
+          "РайффайзенБанк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Райффайзен Банк Аваль",
+          "Райфайзен Банк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "будівництво будинку",
+          "Будівництво будинка"
+        ],
+        "to": "будівництво будинку"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Райффайзен Банк Аваль",
+          "Райффазен банк Аваль"
+        ],
+        "to": "Райффайзен Банк Аваль"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "2/Укрсиббанк;"
+        ],
+        "to": "Укрсиббанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ КБ Приват банк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ КБ Хрещатик"
+        ],
+        "to": "Банк Хрещатик"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Креди Агриколь Банк"
+        ],
+        "to": "Креді Агриколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Правекс банк"
+        ],
+        "to": "Правекс-банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Укрсиббанк"
+        ],
+        "to": "Укрсиббанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПАТ Укрсоцбанк"
+        ],
+        "to": "Укрсоцбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Порше мобилити"
+        ],
+        "to": "Порше Мобіліті"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПрАТ \"СК Провідна\nПрАТ \"СК Провідна"
+        ],
+        "to": "СК Провідна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПРАТ СК Провідна"
+        ],
+        "to": "СК Провідна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПТ КБ \"Приватбанк\nПТ КБ \"Приватбанк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ренесанс кредит"
+        ],
+        "to": "Банк Ренесанс Кредит"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "СК ПЗУ Украина"
+        ],
+        "to": "СК ПЗУ Україна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "СК PZU Україна"
+        ],
+        "to": "СК ПЗУ Україна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "ПЗУ Україна"
+        ],
+        "to": "СК ПЗУ Україна"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "УПСК"
+        ],
+        "to": "Українська пожежно-страхова компанія"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Хрещатик"
+        ],
+        "to": "Банк Хрещатик"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "UniCredit Bank"
+        ],
+        "to": "UniCredit"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "UniCredit"
+        ],
+        "to": "Unicredit"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 100,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "VAB"
+        ],
+        "to": "ВАБ Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "КБ\"Приватбанк\nКБ\"Приватбанк"
+        ],
+        "to": "Приватбанк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Креді Агриколь Банк"
+        ],
+        "to": "Креді Агрыколь Банк"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1",
+    "engineConfig": {
+      "facets": [
+        {
+          "expression": "value",
+          "to": 30,
+          "selectError": true,
+          "selectNumeric": true,
+          "name": "len",
+          "selectBlank": true,
+          "columnName": "len",
+          "selectNonNumeric": true,
+          "from": 0,
+          "type": "range"
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Column 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Креді Агрыколь Банк"
+        ],
+        "to": "Креді Агріколь Банк"
+      }
+    ]
+  }
+]

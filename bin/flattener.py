@@ -5,14 +5,14 @@ import re
 from string import capwords
 from collections import defaultdict
 from openrefine import OpenRefine
-from glob2 import glob
 
 from natsort import natsorted
 
 
 lists = {}
 to_str = lambda x: "%02d" % (x + 1) if isinstance(x, int) else x
-OPREF = OpenRefine(glob("edits/*.json"))
+OPREF = OpenRefine(["edits/2000.json", "edits/pros.json"])
+OPREF_BANKS = OpenRefine(["edits/banks.json"], by_word=False)
 
 
 def title(s):
@@ -161,7 +161,9 @@ FIELDS_TO_NUM_NORMALIZE = [
     "answer.vehicle.43.xxx.sum",
     "answer.vehicle.43.xxx.sum_rent",
     "answer.vehicle.44.xxx.sum",
-    "answer.vehicle.44.xxx.sum_rent"
+    "answer.vehicle.44.xxx.sum_rent",
+    "answer.income.21.xxx.uah_equal",
+    "answer.income.22.xxx.uah_equal",
 ]
 
 TWO_IS_ENOUGH = [
@@ -370,10 +372,11 @@ def normalize_number(s):
 
 def cleanup_bank_name(s):
     if s:
-        for r in ["КБ", "АКБ", "ПАТ", "АТ"]:
-            s = re.sub(r"(:?\b)%s(:?\b)" % r, "", s, flags=re.I | re.U)
+        # for r in ["КБ", "АКБ", "ПАТ", "АТ"]:
+        #     s = re.sub(r"(:?\b)%s(:?\b)" % r, "", s, flags=re.I | re.U)
 
-        return s.replace("(", "").replace(")", "")
+        s = s.replace("(", "").replace(")", "")
+        s = OPREF_BANKS.process(s)
 
     return ""
 
@@ -409,6 +412,15 @@ def cleanup(s, path):
 
         s = re.sub("\s+", " ", s)
         s = s.rstrip(".")
+
+        if s.lower() in ["немає даних", "немає данних"]:
+            s = ""
+
+        s = s.replace("см. куб.", "куб. см.")
+        s = s.replace("см куб.", "куб. см.")
+        s = s.replace("см. куб", "куб. см.")
+        s = s.replace("см куб", "куб. см.")
+        s = s.replace("см3", "куб. см.")
 
         if path in FIELDS_TO_TITLIZE:
             s = title(s)

@@ -11,14 +11,15 @@ from nltk.tokenize import word_tokenize
 class OpenRefine(object):
     """docstring for OpenRefine"""
 
-    def __init__(self, list_of_edits):
+    def __init__(self, list_of_edits, by_word=True):
         super(OpenRefine, self).__init__()
         self.repl = {}
+        self.by_word = by_word
 
         for l in list_of_edits:
             self.load_edits(l)
 
-        print("OpenRefine edits loaded: %s"% len(self.repl))
+        print("OpenRefine edits loaded: %s" % len(self.repl))
 
     def load_edits(self, fname):
         with open(fname, "r") as fp:
@@ -30,13 +31,16 @@ class OpenRefine(object):
                     if frm in self.repl and subedit["to"] != self.repl[frm]:
                         print(", ".join([frm, self.repl[frm], subedit["to"]]))
 
-                    self.repl[frm] = subedit["to"]
+                    self.repl[frm.lower()] = subedit["to"]
 
     def process(self, sentence):
-        return " ".join([
-            self.repl.get(word, word)
-            for word in word_tokenize(sentence.lower().strip('"'))
-        ])
+        if self.by_word:
+            return " ".join([
+                self.repl.get(word, word)
+                for word in word_tokenize(sentence.lower().strip('"'))
+            ])
+        else:
+            return self.repl.get(sentence.lower(), sentence)
 
 
 if __name__ == '__main__':

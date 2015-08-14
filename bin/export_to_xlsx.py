@@ -39,6 +39,15 @@ if __name__ == '__main__':
     for i, f in enumerate(fields):
         worksheet.write_string(0, i, ".".join(map(to_str, f)))
 
+    red_fmt = workbook.add_format()
+    red_fmt.set_bg_color('red')
+
+    cyan_fmt = workbook.add_format()
+    cyan_fmt.set_bg_color('cyan')
+
+    yellow_fmt = workbook.add_format()
+    yellow_fmt.set_bg_color('yellow')
+
     line_no = 1
     for task in all_tasks:
 
@@ -61,21 +70,31 @@ if __name__ == '__main__':
 
             # Do not apply formatting for some fields like email or username
             if unified_path not in FIELDS_TO_IGNORE:
-                if freq == 1:
-                    conflicts_counter.update([freq])
-                    fmt = workbook.add_format()
-                    fmt.set_bg_color('red')
-                elif freq == 2:
-                    fmt = workbook.add_format()
+                if (unified_path.endswith("hidden") or
+                        unified_path.endswith("unclear")) and "on" in values:
+                    use_common_value = True
+                    common_value = "on"
 
-                    # Check if field that has two common answers out of 3+
-                    # belongs to the list of fields where two answers is enough
-                    if (common_value and other_values_empty):
-                        fmt.set_bg_color('cyan')
-                        use_common_value = True
-                    else:
-                        fmt.set_bg_color('yellow')
+                    if values.count("on") < len(values):
+                        fmt = cyan_fmt
+                else:
+                    if freq == 1:
                         conflicts_counter.update([freq])
+                        fmt = red_fmt
+                    elif freq == 2:
+                        fmt = workbook.add_format()
+
+                        # Check if field that has two common answers out of 3+
+                        # belongs to the list of fields where two answers is
+                        # enough
+                        if (common_value and other_values_empty):
+                            fmt = cyan_fmt
+                            use_common_value = True
+                        else:
+                            fmt = yellow_fmt
+                            conflicts_counter.update([freq])
+                    elif freq >= 3:
+                        use_common_value = True
 
             for j, val in enumerate(values):
                 # TODO: move to flattener?
