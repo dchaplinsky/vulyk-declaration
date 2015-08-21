@@ -359,6 +359,32 @@ BANKS_TO_CLEAN = [
     "answer.liabilities.64.sum_foreign_comment",
 ]
 
+MOTOR_INFO_TO_CLEAN = [
+    "answer.vehicle.35.xxx.brand_info",
+    "answer.vehicle.36.xxx.brand_info",
+    "answer.vehicle.37.xxx.brand_info",
+    "answer.vehicle.38.xxx.brand_info",
+    "answer.vehicle.39.xxx.brand_info",
+    "answer.vehicle.40.xxx.brand_info",
+    "answer.vehicle.41.xxx.brand_info",
+    "answer.vehicle.42.xxx.brand_info",
+    "answer.vehicle.43.xxx.brand_info",
+    "answer.vehicle.44.xxx.brand_info",
+]
+
+SPACE_UNITS_TO_CLEAN = [
+    "answer.estate.24.xxx.space_units",
+    "answer.estate.25.xxx.space_units",
+    "answer.estate.26.xxx.space_units",
+    "answer.estate.27.xxx.space_units",
+    "answer.estate.28.xxx.space_units",
+    "answer.estate.30.xxx.space_units",
+    "answer.estate.31.xxx.space_units",
+    "answer.estate.32.xxx.space_units",
+    "answer.estate.33.xxx.space_units",
+    "answer.estate.34.xxx.space_units",
+]
+
 
 def normalize_number(s):
     s = s.strip().replace(" ", "").replace(",", ".").rstrip(".")
@@ -381,6 +407,55 @@ def cleanup_bank_name(s):
     return ""
 
 
+def cleanup_motor_info(s):
+    s = re.sub("(\d)([^\d])", r"\1 \2", s)
+
+    s = s.replace("см. куб.", "куб. см.")
+    s = s.replace("см куб.", "куб. см.")
+    s = s.replace("см. куб", "куб. см.")
+    s = s.replace("см куб", "куб. см.")
+    s = s.replace("куб см.", "куб. см.")
+    s = s.replace("куб. см", "куб. см.")
+    s = s.replace("см.куб.", "куб. см.")
+    s = s.replace("см3", "куб. см.")
+    s = s.replace("cм3", "куб. см.")
+    s = s.replace("cm3", "куб. см.")
+    s = s.replace("sm3", "куб. см.")
+    s = s.replace("куб. см.", "куб. см. ")
+
+    s = s.replace("sm.", "см. ")
+    s = s.replace("sm", "см. ")
+
+    s = s.replace("кс", "к.с.")
+    s = s.replace("к/с", "к.с.")
+    s = s.replace("лс", "к.с.")
+    s = s.replace("л.с.", "к.с.")
+    s = s.replace("л/с", "к.с.")
+    s = s.replace("ks", "к.с.")
+    s = s.replace("к.с.", "к.с. ")
+
+    s = s.replace("кВТ", "кВт")
+    s = s.replace("квт", "кВт")
+    s = s.replace("КВТ", "кВт")
+    s = s.replace("kVt", "кВт")
+    s = s.replace("kvt", "кВт")
+    s = s.replace("kVT", "кВт")
+    s = s.replace("kWt", "кВт")
+    s = s.replace("kWT", "кВт")
+    s = s.replace("kwt", "кВт")
+    s = s.replace("кВт", "кВт ")
+
+    s = s.replace(". .", ".")
+    s = re.sub("\.+", ".", s)
+    s = re.sub("\s+", " ", s)
+    s = s.replace(". ,", ".,")
+
+    s = re.sub("(\d)\\s*\.\s*(\d)", r"\1.\2", s)
+    s = re.sub("(\d)\\s*,\s*(\d)", r"\1.\2", s)
+
+    return s.strip()
+
+
 def cleanup(s, path):
     path = ".".join(map(lambda x: "xxx" if isinstance(x, int) else x, path))
 
@@ -388,6 +463,8 @@ def cleanup(s, path):
         return s
 
     if isinstance(s, basestring):
+        s = s.replace("э", "є").replace("Э", "Є")
+
         if s in ["nodata", "unspecified"]:
             return ""
 
@@ -404,6 +481,7 @@ def cleanup(s, path):
         s = re.sub("\.([^\s])", r". \1", s)
         s = re.sub("\s*\(\s*", " (", s)
         s = re.sub("\s*\)\s*", ") ", s)
+        s = s.replace(";", ", ")
         s = s.replace(" ,", ", ")
         s = s.replace(" .", ". ")
 
@@ -416,11 +494,11 @@ def cleanup(s, path):
         if s.lower() in ["немає даних", "немає данних"]:
             s = ""
 
-        s = s.replace("см. куб.", "куб. см.")
-        s = s.replace("см куб.", "куб. см.")
-        s = s.replace("см. куб", "куб. см.")
-        s = s.replace("см куб", "куб. см.")
-        s = s.replace("см3", "куб. см.")
+        if path in SPACE_UNITS_TO_CLEAN and not s:
+            s = "meters"
+
+        if path in MOTOR_INFO_TO_CLEAN:
+            s = cleanup_motor_info(s)
 
         if path in FIELDS_TO_TITLIZE:
             s = title(s)
