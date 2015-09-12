@@ -9,7 +9,7 @@ from operator import itemgetter
 
 import xlsxwriter
 from flattener import (
-    Flattener, to_str, TWO_IS_ENOUGH, FIELDS_TO_IGNORE, unify_path)
+    Flattener, to_str, FIELDS_TO_IGNORE, unify_path)
 
 
 def parse_in_file(in_file):

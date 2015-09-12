@@ -385,6 +385,173 @@ SPACE_UNITS_TO_CLEAN = [
     "answer.estate.34.xxx.space_units",
 ]
 
+HIDDEN_TO_CLEAN = [
+    "answer.banks.45.xxx.sum_comment",
+    "answer.banks.45.xxx.sum_foreign_comment",
+    "answer.banks.46.xxx.sum_comment",
+    "answer.banks.46.xxx.sum_foreign_comment",
+    "answer.banks.47.xxx.sum_comment",
+    "answer.banks.47.xxx.sum_foreign_comment",
+    "answer.banks.48.xxx.sum_comment",
+    "answer.banks.48.xxx.sum_foreign_comment",
+    "answer.banks.49.xxx.sum_comment",
+    "answer.banks.49.xxx.sum_foreign_comment",
+    "answer.banks.50.xxx.sum_comment",
+    "answer.banks.50.xxx.sum_foreign_comment",
+    "answer.banks.51.xxx.sum_comment",
+    "answer.banks.51.xxx.sum_foreign_comment",
+    "answer.banks.52.xxx.sum_comment",
+    "answer.banks.52.xxx.sum_foreign_comment",
+    "answer.banks.53.xxx.sum_comment",
+    "answer.banks.53.xxx.sum_foreign_comment",
+
+    # "answer.estate.XX.XX.address"
+    "answer.estate.23.xxx.address",
+    "answer.estate.23.xxx.space_comment",
+    "answer.estate.23.xxx.costs_comment",
+    "answer.estate.23.xxx.costs_rent_comment",
+
+    "answer.estate.24.xxx.address",
+    "answer.estate.24.xxx.space_comment",
+    "answer.estate.24.xxx.costs_comment",
+    "answer.estate.24.xxx.costs_rent_comment",
+
+    "answer.estate.25.xxx.address",
+    "answer.estate.25.xxx.space_comment",
+    "answer.estate.25.xxx.costs_comment",
+    "answer.estate.25.xxx.costs_rent_comment",
+
+    "answer.estate.26.xxx.address",
+    "answer.estate.26.xxx.space_comment",
+    "answer.estate.26.xxx.costs_comment",
+    "answer.estate.26.xxx.costs_rent_comment",
+
+    "answer.estate.27.xxx.address",
+    "answer.estate.27.xxx.space_comment",
+    "answer.estate.27.xxx.costs_comment",
+    "answer.estate.27.xxx.costs_rent_comment",
+
+    "answer.estate.28.xxx.address",
+    "answer.estate.28.xxx.space_comment",
+    "answer.estate.28.xxx.costs_comment",
+    "answer.estate.28.xxx.costs_rent_comment",
+
+    "answer.estate.29.xxx.address",
+    "answer.estate.29.xxx.space_comment",
+    "answer.estate.29.xxx.costs_property_comment",
+    "answer.estate.29.xxx.costs_rent_comment",
+
+    "answer.estate.30.xxx.address",
+    "answer.estate.30.xxx.space_comment",
+    "answer.estate.30.xxx.costs_property_comment",
+    "answer.estate.30.xxx.costs_rent_comment",
+
+    "answer.estate.31.xxx.address",
+    "answer.estate.31.xxx.space_comment",
+    "answer.estate.31.xxx.costs_property_comment",
+    "answer.estate.31.xxx.costs_rent_comment",
+
+    "answer.estate.32.xxx.address",
+    "answer.estate.32.xxx.space_comment",
+    "answer.estate.32.xxx.costs_property_comment",
+    "answer.estate.32.xxx.costs_rent_comment",
+
+    "answer.estate.33.xxx.address",
+    "answer.estate.33.xxx.space_comment",
+    "answer.estate.33.xxx.costs_property_comment",
+    "answer.estate.33.xxx.costs_rent_comment",
+
+    "answer.estate.34.xxx.address",
+    "answer.estate.34.xxx.space_comment",
+    "answer.estate.34.xxx.costs_property_comment",
+    "answer.estate.34.xxx.costs_rent_comment",
+
+    "answer.general.addresses.xxx.place",
+    "answer.general.addresses.xxx.place_address",
+
+    "answer.general.family.xxx.inn",
+    "answer.general.family.xxx.name",
+
+    "answer.general.inn",
+    "answer.general.last_name",
+    "answer.general.name",
+    "answer.general.patronymic",
+    "answer.general.post.candidate",
+    "answer.general.post.post",
+    "answer.general.post.region",
+
+    "answer.income.xxx.comment",
+    "answer.income.xxx.family_comment",
+    "answer.liabilities.xxx.sum_comment",
+    "answer.liabilities.xxx.sum_foreign_comment",
+
+    "answer.vehicle.XX.XX.brand",
+    "answer.vehicle.XX.XX.brand_info",
+    "answer.vehicle.XX.XX.sum_comment",
+    "answer.vehicle.XX.XX.sum_rent_comment",
+    "answer.vehicle.XX.XX.year",
+
+    "answer.vehicle.35.xxx.brand",
+    "answer.vehicle.35.xxx.brand_info",
+    "answer.vehicle.35.xxx.sum_comment",
+    "answer.vehicle.35.xxx.sum_rent_comment",
+    "answer.vehicle.35.xxx.year",
+
+    "answer.vehicle.36.xxx.brand",
+    "answer.vehicle.36.xxx.brand_info",
+    "answer.vehicle.36.xxx.sum_comment",
+    "answer.vehicle.36.xxx.sum_rent_comment",
+    "answer.vehicle.36.xxx.year",
+
+    "answer.vehicle.37.xxx.brand",
+    "answer.vehicle.37.xxx.brand_info",
+    "answer.vehicle.37.xxx.sum_comment",
+    "answer.vehicle.37.xxx.sum_rent_comment",
+    "answer.vehicle.37.xxx.year",
+
+    "answer.vehicle.38.xxx.brand",
+    "answer.vehicle.38.xxx.brand_info",
+    "answer.vehicle.38.xxx.sum_comment",
+    "answer.vehicle.38.xxx.sum_rent_comment",
+    "answer.vehicle.38.xxx.year",
+
+    "answer.vehicle.39.xxx.brand",
+    "answer.vehicle.39.xxx.brand_info",
+    "answer.vehicle.39.xxx.sum_comment",
+    "answer.vehicle.39.xxx.sum_rent_comment",
+    "answer.vehicle.39.xxx.year",
+
+    "answer.vehicle.40.xxx.brand",
+    "answer.vehicle.40.xxx.brand_info",
+    "answer.vehicle.40.xxx.sum_comment",
+    "answer.vehicle.40.xxx.sum_rent_comment",
+    "answer.vehicle.40.xxx.year",
+
+    "answer.vehicle.41.xxx.brand",
+    "answer.vehicle.41.xxx.brand_info",
+    "answer.vehicle.41.xxx.sum_comment",
+    "answer.vehicle.41.xxx.sum_rent_comment",
+    "answer.vehicle.41.xxx.year",
+
+    "answer.vehicle.42.xxx.brand",
+    "answer.vehicle.42.xxx.brand_info",
+    "answer.vehicle.42.xxx.sum_comment",
+    "answer.vehicle.42.xxx.sum_rent_comment",
+    "answer.vehicle.42.xxx.year",
+
+    "answer.vehicle.43.xxx.brand",
+    "answer.vehicle.43.xxx.brand_info",
+    "answer.vehicle.43.xxx.sum_comment",
+    "answer.vehicle.43.xxx.sum_rent_comment",
+    "answer.vehicle.43.xxx.year",
+
+    "answer.vehicle.44.xxx.brand",
+    "answer.vehicle.44.xxx.brand_info",
+    "answer.vehicle.44.xxx.sum_comment",
+    "answer.vehicle.44.xxx.sum_rent_comment",
+    "answer.vehicle.44.xxx.year",
+]
+
 
 def normalize_number(s):
     s = s.strip().replace(" ", "").replace(",", ".").rstrip(".")
@@ -456,6 +623,17 @@ def cleanup_motor_info(s):
     return s.strip()
 
 
+def cleanup_hidden(s):
+    is_hidden = False
+
+    if "приховано" in s.lower() or "замазано" in s.lower():
+        is_hidden = True
+        s = re.sub("(приховано)", " ", s, flags=re.I | re.U)
+        s = re.sub("(замазано)", " ", s, flags=re.I | re.U)
+
+    return s.strip(), is_hidden
+
+
 def cleanup(s, path):
     path = ".".join(map(lambda x: "xxx" if isinstance(x, int) else x, path))
 
@@ -486,6 +664,7 @@ def cleanup(s, path):
         s = s.replace(" .", ". ")
 
         s = s.replace('"', "'")
+        s = s.replace('’', "'")
         s = s.replace('`', "'")
 
         s = re.sub("\s+", " ", s)
@@ -514,9 +693,7 @@ def cleanup(s, path):
         if path in FIELDS_TO_NUM_NORMALIZE:
             s = normalize_number(s)
 
-        return s
-    else:
-        return s
+    return s
 
 
 class Flattener(object):
@@ -553,6 +730,13 @@ class Flattener(object):
         self.traverse(answer, current_answer, tuple())
 
         for path in current_answer.keys():
+            if unify_path(path) in HIDDEN_TO_CLEAN:
+                current_answer[path], is_hidden = cleanup_hidden(
+                    current_answer[path])
+
+                if is_hidden:
+                    current_answer[path[:-1] + (path[-1] + "_hidden",)] = "on"
+
             # Extra logic to cover the case when volunteers are writting
             # sums into comments field rather than value field
             if unify_path(path) in TWO_IS_ENOUGH:
