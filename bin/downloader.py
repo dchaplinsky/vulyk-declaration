@@ -188,9 +188,9 @@ if __name__ == '__main__':
                         "link": "http://unshred.it/static/declarations/chosen_ones/mega_batch/%s" % os.path.basename(line["Локальный pdf"])
                     }) + os.linesep)
 
-                    # shutil.copy(
-                    #     line["Локальный pdf"],
-                    #     os.path.join(out_dir, "to_upload"))
+                    shutil.copy(
+                        line["Локальный pdf"],
+                        os.path.join(out_dir, "to_upload"))
 
                 line["Локальный pdf"] = os.path.basename(line["Локальный pdf"])
                 w.writerow(line)

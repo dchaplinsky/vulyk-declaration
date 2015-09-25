@@ -36,7 +36,10 @@ FIELDS_TO_TITLIZE = [
 ]
 
 FIELDS_TO_CAPITALIZE = ["answer.general.family.xxx.name"]
-FIELDS_TO_LOWERCASIZE = []
+FIELDS_TO_LOWERCASIZE = [
+    "answer.income.xxx.comment",
+    "answer.income.xxx.family_comment",
+]
 FIELDS_TO_PROOFREAD = ["answer.general.post.post"]
 
 FIELDS_TO_NUM_NORMALIZE = [
@@ -405,7 +408,6 @@ HIDDEN_TO_CLEAN = [
     "answer.banks.53.xxx.sum_comment",
     "answer.banks.53.xxx.sum_foreign_comment",
 
-    # "answer.estate.XX.XX.address"
     "answer.estate.23.xxx.address",
     "answer.estate.23.xxx.space_comment",
     "answer.estate.23.xxx.costs_comment",
@@ -552,6 +554,10 @@ HIDDEN_TO_CLEAN = [
     "answer.vehicle.44.xxx.year",
 ]
 
+RELATIONS_TO_CLEAN = [
+    "general.family.xxx.relations_other",
+]
+
 
 def normalize_number(s):
     s = s.strip().replace(" ", "").replace(",", ".").rstrip(".")
@@ -634,6 +640,20 @@ def cleanup_hidden(s):
     return s.strip(), is_hidden
 
 
+def cleanup_relations(s):
+    extracted = ""
+
+    if s.lower() in ["донька", "дочка", "син", "сын"]:
+        extracted = "children"
+        s = ""
+
+    elif s.lower() in ["дружина", "жінка", "жена", "чоловік", "муж"]:
+        extracted = "spouse"
+        s = ""
+
+    return s, extracted
+
+
 def cleanup(s, path):
     path = ".".join(map(lambda x: "xxx" if isinstance(x, int) else x, path))
 
@@ -660,6 +680,7 @@ def cleanup(s, path):
         s = re.sub("\s*\(\s*", " (", s)
         s = re.sub("\s*\)\s*", ") ", s)
         s = s.replace(";", ", ")
+        s = s.replace("\\", "/")
         s = s.replace(" ,", ", ")
         s = s.replace(" .", ". ")
 
@@ -737,6 +758,14 @@ class Flattener(object):
                 if is_hidden:
                     current_answer[path[:-1] + (path[-1] + "_hidden",)] = "on"
 
+            if unify_path(path) in RELATIONS_TO_CLEAN:
+                current_answer[path], extracted = cleanup_relations(
+                    current_answer[path])
+
+                if extracted:
+                    print(extracted)
+                    current_answer[path[:-1] + ("relations",)] = extracted
+
             # Extra logic to cover the case when volunteers are writting
             # sums into comments field rather than value field
             if unify_path(path) in TWO_IS_ENOUGH:
@@ -749,7 +778,7 @@ class Flattener(object):
                     # Let's put number from comment to value field
                     if re.search("^\d+([\.,]\d+)?$", comment):
                         current_answer[path] = comment
-                        current_answer[comment_path] = "!MOVED_TO_VAL"
+                        current_answer[comment_path] = ""
 
         return current_answer
 
