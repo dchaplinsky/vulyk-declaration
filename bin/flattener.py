@@ -576,6 +576,7 @@ def cleanup_bank_name(s):
 
         s = s.replace("(", "").replace(")", "")
         s = OPREF_BANKS.process(s)
+        return s
 
     return ""
 

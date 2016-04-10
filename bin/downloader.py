@@ -97,7 +97,7 @@ def download_file(url, fname):
 
 def prepare_fullname(name):
     return translitua(
-        name.strip().lower().replace(
+        name.strip().strip('\ufeff').lower().replace(
             " ", "_").replace(
             " ", "_").replace(
             '"', "_").replace(
@@ -117,6 +117,7 @@ if __name__ == '__main__':
     names = Counter()
 
     new_header = (
+        "id",
         "Ведомство",
         "Регион",
         "Должность",
@@ -143,7 +144,7 @@ if __name__ == '__main__':
                 print(line["ФИО"])
 
                 desired_name = os.path.join(
-                    out_dir, prepare_fullname(line["ФИО"]))
+                    out_dir, prepare_fullname(line["id"] + "_" + line["ФИО"]))
 
                 if desired_name in names:
                     desired_name += "_" + str(names[desired_name])
@@ -185,7 +186,7 @@ if __name__ == '__main__':
                         "region": line["Регион"],
                         "position": line["Должность"],
                         "full_name": line["ФИО"],
-                        "link": "http://unshred.it/static/declarations/chosen_ones/mega_batch/%s" % os.path.basename(line["Локальный pdf"])
+                        "link": "http://static.declarations.com.ua/declarations/chosen_ones/judges_batch/%s" % os.path.basename(line["Локальный pdf"])
                     }) + os.linesep)
 
                     shutil.copy(
