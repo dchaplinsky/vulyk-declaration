@@ -10,8 +10,6 @@ Tests for `vulyk_declaration` module.
 
 import unittest
 
-from vulyk_declaration import vulyk_declaration
-
 
 class TestVulyk_declaration(unittest.TestCase):
 
