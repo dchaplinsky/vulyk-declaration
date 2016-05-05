@@ -5,7 +5,6 @@ __email__ = 'gotsyk@gmail.com'
 __version__ = '0.1.0'
 
 
-# -*- coding=utf-8 -*-
 import logging
 
 from werkzeug.utils import import_string
