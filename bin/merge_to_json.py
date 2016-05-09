@@ -1,9 +1,11 @@
-import io
-import sys
-import json
+# coding=utf-8
 from collections import Counter
+import io
+import json
 from operator import itemgetter
-from flattener import Flattener
+import sys
+
+from .flattener import Flattener
 
 
 def set_answer(answer, field, value):
@@ -24,7 +26,7 @@ def traverse_and_convert(dct):
         if all(map(lambda x: isinstance(x, int), dct.keys())):
             return [traverse_and_convert(dct[k]) for k in sorted(dct.keys())]
         else:
-            for k, v in dct.iteritems():
+            for k, v in dct.items():
                 dct[k] = traverse_and_convert(v)
 
     return dct

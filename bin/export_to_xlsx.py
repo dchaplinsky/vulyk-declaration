@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import json
-import sys
-
 from collections import Counter
+import json
 from operator import itemgetter
-
+import six
+import sys
 import xlsxwriter
-from flattener import (
+
+
+from .flattener import (
     Flattener, to_str, FIELDS_TO_IGNORE, unify_path)
 
 
@@ -102,9 +103,9 @@ if __name__ == '__main__':
                     val = common_value
 
                 if fmt is not None:
-                    worksheet.write_string(line_no + j, i, unicode(val), fmt)
+                    worksheet.write_string(line_no + j, i, six.text_type(val), fmt)
                 else:
-                    worksheet.write_string(line_no + j, i, unicode(val))
+                    worksheet.write_string(line_no + j, i, six.text_type(val))
 
         line_no += len(task)
 

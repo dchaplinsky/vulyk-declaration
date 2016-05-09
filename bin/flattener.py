@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import re
-from string import capwords
 from collections import defaultdict
-from openrefine import OpenRefine
-
 from natsort import natsorted
+import re
+import six
+from string import capwords
+
+from .openrefine import OpenRefine
 
 
 lists = {}
@@ -644,7 +645,7 @@ def cleanup_hidden(s):
 def cleanup_relations(s):
     extracted = ""
 
-    if s.lower() in ["донька", "дочка", "син", "сын"]:
+    if s.lower() in ["донька", "дочка", "син", "сын", "дочь"]:
         extracted = "children"
         s = ""
 
@@ -661,7 +662,7 @@ def cleanup(s, path):
     if path in FIELDS_TO_IGNORE:
         return s
 
-    if isinstance(s, basestring):
+    if isinstance(s, six.text_type):
         s = s.replace("э", "є").replace("Э", "Є")
 
         if s in ["nodata", "unspecified"]:
@@ -725,7 +726,7 @@ class Flattener(object):
 
     def traverse(self, dct, current_answer, path):
         if isinstance(dct, dict):
-            for k, v in dct.iteritems():
+            for k, v in dct.items():
                 if path:
                     current_path = path + tuple([k])
                 else:
