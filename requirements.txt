@@ -10,4 +10,6 @@ natsort==3.5.6
 unicodecsv==0.13.0
 glob2==0.4.1
 nltk==3.0.2
-requests-ftp==0.3.0
+requests-ftp==0.3.1
+rfc6266==0.0.4
+translitua==1.2.2
