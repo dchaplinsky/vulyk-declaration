@@ -2,20 +2,20 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import json
 import os
 import re
-import sys
 import shutil
-import json
-import os.path
+import six
+import sys
 from collections import Counter
 from pprint import pprint
 
-from unicodecsv import DictReader, DictWriter
-from rfc6266 import parse_requests_response
 import requests
-from urllib2 import urlopen, URLError
+from requests_ftp.ftp import FTPSession
+from rfc6266 import parse_requests_response
 from translitua import translitua
+from unicodecsv import DictReader, DictWriter
 
 
 def expand_gdrive_download_url(url):
@@ -50,7 +50,7 @@ def download_file(url, fname):
     if url.startswith("ftp://"):
         # Special case for FTP
         try:
-            req = urlopen(str(url), timeout=60)
+            req = FTPSession().get(six.text_type(url), timeout=60)
 
             fname = "%s.%s" % (
                 fname,
@@ -62,9 +62,11 @@ def download_file(url, fname):
 
             with open(fname, 'wb') as f:
                 shutil.copyfileobj(req, f)
+
             req.close()
+
             return fname
-        except URLError:
+        except requests.HTTPError:
             return "!error=404"
 
     try:
@@ -159,7 +161,7 @@ if __name__ == '__main__':
                     line["Конверсия"] = "Да"
                 else:
                     fname = download_file(
-                        unicode(line["Ссылка"]),
+                        six.text_type(line["Ссылка"]),
                         desired_name)
 
                     bname, ext = os.path.splitext(fname)

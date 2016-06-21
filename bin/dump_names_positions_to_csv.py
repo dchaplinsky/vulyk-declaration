@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import codecs
 import json
+import six
 import sys
 import re
-import codecs
+
 sys.stdout = codecs.getwriter('utf8')(sys.stdout)
 
 
@@ -46,7 +48,7 @@ REGIONS_MAP = {
 
 
 def cleanup(s):
-    if isinstance(s, basestring):
+    if isinstance(s, six.text_type):
         s = s.replace("—", " - ")
         s = re.sub("([^\s])\-\s+", r"\1-", s)
         s = re.sub("\s+\-([^\s])", r"-\1", s)
@@ -70,7 +72,6 @@ if __name__ == '__main__':
 
     with open(in_file, "r") as fp:
         for r in fp:
-            # print(r)
             answers = json.loads(r)
             current_task = []
 
