@@ -9,7 +9,7 @@ import sys
 import xlsxwriter
 
 
-from .flattener import (
+from flattener import (
     Flattener, to_str, FIELDS_TO_IGNORE, unify_path)
 
 
@@ -58,7 +58,7 @@ if __name__ == '__main__':
         for i, field in enumerate(fields):
             unified_path = unify_path(field)
 
-            values = map(itemgetter(field), task)
+            values = list(map(itemgetter(field), task))
 
             x = Counter(values)
             common_value, freq = x.most_common(1)[0]

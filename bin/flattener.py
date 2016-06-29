@@ -7,7 +7,7 @@ import re
 import six
 from string import capwords
 
-from .openrefine import OpenRefine
+from openrefine import OpenRefine
 
 
 lists = {}
@@ -752,7 +752,7 @@ class Flattener(object):
         current_answer = defaultdict(str)
         self.traverse(answer, current_answer, tuple())
 
-        for path in current_answer.keys():
+        for path in list(current_answer.keys()):
             if unify_path(path) in HIDDEN_TO_CLEAN:
                 current_answer[path], is_hidden = cleanup_hidden(
                     current_answer[path])
