@@ -1,12 +1,14 @@
 # -*- coding=utf-8 -*-
 from __future__ import unicode_literals
 
-from vulyk.models.task_types import AbstractTaskType
+from vulyk.blueprints.gamification.models.task_types import (
+    AbstractGamifiedTaskType, POINTS_PER_TASK_KEY, COINS_PER_TASK_KEY,
+    IMPORTANT_KEY)
 
 from vulyk_declaration.models.tasks import DeclarationAnswer, DeclarationTask
 
 
-class DeclarationTaskType(AbstractTaskType):
+class DeclarationTaskType(AbstractGamifiedTaskType):
     """
     Declaration Task to work with Vulyk.
     """
@@ -21,6 +23,12 @@ class DeclarationTaskType(AbstractTaskType):
     type_name = 'declaration_task'
 
     redundancy = 3
+
+    _task_type_meta = {
+        POINTS_PER_TASK_KEY: 1.0,
+        COINS_PER_TASK_KEY: 1.0,
+        IMPORTANT_KEY: True
+    }
 
     JS_ASSETS = ['static/scripts/jquery-ui.min.js',
                  'static/scripts/handlebars.js',

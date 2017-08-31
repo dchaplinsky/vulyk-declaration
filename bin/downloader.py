@@ -61,7 +61,12 @@ def download_file(url, fname):
                 return fname
 
             with open(fname, 'wb') as f:
-                shutil.copyfileobj(req, f)
+                try:
+                    shutil.copyfileobj(req, f)
+                except AttributeError:
+                    print(req)
+                    # req.close()
+                    return "!error=read_error"
 
             req.close()
 
