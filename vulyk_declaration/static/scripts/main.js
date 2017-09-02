@@ -360,7 +360,7 @@ scripts.Common = {
 				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
-				scrpt.$cache.html.scrollTop(0);
+				scrpt.$cache.body.scrollTop(0);
 				output.html(template(data.result.task.data));
 				scrpt.jqueryValidateInit();
 				scrpt.toggleFormSection();
@@ -376,20 +376,13 @@ scripts.Common = {
 					$form.remove();
 					callback(data);
 				} else {
-					scrpt.$cache.html.scrollTop(0);
+					scrpt.$cache.body.scrollTop(0);
+					$(".gross-error").show();
+					callback();
 				}
 			}).on("vulyk.skip", function(e, callback) {
 				$('#form-declaration').remove();
 				callback();
-			}).on("vulyk.task_error", function(e, data) {
-				$.magnificPopup.open({
-					items: {
-						src: '<div class="zoom-anim-dialog small-dialog">' +
-						'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
-						'</div>',
-						type: 'inline'
-					}
-				})
 			});
 		});
 

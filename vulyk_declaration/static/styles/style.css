@@ -706,3 +706,11 @@ dd {
 }
 
 /* @end */
+
+.gross-error {
+  line-height: 40px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
