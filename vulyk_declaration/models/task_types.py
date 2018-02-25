@@ -15,8 +15,8 @@ class DeclarationTaskType(AbstractGamifiedTaskType):
     answer_model = DeclarationAnswer
     task_model = DeclarationTask
 
-    name = 'Декларации'
-    description = 'Распознавание деклараций'
+    name = 'Декларації'
+    description = 'Розпізнавання декларацій'
 
     template = 'index.html'
     helptext_template = 'help.html'

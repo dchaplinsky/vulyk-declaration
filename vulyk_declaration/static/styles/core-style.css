@@ -295,6 +295,7 @@ figure {
   line-height: 1.4299em;
   font-weight: bold;
   margin-bottom: 1em;
+  caption-side: top;
 }
 .weiss-table_decl td,
 .weiss-table_decl th {
