@@ -200,7 +200,7 @@ scripts.Common = {
 					var $elem = toclone.find(element);
 
 					if ($elem.length > 0)
-						$elem.autocomplete('destroy');
+						$elem.autocomplete().autocomplete('destroy');
 				});
 			})
 			.on('clone_after_append', function (event, toclone, newclone) {
