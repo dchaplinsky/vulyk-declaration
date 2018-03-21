@@ -1,5 +1,4 @@
 six==1.10.0
-Sphinx==1.4.1
 wheel==0.29.0
 yuicompressor==2.4.8
 XlsxWriter==0.7.2

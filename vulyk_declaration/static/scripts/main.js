@@ -359,6 +359,16 @@ scripts.Common = {
 			var template = Handlebars.compile($('#decl_form_template').html()),
 				output = $("#form-wrapper");
 
+			function show_loader() {
+				output
+					.html('<p class="loading-message">Завантажуємо наступне завдання</p>');
+
+				output.find("p.loading-message")
+					.fadeIn(700).fadeOut(700).fadeIn(700).fadeOut(700).fadeIn(700).fadeOut(700).fadeIn(700);
+			}
+
+			show_loader();
+
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.body.scrollTop(0);
 				output.html(template(data.result.task.data));
@@ -374,6 +384,7 @@ scripts.Common = {
 
 				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
 					$form.remove();
+					show_loader();
 					callback(data);
 				} else {
 					scrpt.$cache.body.scrollTop(0);
@@ -382,6 +393,7 @@ scripts.Common = {
 				}
 			}).on("vulyk.skip", function(e, callback) {
 				$('#form-declaration').remove();
+				show_loader();
 				callback();
 			});
 		});

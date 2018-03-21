@@ -84,11 +84,15 @@ def download_file(url, fname):
         return "!error=russian"
 
     if resp.ok:
-        parsed = parse_requests_response(resp)
+        try:
+            parsed = parse_requests_response(resp)
+            ext = os.path.splitext(parsed.filename_unsafe)[-1].strip(".").lower()
+        except ValueError:
+            ext = "pdf"
 
         fname = "%s.%s" % (
             fname,
-            os.path.splitext(parsed.filename_unsafe)[-1].strip(".").lower()
+            ext
             or "html")
 
         if os.path.exists(fname):
