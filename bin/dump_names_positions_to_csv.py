@@ -3,7 +3,6 @@
 from __future__ import unicode_literals
 import codecs
 import json
-import six
 import sys
 import re
 
@@ -48,7 +47,7 @@ REGIONS_MAP = {
 
 
 def cleanup(s):
-    if isinstance(s, six.text_type):
+    if isinstance(s, str):
         s = s.replace("—", " - ")
         s = re.sub("([^\s])\-\s+", r"\1-", s)
         s = re.sub("\s+\-([^\s])", r"-\1", s)

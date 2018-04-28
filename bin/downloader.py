@@ -6,7 +6,6 @@ import json
 import os
 import re
 import shutil
-import six
 import sys
 from collections import Counter
 from pprint import pprint
@@ -50,7 +49,7 @@ def download_file(url, fname):
     if url.startswith("ftp://"):
         # Special case for FTP
         try:
-            req = FTPSession().get(six.text_type(url), timeout=60)
+            req = FTPSession().get(url, timeout=60)
 
             fname = "%s.%s" % (
                 fname,
@@ -170,7 +169,7 @@ if __name__ == '__main__':
                     line["Конверсия"] = "Да"
                 else:
                     fname = download_file(
-                        six.text_type(line["Ссылка"]),
+                        line["Ссылка"],
                         desired_name)
 
                     bname, ext = os.path.splitext(fname)
