@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 from collections import Counter
 import json
 from operator import itemgetter
-import six
 import sys
 import xlsxwriter
 
@@ -103,9 +102,9 @@ if __name__ == '__main__':
                     val = common_value
 
                 if fmt is not None:
-                    worksheet.write_string(line_no + j, i, six.text_type(val), fmt)
+                    worksheet.write_string(line_no + j, i, val, fmt)
                 else:
-                    worksheet.write_string(line_no + j, i, six.text_type(val))
+                    worksheet.write_string(line_no + j, i, val)
 
         line_no += len(task)
 

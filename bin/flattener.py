@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 from collections import defaultdict
 from natsort import natsorted
 import re
-import six
 from string import capwords
 
 from openrefine import OpenRefine
@@ -662,7 +661,7 @@ def cleanup(s, path):
     if path in FIELDS_TO_IGNORE:
         return s
 
-    if isinstance(s, six.text_type):
+    if isinstance(s, str):
         s = s.replace("э", "є").replace("Э", "Є")
 
         if s in ["nodata", "unspecified"]:
