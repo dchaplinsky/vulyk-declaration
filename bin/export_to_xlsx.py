@@ -102,9 +102,9 @@ if __name__ == '__main__':
                     val = common_value
 
                 if fmt is not None:
-                    worksheet.write_string(line_no + j, i, val, fmt)
+                    worksheet.write_string(line_no + j, i, str(val), fmt)
                 else:
-                    worksheet.write_string(line_no + j, i, val)
+                    worksheet.write_string(line_no + j, i, str(val))
 
         line_no += len(task)
 
