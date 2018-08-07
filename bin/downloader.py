@@ -14,7 +14,7 @@ import requests
 from requests_ftp.ftp import FTPSession
 from rfc6266 import parse_requests_response
 from translitua import translitua
-from unicodecsv import DictReader, DictWriter
+from csv import DictReader, DictWriter
 
 
 def expand_gdrive_download_url(url):
